@@ -1,0 +1,25 @@
+<input type="number" id="individual-page" />
+
+<?= view('::lists/individuals-table', get_defined_vars()); ?>
+
+<script>
+    window.onload = function() {
+        var table = $(".wt-table-individual").DataTable();
+        var pageInput = $("#individual-page");
+        var queries = new URLSearchParams(window.location.search);
+
+        pageInput.on('keyup', function () {
+            setPage(this.value);
+        });
+        table.on('page.dt', function () {
+            pageInput.val(table.page() + 1);
+            queries.set("page", table.page() + 1);
+            window.history.pushState( {} , '', '?' + queries.toString() );
+        });
+        
+        setPage(queries.get("page"));
+        function setPage(page){
+            table.page(page - 1).draw('page');
+        }
+    };
+</script>

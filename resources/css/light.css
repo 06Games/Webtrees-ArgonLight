@@ -1,0 +1,169 @@
+/************************************************************
+                              Global
+ ************************************************************/
+body {
+  min-width: 300px;
+}
+
+/* Header */
+#primary-header {
+  padding: 5px;
+}
+.wt-header-content .navbar {
+  padding: 0.25rem 0.5rem;
+}
+.wt-header-content .navbar-toggler {
+  color: white;
+  padding: 0;
+  font-size: 2em;
+}
+@media (min-width: 992px) and (max-width: 1050px) {
+  .wt-header-content .nav-link {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .wt-header-content .nav-link {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 475px), (min-width: 1200px) and (max-width: 1500px) {
+  .wt-header-content .navbar-toggler,
+  #primary-header .wt-header-content .wt-site-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 350px) {
+  .wt-header-content .navbar-toggler,
+  #primary-header .wt-header-content .wt-site-title {
+    font-size: 1.25rem;
+  }
+}
+.wt-header-content .navbar-collapse {
+  top: 100%;
+}
+.wt-header-content .wt-header-search-form .input-group > * {
+  height: 100%;
+}
+@media (max-width: 991.8px) {
+  .wt-header-content .navbar-nav > .nav-item > .dropdown-menu {
+    background-color: #9991;
+  }
+}
+@media (min-width: 992px) {
+  .wt-header-content .navbar-nav > .nav-item > .dropdown-menu {
+    position: absolute;
+  }
+}
+@media (min-width: 992px) {
+  .wt-header-content .navbar-collapse {
+    display: flex;
+  }
+  .wt-header-content .navbar-nav {
+    flex-direction: row;
+    flex-grow: 1;
+  }
+  .wt-header-content .navbar-toggler,
+  .wt-header-content hr {
+    display: none;
+  }
+  .wt-header-content .navbar-nav .nav-link {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .wt-header-content .navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+  }
+}
+.wt-header-content li > a {
+  color: #fff;
+}
+
+/* Content */
+#content {
+  padding: 2rem 0;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 75vw;
+  }
+}
+/* Footer */
+#site-footer {
+  display: none;
+}
+
+/* View options in one row */
+/*.wt-page-options {
+  display: flex;
+  gap: 1em;
+}
+.wt-page-options > * {
+  flex: 1;
+}*/
+
+/* Compact the options of the views */
+.wt-page-options .form-group {
+  margin-bottom: 0.25rem;
+}
+
+
+/************************************************************
+                   Magicsunday's Fan chart
+       https://github.com/magicsunday/webtrees-fan-chart
+ ************************************************************/
+
+ .wt-route-webtrees-fan-chart div.tooltip table {
+  border-collapse: separate;
+}
+.wt-route-webtrees-fan-chart div.tooltip table tr > *{
+  border: none;
+}
+.wt-route-webtrees-fan-chart div.tooltip table th{
+  background-color: transparent;
+}
+
+/************************************************************
+               Magicsunday's Pedigree module
+    https://github.com/magicsunday/webtrees-pedigree-chart
+ ************************************************************/
+
+#webtrees-pedigree-chart-container .person rect {
+  stroke-width: 1px;
+  rx: 10px;
+  ry: 10px;
+}
+/*:root{
+  --sex-m-bg: #4a7eb1;
+  --sex-f-bg: #cc5989;
+  --sex-u-bg: #8a8a8a;
+}
+#webtrees-pedigree-chart-container .person > rect {
+  fill-opacity: 1;
+  fill: var(--sex-u-bg);
+  stroke: none !important;
+}
+#webtrees-pedigree-chart-container .person > rect.male {
+  fill: var(--sex-m-bg);
+}
+#webtrees-pedigree-chart-container .person > rect.female {
+  fill: var(--sex-f-bg);
+}
+#webtrees-pedigree-chart-container .person .name {
+  fill: #dfdfdf;
+}
+#webtrees-pedigree-chart-container .person .date {
+  fill: rgb(225, 225, 225);
+}*/
+
+/************************************************************
+                UksusoFF's Faces for webtrees
+          https://github.com/UksusoFF/webtrees-faces
+ ************************************************************/
+
+.fancybox-toolbar > button.fancybox-button {
+  padding: 10px;
+}
