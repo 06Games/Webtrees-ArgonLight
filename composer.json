@@ -1,0 +1,24 @@
+{
+    "name": "evang/light-theme",
+    "description": "",
+    "license": "GPL-3.0-or-later",
+    "type": "webtrees-module",
+    "keywords": [
+        "webtrees",
+        "theme"
+    ],
+    "authors": [
+        {
+            "name": "Evan Galli",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EvanG\\Themes\\LightTheme\\": ""
+        }
+    },
+    "require": {
+        "fisharebest/webtrees": "^2.0"
+    }
+}

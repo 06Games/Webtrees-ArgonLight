@@ -1,13 +1,53 @@
 /************************************************************
                               Global
  ************************************************************/
+:root{
+  --sex-m-fg: rgb(129, 169, 203);
+  --sex-m-bg: rgb(237, 247, 253);
+  --sex-f-fg: rgb(255, 32, 128);
+  --sex-f-bg: rgb(255, 239, 253);
+  --sex-u-bg: #8a8a8a;
+}
 body {
   min-width: 300px;
 }
 
+/* Spinner */
+[dir] .wt-ajax-load:empty{
+  height: 2rem;
+}
+[dir] .wt-ajax-load:empty::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -.125em;
+  border: .25em solid currentColor;
+  border-right-color: currentcolor;
+  border-right-color: currentcolor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: .75s linear infinite spinner-border;
+  animation: .75s linear infinite spinner-border;
+}
+@keyframes spinner-border {
+  to { transform: rotate(360deg); }
+}
+
+
 /* Header */
 #primary-header {
   padding: 5px;
+}
+#primary-header .wt-header-container {
+  margin-top: 0;
+}
+.wt-header-content .wt-site-title{
+  flex-grow: 0;
+  order: 0;
 }
 .wt-header-content .navbar {
   padding: 0.25rem 0.5rem;
@@ -41,6 +81,13 @@ body {
 }
 .wt-header-content .navbar-collapse {
   top: 100%;
+}
+.wt-header-content .wt-header-search{
+  display: table;
+}
+.wt-header-content .wt-header-search-form{
+  vertical-align: middle;
+  display: table-cell;
 }
 .wt-header-content .wt-header-search-form .input-group > * {
   height: 100%;
@@ -110,6 +157,28 @@ body {
   margin-bottom: 0.25rem;
 }
 
+/*[dir] .wt-block {
+  border: none;
+}
+[dir] .wt-block-header {
+  background: none;
+  font-weight: 600;
+}
+
+[dir] .table > :not(:first-child){
+  border-top-width: 1px;
+}
+[dir] .table,
+[dir] .table > *,
+[dir] .table td, [dir] .table th {
+  border-color: var(--lighter);
+}*/
+
+
+/********************* Individual page *********************/
+[dir] .img-thumbnail{
+  text-align: center;
+}
 
 /************************************************************
                    Magicsunday's Fan chart
@@ -136,12 +205,7 @@ body {
   rx: 10px;
   ry: 10px;
 }
-/*:root{
-  --sex-m-bg: #4a7eb1;
-  --sex-f-bg: #cc5989;
-  --sex-u-bg: #8a8a8a;
-}
-#webtrees-pedigree-chart-container .person > rect {
+/*#webtrees-pedigree-chart-container .person > rect {
   fill-opacity: 1;
   fill: var(--sex-u-bg);
   stroke: none !important;

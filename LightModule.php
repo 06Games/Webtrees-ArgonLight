@@ -5,27 +5,22 @@ declare(strict_types=1);
 
 namespace EvanG\Themes\LightTheme;
 
-use Fisharebest\Webtrees\Webtrees;
-use Fisharebest\Webtrees\Module\MinimalTheme;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
+use Fisharebest\Webtrees\Webtrees;
+use Fisharebest\Webtrees\Module\AbstractModule;
+use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+use Fisharebest\Webtrees\Module\ModuleThemeTrait;
 use Fisharebest\Webtrees\View;
 
-class LightTheme extends MinimalTheme implements ModuleCustomInterface {
-    use ModuleCustomTrait;
+class LightTheme extends AbstractModule implements ModuleCustomInterface, ModuleThemeInterface {
+    use ModuleCustomTrait, ModuleThemeTrait;
 
     /**
      * @return string
      */
     public function title(): string { return 'Light'; }
 
-    /**
-     * Misecellaneous dimensions, fonts, styles, etc.
-     *
-     * @param string $parameter_name
-     *
-     * @return string|int|float
-     */
     public function parameter($parameter_name)
     {
         $parameters = [
@@ -52,11 +47,10 @@ class LightTheme extends MinimalTheme implements ModuleCustomInterface {
      */
     public function boot(): void
     {
-
         // Register a namespace for our views.
         View::registerNamespace($this->name(), $this->customResourcesFolder() . 'views/');
 
-        // Replace an existing views with our own versions.
+        // Argon views
 
         // Site Layout
         View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
@@ -73,16 +67,13 @@ class LightTheme extends MinimalTheme implements ModuleCustomInterface {
         View::registerCustomView('::modules/recent_changes/changes-list', $this->name() . '::modules/recent_changes/changes-list'); // Restructure changes list
 
         // Individual Page
-        View::registerCustomView('::individual-page', $this->name() . '::individual-page'); // Add class to header section, center thumbnail
         View::registerCustomView('::modules/interactive-tree/chart', $this->name() . '::modules/interactive-tree/chart'); // Add button class
         View::registerCustomView('::modules/stories/tab', $this->name() . '::modules/stories/tab'); // Add container for story
         View::registerCustomView('::modules/lightbox/tab', $this->name() . '::modules/lightbox/tab'); // Add Bootstrap grid classes for proper sizing, reduce maximum number of items per row to four by increasing column width
         View::registerCustomView('::modules/descendancy/sidebar', $this->name() . '::modules/descendancy/sidebar'); // Add Bootstrap form classes
 
         // Charts
-        View::registerCustomView('::chart-box', $this->name() . '::chart-box'); // Increase thumbnail margin, update pedigree icon
         View::registerCustomView('::modules/lifespans-chart/chart', $this->name() . '::modules/lifespans-chart/chart'); // Adjust vertical positioning and set background based on gender class
-        View::registerCustomView('::modules/statistics-chart/page', $this->name() . '::modules/statistics-chart/page'); // Change tabs to nav pills
 
         // FAQ Page
         View::registerCustomView('::modules/faq/show', $this->name() . '::modules/faq/show'); // Adjust TOC and back-to-top anchor
@@ -94,17 +85,13 @@ class LightTheme extends MinimalTheme implements ModuleCustomInterface {
         View::registerCustomView('::lists/notes-table', $this->name() . '::lists/notes-table'); // Remove small and bordered classes from table
         View::registerCustomView('::lists/sources-table', $this->name() . '::lists/sources-table'); // Remove small class from table
 
-        
+
+        // My views
         View::registerCustomView('::lists/individuals-table', $this->name() . '::lists/individuals-table');
         View::registerCustomView('::lists/families-table', $this->name() . '::lists/families-table');
         View::registerCustomView('::individual-page-menu', $this->name() . '::individual-page-menu');
     }
 
-    /**
-     * Where does this module store its resources
-     *
-     * @return string
-     */
     public function resourcesFolder(): string { return __DIR__ . '/resources/'; }
     public function customResourcesFolder(): string { return Webtrees::ROOT_DIR . Webtrees::MODULES_PATH . 'light/resources/'; }
     public function customAssetUrl(string $asset): string
@@ -126,10 +113,8 @@ class LightTheme extends MinimalTheme implements ModuleCustomInterface {
      */
     public function stylesheets(): array
     {
-        $stylesheets = parent::stylesheets();
         $stylesheets[] = $this->customAssetUrl('css/argon.css');
         $stylesheets[] = $this->customAssetUrl('css/light.css');
-
         return $stylesheets;
     }
 

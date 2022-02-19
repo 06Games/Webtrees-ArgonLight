@@ -2,7 +2,10 @@
 
 use Fisharebest\Webtrees\DebugBar;
 use Fisharebest\Webtrees\FlashMessages;
+use Fisharebest\Webtrees\Http\RequestHandlers\AppleTouchIconPng;
+use Fisharebest\Webtrees\Http\RequestHandlers\BrowserconfigXml;
 use Fisharebest\Webtrees\Http\RequestHandlers\SearchQuickAction;
+use Fisharebest\Webtrees\Http\RequestHandlers\WebmanifestJson;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
@@ -30,9 +33,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="<?= e($meta_robots ?? 'noindex') ?>">
         <meta name="generator" content="<?= e(Webtrees::NAME) ?> <?= e(Webtrees::VERSION) ?>">
-        <?php if ($tree !== null) : ?>
-            <meta name="description" content="<?= e($tree->getPreference('META_DESCRIPTION')) ?>">
-        <?php endif ?>
+        <meta name="description" content="<?= $meta_description ?? '' ?>">
 
         <title>
             <?= strip_tags($title) ?>
@@ -41,47 +42,34 @@ use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
             <?php endif ?>
         </title>
 
+        <!--iOS-->
+        <link rel="apple-touch-icon" sizes="180x180" href="<?= e(route(AppleTouchIconPng::class)) ?>">
         <!--Generic favicons-->
         <link rel="icon" sizes="32x32" href="<?= e(asset('favicon-32.png')) ?>">
-        <link rel="icon" sizes="57x57" href="<?= e(asset('favicon-57.png')) ?>">
-        <link rel="icon" sizes="76x76" href="<?= e(asset('favicon-76.png')) ?>">
-        <link rel="icon" sizes="96x96" href="<?= e(asset('favicon-96.png')) ?>">
-        <link rel="icon" sizes="128x128" href="<?= e(asset('favicon-128.png')) ?>">
         <link rel="icon" sizes="192x192" href="<?= e(asset('favicon-192.png')) ?>">
-        <!--Android-->
-        <link rel="shortcut icon" sizes="196x196" href="<?= e(asset('favicon-196.png')) ?>">
-        <!--iOS-->
-        <link rel="apple-touch-icon" sizes="120x120" href="<?= e(asset('favicon-120.png')) ?>">
-        <link rel="apple-touch-icon" sizes="152x152" href="<?= e(asset('favicon-152.png')) ?>">
-        <link rel="apple-touch-icon" sizes="180x180" href="<?= e(asset('favicon-180.png')) ?>">
-        <!--Windows 8 IE 10-->
-        <meta name="msapplication-TileColor" content="#FFFFFF">
-        <meta name="msapplication-TileImage" content="<?= e(asset('favicon-144.png')) ?>">
-        <!--Windows 8.1 + IE11 and above-->
-        <meta name="msapplication-config" content="<?= e(asset('browserconfig.xml')) ?>">
+        <!--IE11/Edge-->
+        <meta name="msapplication-config" content="<?= e(route(BrowserconfigXml::class)) ?>">
 
-        <link rel="manifest" href="<?= e(asset('site.webmanifest')) ?>">
+        <link rel="manifest" href="<?= e(route(WebmanifestJson::class)) ?>">
 
+        <link rel="stylesheet" href="<?= e(asset('css/vendor.min.css')) ?>">
         <?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
-            <?php /* Remove Minimal styles */ if (!strpos($stylesheet, 'minimal')) : ?>
-                <link rel="stylesheet" href="<?= e($stylesheet) ?>">
-            <?php endif ?>
+            <link rel="stylesheet" href="<?= e($stylesheet) ?>">
         <?php endforeach ?>
 
         <?= View::stack('styles') ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-    return $module->headContent();
+            return $module->headContent();
         })->implode('') ?>
-
-        <?= DebugBar::renderHead() ?>
     </head>
 
     <body class="wt-global wt-theme-<?= e(app(ModuleThemeInterface::class)->name()) ?> wt-route-<?= e(app(ServerRequestInterface::class)->getAttribute('route')->name) ?>">
         <header class="wt-header-wrapper d-print-none">
             <div class="wt-accessibility-links position-fixed">
-                <a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
-                    <?= /* I18N: Skip over the headers and menus, to the main content of the page */ I18N::translate('Skip to content') ?>
+                <a class="visually-hidden visually-hidden-focusable btn btn-info btn-sm" href="#content">
+                    <?= /* I18N: Skip over the headers and menus, to the main content of the page */
+                    I18N::translate('Skip to content') ?>
                 </a>
             </div>
             <div id="primary-header">
@@ -117,7 +105,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
                                                     </div>
                                                 </div>
                                             </form>
-                                        </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
@@ -144,12 +132,10 @@ use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
             </div>
         </main>
 
-        <footer class="wt-footers d-print-none" id="site-footer">
-            <div class="container">
-                <?= app(ModuleService::class)->findByInterface(ModuleFooterInterface::class)->map(static function (ModuleFooterInterface $module) use ($request): string {
-                    return $module->getFooter($request);
-                })->implode('') ?>
-            </div>
+        <footer class="container-lg wt-footers d-print-none">
+            <?= app(ModuleService::class)->findByInterface(ModuleFooterInterface::class)->map(static function (ModuleFooterInterface $module) use ($request): string {
+                return $module->getFooter($request);
+            })->implode('') ?>
         </footer>
 
         <script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
@@ -161,29 +147,29 @@ use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
                 // Enable colorbox for images
                 $("a[type^=image].gallery").colorbox({
                     // Don't scroll window with document
-                    fixed:          true,
-                    width:          "85%",
-                    height:         "85%",
-                    current:        "",
-                    previous:       '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
-                    next:           '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
+                    fixed: true,
+                    width: "85%",
+                    height: "85%",
+                    current: "",
+                    previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
+                    next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
                     slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
-                    slideshowStop:  '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
-                    close:          '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
-                    title:          function () {
+                    slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
+                    close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
+                    title: function () {
                         return this.dataset.title;
                     },
-                    photo:          true,
-                    rel:            "gallery", // Turn all images on the page into a slideshow
-                    slideshow:      true,
-                    slideshowAuto:  false,
+                    photo: true,
+                    rel: "gallery", // Turn all images on the page into a slideshow
+                    slideshow: true,
+                    slideshowAuto: false,
                     // Add wheelzoom to the displayed image
-                    onComplete:     function () {
+                    onComplete: function () {
                         // Disable click on image triggering next image
                         // https://github.com/jackmoore/colorbox/issues/668
                         $(".cboxPhoto").unbind("click");
-
-                        wheelzoom(document.querySelectorAll(".cboxPhoto"));
+                        // Enable wheel/pinch zooming
+                        $('.cboxPhoto').wrap("<pinch-zoom></pinch-zoom>");
                     }
                 });
             });
@@ -192,13 +178,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
         <?= View::stack('javascript') ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-    return $module->bodyContent();
+            return $module->bodyContent();
         })->implode('') ?>
-
-        <?= DebugBar::render() ?>
-
-        <?php foreach (app(ModuleThemeInterface::class)->scripts() as $script) : ?>
-            <script src="<?= e($script) ?>"></script>
-        <?php endforeach ?>
     </body>
 </html>
