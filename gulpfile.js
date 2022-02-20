@@ -1,40 +1,49 @@
-var gulp = require('gulp');
-var replace = require('gulp-replace');
+/************************************************
+                Argon Light Theme
+             Originally made by jchue
+  Under the Internet Systems Consortium License
+  https://github.com/jchue/argon-webtrees-theme
 
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
-const url = require("postcss-url");
+       Forked and maintained by Evan Galli
+             Under the same licence
+ https://github.com/06Games/Webtrees-ArgonLight
+***********************************************/
 
-var babel = require('gulp-babel');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
 
-var del = require('del');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+
+const del = require('del');
 
 /* Sass/CSS */
 
 function scss() {
-    // Inline assets using base64 encoding
-    const options = {
-        url: 'inline'
-    };
-
-    var plugins = [
-        autoprefixer(),
-        //cssnano(),
-        url(options)
+    const plugins = [
+        require('autoprefixer'),
+        require("postcss-url")({url: 'inline'}), // Inline assets using base64 encoding
+        require('postcss-prettify')
     ];
 
+    // noinspection JSCheckFunctionSignatures
     return gulp.src('src/scss/theme.scss')
-    .pipe(sass())
-    .pipe(postcss(plugins))
-    .pipe(gulp.dest('resources/css'));
+        .pipe(sass())
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest('resources/css'))
+        .pipe(postcss([ require("cssnano") ]))
+        .pipe(rename(function(path) {
+            path.extname = ".min.css";
+        }))
+        .pipe(gulp.dest('resources/css'))
 }
 
 function cssBuild() {
     return gulp.src('resources/css/**/*')
-    .pipe(gulp.dest('dist/resources/css/'));
+        .pipe(gulp.dest('dist/resources/css/'));
 }
 
 /* JavaScript */

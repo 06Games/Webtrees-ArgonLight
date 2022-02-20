@@ -1,7 +1,10 @@
 {
     "name": "evang/light-theme",
-    "description": "",
-    "license": "GPL-3.0-or-later",
+    "description": "A light theme for Webtrees based on Argon Design System",
+    "homepage": "https://github.com/06Games/Webtrees-ArgonLight",
+    "readme": "./README.md",
+    "version": "1.1.0",
+    "license": "ISC",
     "type": "webtrees-module",
     "keywords": [
         "webtrees",
@@ -10,7 +13,13 @@
     "authors": [
         {
             "name": "Evan Galli",
-            "role": "Developer"
+            "role": "Developer",
+            "homepage": "https://github.com/06Games"
+        },
+        {
+            "name": "jchue",
+            "role": "Initial Developer",
+            "homepage": "https://github.com/jchue"
         }
     ],
     "autoload": {
