@@ -1,5 +1,14 @@
 <?php
-//Based on https://github.com/jchue/argon-webtrees-theme
+/************************************************
+                Argon Light Theme
+             Originally made by jchue
+  Under the Internet Systems Consortium License
+  https://github.com/jchue/argon-webtrees-theme
+
+       Forked and maintained by Evan Galli
+             Under the same licence
+ https://github.com/06Games/Webtrees-ArgonLight
+***********************************************/
 
 declare(strict_types=1);
 
@@ -16,10 +25,7 @@ use Fisharebest\Webtrees\View;
 class LightTheme extends AbstractModule implements ModuleCustomInterface, ModuleThemeInterface {
     use ModuleCustomTrait, ModuleThemeTrait;
 
-    /**
-     * @return string
-     */
-    public function title(): string { return 'Light'; }
+    public function title(): string { return 'Argon Light'; }
 
     public function parameter($parameter_name)
     {
@@ -113,8 +119,7 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function stylesheets(): array
     {
-        $stylesheets[] = $this->customAssetUrl('css/argon.css');
-        $stylesheets[] = $this->customAssetUrl('css/light.css');
+        $stylesheets[] = $this->customAssetUrl('css/theme.css');
         return $stylesheets;
     }
 
@@ -123,10 +128,5 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
      *
      * @return array
      */
-    public function scripts(): array
-    {
-        $scripts[] = $this->customAssetUrl('js/script.js');
-
-        return $scripts;
-    }
+    public function scripts(): array { return []; }
 }

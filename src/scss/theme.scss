@@ -1,3 +1,14 @@
+/************************************************
+                Argon Light Theme
+             Originally made by jchue
+  Under the Internet Systems Consortium License
+  https://github.com/jchue/argon-webtrees-theme
+
+       Forked and maintained by Evan Galli
+             Under the same licence
+ https://github.com/06Games/Webtrees-ArgonLight
+***********************************************/
+
 $card-border-width: 0.188rem;
 $card-spacer-y: 0.5rem;
 $card-spacer-x: 1rem;
@@ -12,9 +23,20 @@ $u-color: #fff;
 $box-shadow-xs: 0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
 
 @import "argon/argon";
+@import "argon/bootstrap/spinners";
 @import "select2/core"; // Custom selection dropdowns
 @import "leaflet/leaflet"; // Maps
 @import "beautify-marker/beautify-marker"; // Map markers
+
+body{
+    min-width: 350px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 75vw;
+    }
+}
 
 .markdown p {
     white-space: pre-wrap;
@@ -253,13 +275,36 @@ select {
 /* Icons */
 
 // Accordion toggles
-[data-toggle="collapse"][aria-expanded="false"] > .wt-icon-collapse,
-[data-toggle="collapse"][aria-expanded="true"] > .wt-icon-expand {
-    display: none;
+[dir] .accordion-header {
+    .wt-icon-collapse,
+    .wt-icon-expand {
+        display: none;
+    }
+
+    .accordion-button{
+        &:focus{
+            box-shadow: none;
+        }
+        &:not(.collapsed) {
+            &,
+            &:focus {
+                border-color: #e7f1ff;
+                box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+            }
+        }
+    }
 }
 
-.icon-loading-small {
-    content: url("data:image/gif;base64,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");
+// Spinner
+[dir] .wt-ajax-load:empty{
+    height: 2rem;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+
+        @extend .spinner-border;
+    }
 }
 
 .icon-minus {
@@ -419,11 +464,11 @@ select {
     }
 }
 
-#primary-header {
+[dir] #primary-header {
     background-color: theme-color("default");
     box-shadow: 0 10px 20px rgba(50, 50, 93, .2);
     left: 0;
-    padding: 1.25rem 0;
+    padding: 5px;
     right: 0;
     top: 0;
     z-index: 1052;
@@ -433,6 +478,8 @@ select {
 
         .wt-site-title {
             color: theme-color("white");
+            //flex-grow: 0;
+            //order: 0;
             flex-basis: content;
             font-size: 2rem;
             font-weight: 800;
@@ -447,23 +494,36 @@ select {
             }
         }
 
-        .wt-primary-navigation {
-            flex-basis: content;
-            flex-grow: 1;
+        .navbar {
+            padding: 0.25rem 0.5rem;
 
-            ul.wt-genealogy-menu {
-                justify-content: flex-end;
-
+            ul {
                 & > li {
                     & > a {
                         color: theme-color("white");
-                        padding: 0.75rem;
+                        padding: 0.75rem 0.25rem;
 
                         &:hover {
                             color: darken(theme-color("white"), 20%);
                         }
                     }
                 }
+            }
+
+            .navbar-nav {
+                flex-grow: 1;
+                @media (max-width: 991.8px) {
+                    .nav-item > .dropdown-menu {
+                        background-color: #9991;
+                    }
+                }
+            }
+
+            // Btn to toggle menu on small screens
+            .navbar-toggler {
+                color: white;
+                padding: 0;
+                box-shadow: none;
             }
         }
     }
@@ -823,6 +883,10 @@ div[id^=caldiv] {
 /*****
  * Individual Page
  *****/
+
+[dir] .img-thumbnail {
+    text-align: center;
+}
 
 /* Families Tab */
 
@@ -1262,6 +1326,11 @@ table.tv_tree {
 .wt-chart {
     overflow-x: auto;
     overflow-y: hidden;
+}
+
+//Compact the options of the charts
+.wt-page-options .form-group {
+    margin-bottom: 0.25rem;
 }
 
 // Also includes Family page (since it utilizes many of the same components but lacks a chart wrapper class)

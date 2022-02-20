@@ -78,7 +78,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
                         <?php if ($tree !== null) : ?>
                             <nav class="navbar navbar-expand-xl w-100">
                                 <h1 class="wt-site-title navbar-brand"><a href="<?= e(route(TreePage::class, ['tree' => $tree->name()])) ?>"><?= e($tree->title()) ?></a></h1>
-                                <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#header-navbar" aria-controls="header-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-navbar" aria-controls="header-navbar" aria-expanded="false" aria-label="Toggle navigation">
                                     <i class="fas fa-bars"></i>
                                 </button>
                                 <div class="collapse navbar-collapse" id="header-navbar">
