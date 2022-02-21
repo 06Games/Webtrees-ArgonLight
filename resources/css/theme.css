@@ -2489,6 +2489,7 @@ input.is-invalid[type=text] ~ .invalid-feedback,
     display: inline-block;
   }
   .form-inline .input-group,
+.form-inline .hideShowPassword-wrapper,
     .form-inline .custom-select,
     .form-inline select {
     width: auto;
@@ -2517,6 +2518,8 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 }
 
 [dir] .btn,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle,
 [dir] #cboxClose,
 [dir] #cboxNext,
 [dir] #cboxPrevious,
@@ -2541,6 +2544,8 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 
 @media (prefers-reduced-motion: reduce) {
   [dir] .btn,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle,
 [dir] #cboxClose,
 [dir] #cboxNext,
 [dir] #cboxPrevious,
@@ -2550,6 +2555,8 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 }
 
 [dir] .btn:hover,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:hover,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:hover,
 [dir] #cboxClose:hover,
 [dir] #cboxNext:hover,
 [dir] #cboxPrevious:hover,
@@ -2559,11 +2566,15 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 }
 
 [dir] .btn:focus,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:focus,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:focus,
 [dir] #cboxClose:focus,
 [dir] #cboxNext:focus,
 [dir] #cboxPrevious:focus,
 [dir] #cboxSlideshow:focus,
 [dir] .btn.focus,
+[dir] .hideShowPassword-wrapper .focus.hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .focus.hideShowPassword-toggle,
 [dir] .focus#cboxClose,
 [dir] .focus#cboxNext,
 [dir] .focus#cboxPrevious,
@@ -2573,11 +2584,15 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 }
 
 [dir] .btn.disabled,
+[dir] .hideShowPassword-wrapper .disabled.hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .disabled.hideShowPassword-toggle,
 [dir] .disabled#cboxClose,
 [dir] .disabled#cboxNext,
 [dir] .disabled#cboxPrevious,
 [dir] .disabled#cboxSlideshow,
 [dir] .btn:disabled,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:disabled,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:disabled,
 [dir] #cboxClose:disabled,
 [dir] #cboxNext:disabled,
 [dir] #cboxPrevious:disabled,
@@ -2587,11 +2602,15 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 }
 
 [dir] .btn:not(:disabled):not(.disabled):active,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled):active,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled):active,
 [dir] #cboxClose:not(:disabled):not(.disabled):active,
 [dir] #cboxNext:not(:disabled):not(.disabled):active,
 [dir] #cboxPrevious:not(:disabled):not(.disabled):active,
 [dir] #cboxSlideshow:not(:disabled):not(.disabled):active,
 [dir] .btn:not(:disabled):not(.disabled).active,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled).active,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled).active,
 [dir] #cboxClose:not(:disabled):not(.disabled).active,
 [dir] #cboxNext:not(:disabled):not(.disabled).active,
 [dir] #cboxPrevious:not(:disabled):not(.disabled).active,
@@ -2600,11 +2619,15 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 }
 
 [dir] .btn:not(:disabled):not(.disabled):active:focus,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled):active:focus,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled):active:focus,
 [dir] #cboxClose:not(:disabled):not(.disabled):active:focus,
 [dir] #cboxNext:not(:disabled):not(.disabled):active:focus,
 [dir] #cboxPrevious:not(:disabled):not(.disabled):active:focus,
 [dir] #cboxSlideshow:not(:disabled):not(.disabled):active:focus,
 [dir] .btn:not(:disabled):not(.disabled).active:focus,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled).active:focus,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled).active:focus,
 [dir] #cboxClose:not(:disabled):not(.disabled).active:focus,
 [dir] #cboxNext:not(:disabled):not(.disabled).active:focus,
 [dir] #cboxPrevious:not(:disabled):not(.disabled).active:focus,
@@ -2613,11 +2636,14 @@ input.is-invalid[type=text] ~ .invalid-feedback,
 }
 
 a.btn.disabled,
+.hideShowPassword-wrapper a.disabled.hideShowPassword-toggle,
 [dir] a.disabled#cboxClose,
 [dir] a.disabled#cboxNext,
 [dir] a.disabled#cboxPrevious,
 [dir] a.disabled#cboxSlideshow,
 fieldset:disabled a.btn,
+fieldset:disabled .hideShowPassword-wrapper a.hideShowPassword-toggle,
+.hideShowPassword-wrapper fieldset:disabled a.hideShowPassword-toggle,
 fieldset:disabled [dir] a#cboxClose,
 [dir] fieldset:disabled a#cboxClose,
 fieldset:disabled [dir] a#cboxNext,
@@ -2668,42 +2694,66 @@ fieldset:disabled [dir] a#cboxSlideshow,
   box-shadow: none, 0 0 0 0 rgba(94, 114, 228, 0.5);
 }
 
-[dir] .btn-secondary {
+[dir] .btn-secondary,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-[dir] .btn-secondary:hover {
+[dir] .btn-secondary:hover,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:hover,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:hover {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
 }
 
 [dir] .btn-secondary:focus,
-[dir] .btn-secondary.focus {
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:focus,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:focus,
+[dir] .btn-secondary.focus,
+[dir] .hideShowPassword-wrapper .focus.hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .focus.hideShowPassword-toggle {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(244, 245, 247, 0.5);
 }
 
 [dir] .btn-secondary.disabled,
-[dir] .btn-secondary:disabled {
+[dir] .hideShowPassword-wrapper .disabled.hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .disabled.hideShowPassword-toggle,
+[dir] .btn-secondary:disabled,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:disabled,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:disabled {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
 }
 
 [dir] .btn-secondary:not(:disabled):not(.disabled):active,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled):active,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled):active,
 [dir] .btn-secondary:not(:disabled):not(.disabled).active,
-  .show > [dir] .btn-secondary.dropdown-toggle {
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled).active,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled).active,
+  .show > [dir] .btn-secondary.dropdown-toggle,
+  .show > [dir] .hideShowPassword-wrapper .dropdown-toggle.hideShowPassword-toggle,
+  .hideShowPassword-wrapper .show > [dir] .dropdown-toggle.hideShowPassword-toggle {
   color: #212529;
   background-color: #d6dae2;
   border-color: #f4f5f7;
 }
 
 [dir] .btn-secondary:not(:disabled):not(.disabled):active:focus,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled):active:focus,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled):active:focus,
 [dir] .btn-secondary:not(:disabled):not(.disabled).active:focus,
-    .show > [dir] .btn-secondary.dropdown-toggle:focus {
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:disabled):not(.disabled).active:focus,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:disabled):not(.disabled).active:focus,
+    .show > [dir] .btn-secondary.dropdown-toggle:focus,
+    .show > [dir] .hideShowPassword-wrapper .dropdown-toggle.hideShowPassword-toggle:focus,
+    .hideShowPassword-wrapper .show > [dir] .dropdown-toggle.hideShowPassword-toggle:focus {
   box-shadow: none, 0 0 0 0 rgba(244, 245, 247, 0.5);
 }
 
@@ -3626,6 +3676,8 @@ fieldset:disabled [dir] a#cboxSlideshow,
 
 [dir] .btn-lg,
 [dir] .btn-group-lg > .btn,
+[dir] .hideShowPassword-wrapper .btn-group-lg > .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .btn-group-lg > .hideShowPassword-toggle,
 [dir] .btn-group-lg > #cboxClose,
 [dir] .btn-group-lg > #cboxNext,
 [dir] .btn-group-lg > #cboxPrevious,
@@ -3638,6 +3690,8 @@ fieldset:disabled [dir] a#cboxSlideshow,
 
 [dir] .btn-sm,
 [dir] .btn-group-sm > .btn,
+[dir] .hideShowPassword-wrapper .btn-group-sm > .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .btn-group-sm > .hideShowPassword-toggle,
 [dir] #cboxClose,
 [dir] #cboxNext,
 [dir] #cboxPrevious,
@@ -4015,11 +4069,13 @@ input[type="button"].btn-block {
 }
 
 .btn-group > .btn,
+.hideShowPassword-wrapper .btn-group > .hideShowPassword-toggle,
 [dir] .btn-group > #cboxClose,
 [dir] .btn-group > #cboxNext,
 [dir] .btn-group > #cboxPrevious,
 [dir] .btn-group > #cboxSlideshow,
   .btn-group-vertical > .btn,
+  .hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle,
   [dir] .btn-group-vertical > #cboxClose,
   [dir] .btn-group-vertical > #cboxNext,
   [dir] .btn-group-vertical > #cboxPrevious,
@@ -4029,11 +4085,13 @@ input[type="button"].btn-block {
 }
 
 .btn-group > .btn:hover,
+.hideShowPassword-wrapper .btn-group > .hideShowPassword-toggle:hover,
 [dir] .btn-group > #cboxClose:hover,
 [dir] .btn-group > #cboxNext:hover,
 [dir] .btn-group > #cboxPrevious:hover,
 [dir] .btn-group > #cboxSlideshow:hover,
     .btn-group-vertical > .btn:hover,
+    .hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle:hover,
     [dir] .btn-group-vertical > #cboxClose:hover,
     [dir] .btn-group-vertical > #cboxNext:hover,
     [dir] .btn-group-vertical > #cboxPrevious:hover,
@@ -4042,31 +4100,37 @@ input[type="button"].btn-block {
 }
 
 .btn-group > .btn:focus,
+.hideShowPassword-wrapper .btn-group > .hideShowPassword-toggle:focus,
 [dir] .btn-group > #cboxClose:focus,
 [dir] .btn-group > #cboxNext:focus,
 [dir] .btn-group > #cboxPrevious:focus,
 [dir] .btn-group > #cboxSlideshow:focus,
 .btn-group > .btn:active,
+.hideShowPassword-wrapper .btn-group > .hideShowPassword-toggle:active,
 [dir] .btn-group > #cboxClose:active,
 [dir] .btn-group > #cboxNext:active,
 [dir] .btn-group > #cboxPrevious:active,
 [dir] .btn-group > #cboxSlideshow:active,
 .btn-group > .btn.active,
+.hideShowPassword-wrapper .btn-group > .active.hideShowPassword-toggle,
 [dir] .btn-group > .active#cboxClose,
 [dir] .btn-group > .active#cboxNext,
 [dir] .btn-group > .active#cboxPrevious,
 [dir] .btn-group > .active#cboxSlideshow,
     .btn-group-vertical > .btn:focus,
+    .hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle:focus,
     [dir] .btn-group-vertical > #cboxClose:focus,
     [dir] .btn-group-vertical > #cboxNext:focus,
     [dir] .btn-group-vertical > #cboxPrevious:focus,
     [dir] .btn-group-vertical > #cboxSlideshow:focus,
     .btn-group-vertical > .btn:active,
+    .hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle:active,
     [dir] .btn-group-vertical > #cboxClose:active,
     [dir] .btn-group-vertical > #cboxNext:active,
     [dir] .btn-group-vertical > #cboxPrevious:active,
     [dir] .btn-group-vertical > #cboxSlideshow:active,
     .btn-group-vertical > .btn.active,
+    .hideShowPassword-wrapper .btn-group-vertical > .active.hideShowPassword-toggle,
     [dir] .btn-group-vertical > .active#cboxClose,
     [dir] .btn-group-vertical > .active#cboxNext,
     [dir] .btn-group-vertical > .active#cboxPrevious,
@@ -4080,11 +4144,13 @@ input[type="button"].btn-block {
   justify-content: flex-start;
 }
 
-.btn-toolbar .input-group {
+.btn-toolbar .input-group,
+.btn-toolbar .hideShowPassword-wrapper {
   width: auto;
 }
 
 .btn-group > .btn:not(:first-child),
+.hideShowPassword-wrapper .btn-group > .hideShowPassword-toggle:not(:first-child),
 [dir] .btn-group > #cboxClose:not(:first-child),
 [dir] .btn-group > #cboxNext:not(:first-child),
 [dir] .btn-group > #cboxPrevious:not(:first-child),
@@ -4094,11 +4160,13 @@ input[type="button"].btn-block {
 }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.hideShowPassword-wrapper .btn-group > .hideShowPassword-toggle:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group > #cboxClose:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group > #cboxNext:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group > #cboxPrevious:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group > #cboxSlideshow:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
+.hideShowPassword-wrapper .btn-group > .btn-group:not(:last-child) > .hideShowPassword-toggle,
 [dir] .btn-group > .btn-group:not(:last-child) > #cboxClose,
 [dir] .btn-group > .btn-group:not(:last-child) > #cboxNext,
 [dir] .btn-group > .btn-group:not(:last-child) > #cboxPrevious,
@@ -4108,11 +4176,13 @@ input[type="button"].btn-block {
 }
 
 .btn-group > .btn:not(:first-child),
+.hideShowPassword-wrapper .btn-group > .hideShowPassword-toggle:not(:first-child),
 [dir] .btn-group > #cboxClose:not(:first-child),
 [dir] .btn-group > #cboxNext:not(:first-child),
 [dir] .btn-group > #cboxPrevious:not(:first-child),
 [dir] .btn-group > #cboxSlideshow:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
+.hideShowPassword-wrapper .btn-group > .btn-group:not(:first-child) > .hideShowPassword-toggle,
 [dir] .btn-group > .btn-group:not(:first-child) > #cboxClose,
 [dir] .btn-group > .btn-group:not(:first-child) > #cboxNext,
 [dir] .btn-group > .btn-group:not(:first-child) > #cboxPrevious,
@@ -4138,6 +4208,7 @@ input[type="button"].btn-block {
 
 .btn-sm + .dropdown-toggle-split,
 .btn-group-sm > .btn + .dropdown-toggle-split,
+.hideShowPassword-wrapper .btn-group-sm > .hideShowPassword-toggle + .dropdown-toggle-split,
 [dir] .btn-group-sm > #cboxClose + .dropdown-toggle-split,
 [dir] .btn-group-sm > #cboxNext + .dropdown-toggle-split,
 [dir] .btn-group-sm > #cboxPrevious + .dropdown-toggle-split,
@@ -4152,6 +4223,7 @@ input[type="button"].btn-block {
 
 .btn-lg + .dropdown-toggle-split,
 .btn-group-lg > .btn + .dropdown-toggle-split,
+.hideShowPassword-wrapper .btn-group-lg > .hideShowPassword-toggle + .dropdown-toggle-split,
 [dir] .btn-group-lg > #cboxClose + .dropdown-toggle-split,
 [dir] .btn-group-lg > #cboxNext + .dropdown-toggle-split,
 [dir] .btn-group-lg > #cboxPrevious + .dropdown-toggle-split,
@@ -4175,6 +4247,7 @@ input[type="button"].btn-block {
 }
 
 .btn-group-vertical > .btn,
+  .hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle,
   [dir] .btn-group-vertical > #cboxClose,
   [dir] .btn-group-vertical > #cboxNext,
   [dir] .btn-group-vertical > #cboxPrevious,
@@ -4184,6 +4257,7 @@ input[type="button"].btn-block {
 }
 
 .btn-group-vertical > .btn:not(:first-child),
+.hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle:not(:first-child),
 [dir] .btn-group-vertical > #cboxClose:not(:first-child),
 [dir] .btn-group-vertical > #cboxNext:not(:first-child),
 [dir] .btn-group-vertical > #cboxPrevious:not(:first-child),
@@ -4193,11 +4267,13 @@ input[type="button"].btn-block {
 }
 
 .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group-vertical > #cboxClose:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group-vertical > #cboxNext:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group-vertical > #cboxPrevious:not(:last-child):not(.dropdown-toggle),
 [dir] .btn-group-vertical > #cboxSlideshow:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  .hideShowPassword-wrapper .btn-group-vertical > .btn-group:not(:last-child) > .hideShowPassword-toggle,
   [dir] .btn-group-vertical > .btn-group:not(:last-child) > #cboxClose,
   [dir] .btn-group-vertical > .btn-group:not(:last-child) > #cboxNext,
   [dir] .btn-group-vertical > .btn-group:not(:last-child) > #cboxPrevious,
@@ -4207,11 +4283,13 @@ input[type="button"].btn-block {
 }
 
 .btn-group-vertical > .btn:not(:first-child),
+.hideShowPassword-wrapper .btn-group-vertical > .hideShowPassword-toggle:not(:first-child),
 [dir] .btn-group-vertical > #cboxClose:not(:first-child),
 [dir] .btn-group-vertical > #cboxNext:not(:first-child),
 [dir] .btn-group-vertical > #cboxPrevious:not(:first-child),
 [dir] .btn-group-vertical > #cboxSlideshow:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  .hideShowPassword-wrapper .btn-group-vertical > .btn-group:not(:first-child) > .hideShowPassword-toggle,
   [dir] .btn-group-vertical > .btn-group:not(:first-child) > #cboxClose,
   [dir] .btn-group-vertical > .btn-group:not(:first-child) > #cboxNext,
   [dir] .btn-group-vertical > .btn-group:not(:first-child) > #cboxPrevious,
@@ -4221,11 +4299,13 @@ input[type="button"].btn-block {
 }
 
 .btn-group-toggle > .btn,
+.hideShowPassword-wrapper .btn-group-toggle > .hideShowPassword-toggle,
 [dir] .btn-group-toggle > #cboxClose,
 [dir] .btn-group-toggle > #cboxNext,
 [dir] .btn-group-toggle > #cboxPrevious,
 [dir] .btn-group-toggle > #cboxSlideshow,
 .btn-group-toggle > .btn-group > .btn,
+.hideShowPassword-wrapper .btn-group-toggle > .btn-group > .hideShowPassword-toggle,
 [dir] .btn-group-toggle > .btn-group > #cboxClose,
 [dir] .btn-group-toggle > .btn-group > #cboxNext,
 [dir] .btn-group-toggle > .btn-group > #cboxPrevious,
@@ -4234,21 +4314,25 @@ input[type="button"].btn-block {
 }
 
 .btn-group-toggle > .btn input[type="radio"],
+.hideShowPassword-wrapper .btn-group-toggle > .hideShowPassword-toggle input[type="radio"],
 [dir] .btn-group-toggle > #cboxClose input[type="radio"],
 [dir] .btn-group-toggle > #cboxNext input[type="radio"],
 [dir] .btn-group-toggle > #cboxPrevious input[type="radio"],
 [dir] .btn-group-toggle > #cboxSlideshow input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  .hideShowPassword-wrapper .btn-group-toggle > .hideShowPassword-toggle input[type="checkbox"],
   [dir] .btn-group-toggle > #cboxClose input[type="checkbox"],
   [dir] .btn-group-toggle > #cboxNext input[type="checkbox"],
   [dir] .btn-group-toggle > #cboxPrevious input[type="checkbox"],
   [dir] .btn-group-toggle > #cboxSlideshow input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
+  .hideShowPassword-wrapper .btn-group-toggle > .btn-group > .hideShowPassword-toggle input[type="radio"],
   [dir] .btn-group-toggle > .btn-group > #cboxClose input[type="radio"],
   [dir] .btn-group-toggle > .btn-group > #cboxNext input[type="radio"],
   [dir] .btn-group-toggle > .btn-group > #cboxPrevious input[type="radio"],
   [dir] .btn-group-toggle > .btn-group > #cboxSlideshow input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  .hideShowPassword-wrapper .btn-group-toggle > .btn-group > .hideShowPassword-toggle input[type="checkbox"],
   [dir] .btn-group-toggle > .btn-group > #cboxClose input[type="checkbox"],
   [dir] .btn-group-toggle > .btn-group > #cboxNext input[type="checkbox"],
   [dir] .btn-group-toggle > .btn-group > #cboxPrevious input[type="checkbox"],
@@ -4258,7 +4342,8 @@ input[type="button"].btn-block {
   pointer-events: none;
 }
 
-.input-group {
+.input-group,
+.hideShowPassword-wrapper {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -4267,13 +4352,21 @@ input[type="button"].btn-block {
 }
 
 .input-group > .form-control,
+.hideShowPassword-wrapper > .form-control,
 .input-group > input[type=text],
+.hideShowPassword-wrapper > input[type=text],
 .select2-container .input-group > .select2-selection--single,
+.select2-container .hideShowPassword-wrapper > .select2-selection--single,
 .select2-dropdown .input-group > .select2-search__field,
+.select2-dropdown .hideShowPassword-wrapper > .select2-search__field,
   .input-group > .form-control-plaintext,
+  .hideShowPassword-wrapper > .form-control-plaintext,
   .input-group > .custom-select,
+  .hideShowPassword-wrapper > .custom-select,
   .input-group > select,
-  .input-group > .custom-file {
+  .hideShowPassword-wrapper > select,
+  .input-group > .custom-file,
+  .hideShowPassword-wrapper > .custom-file {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
@@ -4281,112 +4374,194 @@ input[type="button"].btn-block {
 }
 
 .input-group > .form-control + .form-control,
+.hideShowPassword-wrapper > .form-control + .form-control,
 .input-group > input[type=text] + .form-control,
+.hideShowPassword-wrapper > input[type=text] + .form-control,
 .select2-container .input-group > .select2-selection--single + .form-control,
+.select2-container .hideShowPassword-wrapper > .select2-selection--single + .form-control,
 .select2-dropdown .input-group > .select2-search__field + .form-control,
+.select2-dropdown .hideShowPassword-wrapper > .select2-search__field + .form-control,
 .input-group > .form-control + input[type=text],
+.hideShowPassword-wrapper > .form-control + input[type=text],
 .input-group > input[type=text] + input[type=text],
+.hideShowPassword-wrapper > input[type=text] + input[type=text],
 .select2-container .input-group > .select2-selection--single + input[type=text],
+.select2-container .hideShowPassword-wrapper > .select2-selection--single + input[type=text],
 .select2-dropdown .input-group > .select2-search__field + input[type=text],
+.select2-dropdown .hideShowPassword-wrapper > .select2-search__field + input[type=text],
 .select2-container .input-group > .form-control + .select2-selection--single,
+.select2-container .hideShowPassword-wrapper > .form-control + .select2-selection--single,
 .select2-container .input-group > input[type=text] + .select2-selection--single,
+.select2-container .hideShowPassword-wrapper > input[type=text] + .select2-selection--single,
 .select2-container .input-group > .select2-selection--single + .select2-selection--single,
+.select2-container .hideShowPassword-wrapper > .select2-selection--single + .select2-selection--single,
 .select2-dropdown .select2-container .input-group > .select2-search__field + .select2-selection--single,
 .select2-container .select2-dropdown .input-group > .select2-search__field + .select2-selection--single,
+.select2-dropdown .select2-container .hideShowPassword-wrapper > .select2-search__field + .select2-selection--single,
+.select2-container .select2-dropdown .hideShowPassword-wrapper > .select2-search__field + .select2-selection--single,
 .select2-dropdown .input-group > .form-control + .select2-search__field,
+.select2-dropdown .hideShowPassword-wrapper > .form-control + .select2-search__field,
 .select2-dropdown .input-group > input[type=text] + .select2-search__field,
+.select2-dropdown .hideShowPassword-wrapper > input[type=text] + .select2-search__field,
 .select2-container .select2-dropdown .input-group > .select2-selection--single + .select2-search__field,
 .select2-dropdown .select2-container .input-group > .select2-selection--single + .select2-search__field,
+.select2-container .select2-dropdown .hideShowPassword-wrapper > .select2-selection--single + .select2-search__field,
+.select2-dropdown .select2-container .hideShowPassword-wrapper > .select2-selection--single + .select2-search__field,
 .select2-dropdown .input-group > .select2-search__field + .select2-search__field,
+.select2-dropdown .hideShowPassword-wrapper > .select2-search__field + .select2-search__field,
     .input-group > .form-control + .custom-select,
+    .hideShowPassword-wrapper > .form-control + .custom-select,
     .input-group > input[type=text] + .custom-select,
+    .hideShowPassword-wrapper > input[type=text] + .custom-select,
     .select2-container .input-group > .select2-selection--single + .custom-select,
+    .select2-container .hideShowPassword-wrapper > .select2-selection--single + .custom-select,
     .select2-dropdown .input-group > .select2-search__field + .custom-select,
+    .select2-dropdown .hideShowPassword-wrapper > .select2-search__field + .custom-select,
     .input-group > .form-control + select,
+    .hideShowPassword-wrapper > .form-control + select,
     .input-group > input[type=text] + select,
+    .hideShowPassword-wrapper > input[type=text] + select,
     .select2-container .input-group > .select2-selection--single + select,
+    .select2-container .hideShowPassword-wrapper > .select2-selection--single + select,
     .select2-dropdown .input-group > .select2-search__field + select,
+    .select2-dropdown .hideShowPassword-wrapper > .select2-search__field + select,
     .input-group > .form-control + .custom-file,
+    .hideShowPassword-wrapper > .form-control + .custom-file,
     .input-group > input[type=text] + .custom-file,
+    .hideShowPassword-wrapper > input[type=text] + .custom-file,
     .select2-container .input-group > .select2-selection--single + .custom-file,
+    .select2-container .hideShowPassword-wrapper > .select2-selection--single + .custom-file,
     .select2-dropdown .input-group > .select2-search__field + .custom-file,
+    .select2-dropdown .hideShowPassword-wrapper > .select2-search__field + .custom-file,
     .input-group > .form-control-plaintext + .form-control,
+    .hideShowPassword-wrapper > .form-control-plaintext + .form-control,
     .input-group > .form-control-plaintext + input[type=text],
+    .hideShowPassword-wrapper > .form-control-plaintext + input[type=text],
     .select2-container .input-group > .form-control-plaintext + .select2-selection--single,
+    .select2-container .hideShowPassword-wrapper > .form-control-plaintext + .select2-selection--single,
     .select2-dropdown .input-group > .form-control-plaintext + .select2-search__field,
+    .select2-dropdown .hideShowPassword-wrapper > .form-control-plaintext + .select2-search__field,
     .input-group > .form-control-plaintext + .custom-select,
+    .hideShowPassword-wrapper > .form-control-plaintext + .custom-select,
     .input-group > .form-control-plaintext + select,
+    .hideShowPassword-wrapper > .form-control-plaintext + select,
     .input-group > .form-control-plaintext + .custom-file,
+    .hideShowPassword-wrapper > .form-control-plaintext + .custom-file,
     .input-group > .custom-select + .form-control,
+    .hideShowPassword-wrapper > .custom-select + .form-control,
     .input-group > select + .form-control,
+    .hideShowPassword-wrapper > select + .form-control,
     .input-group > .custom-select + input[type=text],
+    .hideShowPassword-wrapper > .custom-select + input[type=text],
     .input-group > select + input[type=text],
+    .hideShowPassword-wrapper > select + input[type=text],
     .select2-container .input-group > .custom-select + .select2-selection--single,
+    .select2-container .hideShowPassword-wrapper > .custom-select + .select2-selection--single,
     .select2-container .input-group > select + .select2-selection--single,
+    .select2-container .hideShowPassword-wrapper > select + .select2-selection--single,
     .select2-dropdown .input-group > .custom-select + .select2-search__field,
+    .select2-dropdown .hideShowPassword-wrapper > .custom-select + .select2-search__field,
     .select2-dropdown .input-group > select + .select2-search__field,
+    .select2-dropdown .hideShowPassword-wrapper > select + .select2-search__field,
     .input-group > .custom-select + .custom-select,
+    .hideShowPassword-wrapper > .custom-select + .custom-select,
     .input-group > select + .custom-select,
+    .hideShowPassword-wrapper > select + .custom-select,
     .input-group > .custom-select + select,
+    .hideShowPassword-wrapper > .custom-select + select,
     .input-group > select + select,
+    .hideShowPassword-wrapper > select + select,
     .input-group > .custom-select + .custom-file,
+    .hideShowPassword-wrapper > .custom-select + .custom-file,
     .input-group > select + .custom-file,
+    .hideShowPassword-wrapper > select + .custom-file,
     .input-group > .custom-file + .form-control,
+    .hideShowPassword-wrapper > .custom-file + .form-control,
     .input-group > .custom-file + input[type=text],
+    .hideShowPassword-wrapper > .custom-file + input[type=text],
     .select2-container .input-group > .custom-file + .select2-selection--single,
+    .select2-container .hideShowPassword-wrapper > .custom-file + .select2-selection--single,
     .select2-dropdown .input-group > .custom-file + .select2-search__field,
+    .select2-dropdown .hideShowPassword-wrapper > .custom-file + .select2-search__field,
     .input-group > .custom-file + .custom-select,
+    .hideShowPassword-wrapper > .custom-file + .custom-select,
     .input-group > .custom-file + select,
-    .input-group > .custom-file + .custom-file {
+    .hideShowPassword-wrapper > .custom-file + select,
+    .input-group > .custom-file + .custom-file,
+    .hideShowPassword-wrapper > .custom-file + .custom-file {
   margin-left: -1px;
 }
 
 .input-group > .form-control:focus,
+.hideShowPassword-wrapper > .form-control:focus,
 .input-group > input:focus[type=text],
+.hideShowPassword-wrapper > input:focus[type=text],
 .select2-container .input-group > .select2-selection--single:focus,
+.select2-container .hideShowPassword-wrapper > .select2-selection--single:focus,
 .select2-dropdown .input-group > .select2-search__field:focus,
+.select2-dropdown .hideShowPassword-wrapper > .select2-search__field:focus,
   .input-group > .custom-select:focus,
+  .hideShowPassword-wrapper > .custom-select:focus,
   .input-group > select:focus,
-  .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
+  .hideShowPassword-wrapper > select:focus,
+  .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label,
+  .hideShowPassword-wrapper > .custom-file .custom-file-input:focus ~ .custom-file-label {
   z-index: 3;
 }
 
-.input-group > .custom-file .custom-file-input:focus {
+.input-group > .custom-file .custom-file-input:focus,
+.hideShowPassword-wrapper > .custom-file .custom-file-input:focus {
   z-index: 4;
 }
 
 .input-group > .form-control:not(:last-child),
+.hideShowPassword-wrapper > .form-control:not(:last-child),
 .input-group > input:not(:last-child)[type=text],
+.hideShowPassword-wrapper > input:not(:last-child)[type=text],
 .select2-container .input-group > .select2-selection--single:not(:last-child),
+.select2-container .hideShowPassword-wrapper > .select2-selection--single:not(:last-child),
 .select2-dropdown .input-group > .select2-search__field:not(:last-child),
+.select2-dropdown .hideShowPassword-wrapper > .select2-search__field:not(:last-child),
   .input-group > .custom-select:not(:last-child),
-  .input-group > select:not(:last-child) {
+  .hideShowPassword-wrapper > .custom-select:not(:last-child),
+  .input-group > select:not(:last-child),
+  .hideShowPassword-wrapper > select:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .input-group > .form-control:not(:first-child),
+.hideShowPassword-wrapper > .form-control:not(:first-child),
 .input-group > input:not(:first-child)[type=text],
+.hideShowPassword-wrapper > input:not(:first-child)[type=text],
 .select2-container .input-group > .select2-selection--single:not(:first-child),
+.select2-container .hideShowPassword-wrapper > .select2-selection--single:not(:first-child),
 .select2-dropdown .input-group > .select2-search__field:not(:first-child),
+.select2-dropdown .hideShowPassword-wrapper > .select2-search__field:not(:first-child),
   .input-group > .custom-select:not(:first-child),
-  .input-group > select:not(:first-child) {
+  .hideShowPassword-wrapper > .custom-select:not(:first-child),
+  .input-group > select:not(:first-child),
+  .hideShowPassword-wrapper > select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.input-group > .custom-file {
+.input-group > .custom-file,
+  .hideShowPassword-wrapper > .custom-file {
   display: flex;
   align-items: center;
 }
 
 .input-group > .custom-file:not(:last-child) .custom-file-label,
-    .input-group > .custom-file:not(:last-child) .custom-file-label::after {
+.hideShowPassword-wrapper > .custom-file:not(:last-child) .custom-file-label,
+    .input-group > .custom-file:not(:last-child) .custom-file-label::after,
+    .hideShowPassword-wrapper > .custom-file:not(:last-child) .custom-file-label::after {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .custom-file:not(:first-child) .custom-file-label {
+.input-group > .custom-file:not(:first-child) .custom-file-label,
+.hideShowPassword-wrapper > .custom-file:not(:first-child) .custom-file-label {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4397,6 +4572,8 @@ input[type="button"].btn-block {
 }
 
 .input-group-prepend .btn,
+.input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle,
 .input-group-prepend [dir] #cboxClose,
 [dir] .input-group-prepend #cboxClose,
 .input-group-prepend [dir] #cboxNext,
@@ -4406,6 +4583,8 @@ input[type="button"].btn-block {
 .input-group-prepend [dir] #cboxSlideshow,
 [dir] .input-group-prepend #cboxSlideshow,
   .input-group-append .btn,
+  .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle,
   .input-group-append [dir] #cboxClose,
   [dir] .input-group-append #cboxClose,
   .input-group-append [dir] #cboxNext,
@@ -4419,6 +4598,8 @@ input[type="button"].btn-block {
 }
 
 .input-group-prepend .btn:focus,
+.input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle:focus,
+.hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle:focus,
 .input-group-prepend [dir] #cboxClose:focus,
 [dir] .input-group-prepend #cboxClose:focus,
 .input-group-prepend [dir] #cboxNext:focus,
@@ -4428,6 +4609,8 @@ input[type="button"].btn-block {
 .input-group-prepend [dir] #cboxSlideshow:focus,
 [dir] .input-group-prepend #cboxSlideshow:focus,
     .input-group-append .btn:focus,
+    .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle:focus,
+    .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle:focus,
     .input-group-append [dir] #cboxClose:focus,
     [dir] .input-group-append #cboxClose:focus,
     .input-group-append [dir] #cboxNext:focus,
@@ -4440,6 +4623,8 @@ input[type="button"].btn-block {
 }
 
 .input-group-prepend .btn + .btn,
+.input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle + .btn,
+.hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle + .btn,
 .input-group-prepend [dir] #cboxClose + .btn,
 [dir] .input-group-prepend #cboxClose + .btn,
 .input-group-prepend [dir] #cboxNext + .btn,
@@ -4448,8 +4633,32 @@ input[type="button"].btn-block {
 [dir] .input-group-prepend #cboxPrevious + .btn,
 .input-group-prepend [dir] #cboxSlideshow + .btn,
 [dir] .input-group-prepend #cboxSlideshow + .btn,
+.input-group-prepend .hideShowPassword-wrapper .btn + .hideShowPassword-toggle,
+.hideShowPassword-wrapper .input-group-prepend .btn + .hideShowPassword-toggle,
+.input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle + .hideShowPassword-toggle,
+.hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle + .hideShowPassword-toggle,
+.input-group-prepend [dir] .hideShowPassword-wrapper #cboxClose + .hideShowPassword-toggle,
+.hideShowPassword-wrapper .input-group-prepend [dir] #cboxClose + .hideShowPassword-toggle,
+[dir] .input-group-prepend .hideShowPassword-wrapper #cboxClose + .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .input-group-prepend #cboxClose + .hideShowPassword-toggle,
+.input-group-prepend [dir] .hideShowPassword-wrapper #cboxNext + .hideShowPassword-toggle,
+.hideShowPassword-wrapper .input-group-prepend [dir] #cboxNext + .hideShowPassword-toggle,
+[dir] .input-group-prepend .hideShowPassword-wrapper #cboxNext + .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .input-group-prepend #cboxNext + .hideShowPassword-toggle,
+.input-group-prepend [dir] .hideShowPassword-wrapper #cboxPrevious + .hideShowPassword-toggle,
+.hideShowPassword-wrapper .input-group-prepend [dir] #cboxPrevious + .hideShowPassword-toggle,
+[dir] .input-group-prepend .hideShowPassword-wrapper #cboxPrevious + .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .input-group-prepend #cboxPrevious + .hideShowPassword-toggle,
+.input-group-prepend [dir] .hideShowPassword-wrapper #cboxSlideshow + .hideShowPassword-toggle,
+.hideShowPassword-wrapper .input-group-prepend [dir] #cboxSlideshow + .hideShowPassword-toggle,
+[dir] .input-group-prepend .hideShowPassword-wrapper #cboxSlideshow + .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .input-group-prepend #cboxSlideshow + .hideShowPassword-toggle,
 .input-group-prepend [dir] .btn + #cboxClose,
 [dir] .input-group-prepend .btn + #cboxClose,
+.input-group-prepend .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxClose,
+[dir] .input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxClose,
+.hideShowPassword-wrapper .input-group-prepend [dir] .hideShowPassword-toggle + #cboxClose,
+[dir] .hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle + #cboxClose,
 .input-group-prepend [dir] #cboxClose + #cboxClose,
 [dir] .input-group-prepend #cboxClose + #cboxClose,
 .input-group-prepend [dir] #cboxNext + #cboxClose,
@@ -4460,6 +4669,10 @@ input[type="button"].btn-block {
 [dir] .input-group-prepend #cboxSlideshow + #cboxClose,
 .input-group-prepend [dir] .btn + #cboxNext,
 [dir] .input-group-prepend .btn + #cboxNext,
+.input-group-prepend .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxNext,
+[dir] .input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxNext,
+.hideShowPassword-wrapper .input-group-prepend [dir] .hideShowPassword-toggle + #cboxNext,
+[dir] .hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle + #cboxNext,
 .input-group-prepend [dir] #cboxClose + #cboxNext,
 [dir] .input-group-prepend #cboxClose + #cboxNext,
 .input-group-prepend [dir] #cboxNext + #cboxNext,
@@ -4470,6 +4683,10 @@ input[type="button"].btn-block {
 [dir] .input-group-prepend #cboxSlideshow + #cboxNext,
 .input-group-prepend [dir] .btn + #cboxPrevious,
 [dir] .input-group-prepend .btn + #cboxPrevious,
+.input-group-prepend .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxPrevious,
+[dir] .input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxPrevious,
+.hideShowPassword-wrapper .input-group-prepend [dir] .hideShowPassword-toggle + #cboxPrevious,
+[dir] .hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle + #cboxPrevious,
 .input-group-prepend [dir] #cboxClose + #cboxPrevious,
 [dir] .input-group-prepend #cboxClose + #cboxPrevious,
 .input-group-prepend [dir] #cboxNext + #cboxPrevious,
@@ -4480,6 +4697,10 @@ input[type="button"].btn-block {
 [dir] .input-group-prepend #cboxSlideshow + #cboxPrevious,
 .input-group-prepend [dir] .btn + #cboxSlideshow,
 [dir] .input-group-prepend .btn + #cboxSlideshow,
+.input-group-prepend .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxSlideshow,
+[dir] .input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxSlideshow,
+.hideShowPassword-wrapper .input-group-prepend [dir] .hideShowPassword-toggle + #cboxSlideshow,
+[dir] .hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle + #cboxSlideshow,
 .input-group-prepend [dir] #cboxClose + #cboxSlideshow,
 [dir] .input-group-prepend #cboxClose + #cboxSlideshow,
 .input-group-prepend [dir] #cboxNext + #cboxSlideshow,
@@ -4489,6 +4710,8 @@ input[type="button"].btn-block {
 .input-group-prepend [dir] #cboxSlideshow + #cboxSlideshow,
 [dir] .input-group-prepend #cboxSlideshow + #cboxSlideshow,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .hideShowPassword-wrapper .hideShowPassword-toggle + .input-group-text,
+  .hideShowPassword-wrapper .input-group-prepend .hideShowPassword-toggle + .input-group-text,
   .input-group-prepend [dir] #cboxClose + .input-group-text,
   [dir] .input-group-prepend #cboxClose + .input-group-text,
   .input-group-prepend [dir] #cboxNext + .input-group-text,
@@ -4499,6 +4722,8 @@ input[type="button"].btn-block {
   [dir] .input-group-prepend #cboxSlideshow + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .hideShowPassword-wrapper .input-group-text + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-prepend .input-group-text + .hideShowPassword-toggle,
   .input-group-prepend [dir] .input-group-text + #cboxClose,
   [dir] .input-group-prepend .input-group-text + #cboxClose,
   .input-group-prepend [dir] .input-group-text + #cboxNext,
@@ -4508,6 +4733,8 @@ input[type="button"].btn-block {
   .input-group-prepend [dir] .input-group-text + #cboxSlideshow,
   [dir] .input-group-prepend .input-group-text + #cboxSlideshow,
   .input-group-append .btn + .btn,
+  .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle + .btn,
+  .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle + .btn,
   .input-group-append [dir] #cboxClose + .btn,
   [dir] .input-group-append #cboxClose + .btn,
   .input-group-append [dir] #cboxNext + .btn,
@@ -4516,8 +4743,32 @@ input[type="button"].btn-block {
   [dir] .input-group-append #cboxPrevious + .btn,
   .input-group-append [dir] #cboxSlideshow + .btn,
   [dir] .input-group-append #cboxSlideshow + .btn,
+  .input-group-append .hideShowPassword-wrapper .btn + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append .btn + .hideShowPassword-toggle,
+  .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle + .hideShowPassword-toggle,
+  .input-group-append [dir] .hideShowPassword-wrapper #cboxClose + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append [dir] #cboxClose + .hideShowPassword-toggle,
+  [dir] .input-group-append .hideShowPassword-wrapper #cboxClose + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper [dir] .input-group-append #cboxClose + .hideShowPassword-toggle,
+  .input-group-append [dir] .hideShowPassword-wrapper #cboxNext + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append [dir] #cboxNext + .hideShowPassword-toggle,
+  [dir] .input-group-append .hideShowPassword-wrapper #cboxNext + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper [dir] .input-group-append #cboxNext + .hideShowPassword-toggle,
+  .input-group-append [dir] .hideShowPassword-wrapper #cboxPrevious + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append [dir] #cboxPrevious + .hideShowPassword-toggle,
+  [dir] .input-group-append .hideShowPassword-wrapper #cboxPrevious + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper [dir] .input-group-append #cboxPrevious + .hideShowPassword-toggle,
+  .input-group-append [dir] .hideShowPassword-wrapper #cboxSlideshow + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append [dir] #cboxSlideshow + .hideShowPassword-toggle,
+  [dir] .input-group-append .hideShowPassword-wrapper #cboxSlideshow + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper [dir] .input-group-append #cboxSlideshow + .hideShowPassword-toggle,
   .input-group-append [dir] .btn + #cboxClose,
   [dir] .input-group-append .btn + #cboxClose,
+  .input-group-append .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxClose,
+  [dir] .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxClose,
+  .hideShowPassword-wrapper .input-group-append [dir] .hideShowPassword-toggle + #cboxClose,
+  [dir] .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle + #cboxClose,
   .input-group-append [dir] #cboxClose + #cboxClose,
   [dir] .input-group-append #cboxClose + #cboxClose,
   .input-group-append [dir] #cboxNext + #cboxClose,
@@ -4528,6 +4779,10 @@ input[type="button"].btn-block {
   [dir] .input-group-append #cboxSlideshow + #cboxClose,
   .input-group-append [dir] .btn + #cboxNext,
   [dir] .input-group-append .btn + #cboxNext,
+  .input-group-append .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxNext,
+  [dir] .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxNext,
+  .hideShowPassword-wrapper .input-group-append [dir] .hideShowPassword-toggle + #cboxNext,
+  [dir] .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle + #cboxNext,
   .input-group-append [dir] #cboxClose + #cboxNext,
   [dir] .input-group-append #cboxClose + #cboxNext,
   .input-group-append [dir] #cboxNext + #cboxNext,
@@ -4538,6 +4793,10 @@ input[type="button"].btn-block {
   [dir] .input-group-append #cboxSlideshow + #cboxNext,
   .input-group-append [dir] .btn + #cboxPrevious,
   [dir] .input-group-append .btn + #cboxPrevious,
+  .input-group-append .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxPrevious,
+  [dir] .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxPrevious,
+  .hideShowPassword-wrapper .input-group-append [dir] .hideShowPassword-toggle + #cboxPrevious,
+  [dir] .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle + #cboxPrevious,
   .input-group-append [dir] #cboxClose + #cboxPrevious,
   [dir] .input-group-append #cboxClose + #cboxPrevious,
   .input-group-append [dir] #cboxNext + #cboxPrevious,
@@ -4548,6 +4807,10 @@ input[type="button"].btn-block {
   [dir] .input-group-append #cboxSlideshow + #cboxPrevious,
   .input-group-append [dir] .btn + #cboxSlideshow,
   [dir] .input-group-append .btn + #cboxSlideshow,
+  .input-group-append .hideShowPassword-wrapper [dir] .hideShowPassword-toggle + #cboxSlideshow,
+  [dir] .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle + #cboxSlideshow,
+  .hideShowPassword-wrapper .input-group-append [dir] .hideShowPassword-toggle + #cboxSlideshow,
+  [dir] .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle + #cboxSlideshow,
   .input-group-append [dir] #cboxClose + #cboxSlideshow,
   [dir] .input-group-append #cboxClose + #cboxSlideshow,
   .input-group-append [dir] #cboxNext + #cboxSlideshow,
@@ -4557,6 +4820,8 @@ input[type="button"].btn-block {
   .input-group-append [dir] #cboxSlideshow + #cboxSlideshow,
   [dir] .input-group-append #cboxSlideshow + #cboxSlideshow,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .hideShowPassword-wrapper .hideShowPassword-toggle + .input-group-text,
+  .hideShowPassword-wrapper .input-group-append .hideShowPassword-toggle + .input-group-text,
   .input-group-append [dir] #cboxClose + .input-group-text,
   [dir] .input-group-append #cboxClose + .input-group-text,
   .input-group-append [dir] #cboxNext + .input-group-text,
@@ -4567,6 +4832,8 @@ input[type="button"].btn-block {
   [dir] .input-group-append #cboxSlideshow + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
+  .input-group-append .hideShowPassword-wrapper .input-group-text + .hideShowPassword-toggle,
+  .hideShowPassword-wrapper .input-group-append .input-group-text + .hideShowPassword-toggle,
   .input-group-append [dir] .input-group-text + #cboxClose,
   [dir] .input-group-append .input-group-text + #cboxClose,
   .input-group-append [dir] .input-group-text + #cboxNext,
@@ -4625,11 +4892,13 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
+.hideShowPassword-wrapper .input-group-lg > .input-group-prepend > .hideShowPassword-toggle,
 [dir] .input-group-lg > .input-group-prepend > #cboxClose,
 [dir] .input-group-lg > .input-group-prepend > #cboxNext,
 [dir] .input-group-lg > .input-group-prepend > #cboxPrevious,
 [dir] .input-group-lg > .input-group-prepend > #cboxSlideshow,
 .input-group-lg > .input-group-append > .btn,
+.hideShowPassword-wrapper .input-group-lg > .input-group-append > .hideShowPassword-toggle,
 [dir] .input-group-lg > .input-group-append > #cboxClose,
 [dir] .input-group-lg > .input-group-append > #cboxNext,
 [dir] .input-group-lg > .input-group-append > #cboxPrevious,
@@ -4658,11 +4927,13 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
+.hideShowPassword-wrapper .input-group-sm > .input-group-prepend > .hideShowPassword-toggle,
 [dir] .input-group-sm > .input-group-prepend > #cboxClose,
 [dir] .input-group-sm > .input-group-prepend > #cboxNext,
 [dir] .input-group-sm > .input-group-prepend > #cboxPrevious,
 [dir] .input-group-sm > .input-group-prepend > #cboxSlideshow,
 .input-group-sm > .input-group-append > .btn,
+.hideShowPassword-wrapper .input-group-sm > .input-group-append > .hideShowPassword-toggle,
 [dir] .input-group-sm > .input-group-append > #cboxClose,
 [dir] .input-group-sm > .input-group-append > #cboxNext,
 [dir] .input-group-sm > .input-group-append > #cboxPrevious,
@@ -4681,45 +4952,93 @@ input[type="button"].btn-block {
 }
 
 .input-group > .input-group-prepend > .btn,
+.hideShowPassword-wrapper > .input-group-prepend > .btn,
+.hideShowPassword-wrapper .input-group > .input-group-prepend > .hideShowPassword-toggle,
+.hideShowPassword-wrapper > .input-group-prepend > .hideShowPassword-toggle,
 [dir] .input-group > .input-group-prepend > #cboxClose,
+[dir] .hideShowPassword-wrapper > .input-group-prepend > #cboxClose,
 [dir] .input-group > .input-group-prepend > #cboxNext,
+[dir] .hideShowPassword-wrapper > .input-group-prepend > #cboxNext,
 [dir] .input-group > .input-group-prepend > #cboxPrevious,
+[dir] .hideShowPassword-wrapper > .input-group-prepend > #cboxPrevious,
 [dir] .input-group > .input-group-prepend > #cboxSlideshow,
+[dir] .hideShowPassword-wrapper > .input-group-prepend > #cboxSlideshow,
 .input-group > .input-group-prepend > .input-group-text,
+.hideShowPassword-wrapper > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.hideShowPassword-wrapper > .input-group-append:not(:last-child) > .btn,
+.hideShowPassword-wrapper .input-group > .input-group-append:not(:last-child) > .hideShowPassword-toggle,
+.hideShowPassword-wrapper > .input-group-append:not(:last-child) > .hideShowPassword-toggle,
 [dir] .input-group > .input-group-append:not(:last-child) > #cboxClose,
+[dir] .hideShowPassword-wrapper > .input-group-append:not(:last-child) > #cboxClose,
 [dir] .input-group > .input-group-append:not(:last-child) > #cboxNext,
+[dir] .hideShowPassword-wrapper > .input-group-append:not(:last-child) > #cboxNext,
 [dir] .input-group > .input-group-append:not(:last-child) > #cboxPrevious,
+[dir] .hideShowPassword-wrapper > .input-group-append:not(:last-child) > #cboxPrevious,
 [dir] .input-group > .input-group-append:not(:last-child) > #cboxSlideshow,
+[dir] .hideShowPassword-wrapper > .input-group-append:not(:last-child) > #cboxSlideshow,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
+.hideShowPassword-wrapper > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.hideShowPassword-wrapper > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.hideShowPassword-wrapper .input-group > .input-group-append:last-child > .hideShowPassword-toggle:not(:last-child):not(.dropdown-toggle),
+.hideShowPassword-wrapper > .input-group-append:last-child > .hideShowPassword-toggle:not(:last-child):not(.dropdown-toggle),
 [dir] .input-group > .input-group-append:last-child > #cboxClose:not(:last-child):not(.dropdown-toggle),
+[dir] .hideShowPassword-wrapper > .input-group-append:last-child > #cboxClose:not(:last-child):not(.dropdown-toggle),
 [dir] .input-group > .input-group-append:last-child > #cboxNext:not(:last-child):not(.dropdown-toggle),
+[dir] .hideShowPassword-wrapper > .input-group-append:last-child > #cboxNext:not(:last-child):not(.dropdown-toggle),
 [dir] .input-group > .input-group-append:last-child > #cboxPrevious:not(:last-child):not(.dropdown-toggle),
+[dir] .hideShowPassword-wrapper > .input-group-append:last-child > #cboxPrevious:not(:last-child):not(.dropdown-toggle),
 [dir] .input-group > .input-group-append:last-child > #cboxSlideshow:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+[dir] .hideShowPassword-wrapper > .input-group-append:last-child > #cboxSlideshow:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .input-group-text:not(:last-child),
+.hideShowPassword-wrapper > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .input-group > .input-group-append > .btn,
+.hideShowPassword-wrapper > .input-group-append > .btn,
+.hideShowPassword-wrapper .input-group > .input-group-append > .hideShowPassword-toggle,
+.hideShowPassword-wrapper > .input-group-append > .hideShowPassword-toggle,
 [dir] .input-group > .input-group-append > #cboxClose,
+[dir] .hideShowPassword-wrapper > .input-group-append > #cboxClose,
 [dir] .input-group > .input-group-append > #cboxNext,
+[dir] .hideShowPassword-wrapper > .input-group-append > #cboxNext,
 [dir] .input-group > .input-group-append > #cboxPrevious,
+[dir] .hideShowPassword-wrapper > .input-group-append > #cboxPrevious,
 [dir] .input-group > .input-group-append > #cboxSlideshow,
+[dir] .hideShowPassword-wrapper > .input-group-append > #cboxSlideshow,
 .input-group > .input-group-append > .input-group-text,
+.hideShowPassword-wrapper > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.hideShowPassword-wrapper > .input-group-prepend:not(:first-child) > .btn,
+.hideShowPassword-wrapper .input-group > .input-group-prepend:not(:first-child) > .hideShowPassword-toggle,
+.hideShowPassword-wrapper > .input-group-prepend:not(:first-child) > .hideShowPassword-toggle,
 [dir] .input-group > .input-group-prepend:not(:first-child) > #cboxClose,
+[dir] .hideShowPassword-wrapper > .input-group-prepend:not(:first-child) > #cboxClose,
 [dir] .input-group > .input-group-prepend:not(:first-child) > #cboxNext,
+[dir] .hideShowPassword-wrapper > .input-group-prepend:not(:first-child) > #cboxNext,
 [dir] .input-group > .input-group-prepend:not(:first-child) > #cboxPrevious,
+[dir] .hideShowPassword-wrapper > .input-group-prepend:not(:first-child) > #cboxPrevious,
 [dir] .input-group > .input-group-prepend:not(:first-child) > #cboxSlideshow,
+[dir] .hideShowPassword-wrapper > .input-group-prepend:not(:first-child) > #cboxSlideshow,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
+.hideShowPassword-wrapper > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.hideShowPassword-wrapper > .input-group-prepend:first-child > .btn:not(:first-child),
+.hideShowPassword-wrapper .input-group > .input-group-prepend:first-child > .hideShowPassword-toggle:not(:first-child),
+.hideShowPassword-wrapper > .input-group-prepend:first-child > .hideShowPassword-toggle:not(:first-child),
 [dir] .input-group > .input-group-prepend:first-child > #cboxClose:not(:first-child),
+[dir] .hideShowPassword-wrapper > .input-group-prepend:first-child > #cboxClose:not(:first-child),
 [dir] .input-group > .input-group-prepend:first-child > #cboxNext:not(:first-child),
+[dir] .hideShowPassword-wrapper > .input-group-prepend:first-child > #cboxNext:not(:first-child),
 [dir] .input-group > .input-group-prepend:first-child > #cboxPrevious:not(:first-child),
+[dir] .hideShowPassword-wrapper > .input-group-prepend:first-child > #cboxPrevious:not(:first-child),
 [dir] .input-group > .input-group-prepend:first-child > #cboxSlideshow:not(:first-child),
-.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+[dir] .hideShowPassword-wrapper > .input-group-prepend:first-child > #cboxSlideshow:not(:first-child),
+.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
+.hideShowPassword-wrapper > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -6129,6 +6448,7 @@ a.badge:focus {
 }
 
 .btn .badge,
+.hideShowPassword-wrapper .hideShowPassword-toggle .badge,
 [dir] #cboxClose .badge,
 [dir] #cboxNext .badge,
 [dir] #cboxPrevious .badge,
@@ -13741,6 +14061,7 @@ button.section-darker:focus {
 }
 
 .btn .badge:not(:first-child),
+.hideShowPassword-wrapper .hideShowPassword-toggle .badge:not(:first-child),
 [dir] #cboxClose .badge:not(:first-child),
 [dir] #cboxNext .badge:not(:first-child),
 [dir] #cboxPrevious .badge:not(:first-child),
@@ -13749,6 +14070,7 @@ button.section-darker:focus {
 }
 
 .btn .badge:not(:last-child),
+.hideShowPassword-wrapper .hideShowPassword-toggle .badge:not(:last-child),
 [dir] #cboxClose .badge:not(:last-child),
 [dir] #cboxNext .badge:not(:last-child),
 [dir] #cboxPrevious .badge:not(:last-child),
@@ -13757,6 +14079,8 @@ button.section-darker:focus {
 }
 
 [dir] .btn,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle,
 [dir] #cboxClose,
 [dir] #cboxNext,
 [dir] #cboxPrevious,
@@ -13770,6 +14094,8 @@ button.section-darker:focus {
 }
 
 [dir] .btn:hover,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:hover,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:hover,
 [dir] #cboxClose:hover,
 [dir] #cboxNext:hover,
 [dir] #cboxPrevious:hover,
@@ -13779,6 +14105,8 @@ button.section-darker:focus {
 }
 
 [dir] .btn:not(:last-child),
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:not(:last-child),
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:not(:last-child),
 [dir] #cboxClose:not(:last-child),
 [dir] #cboxNext:not(:last-child),
 [dir] #cboxPrevious:not(:last-child),
@@ -13787,21 +14115,32 @@ button.section-darker:focus {
 }
 
 [dir] .btn-group .btn,
+[dir] .btn-group .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .btn-group .hideShowPassword-toggle,
 [dir] .btn-group #cboxClose,
 [dir] .btn-group #cboxNext,
 [dir] .btn-group #cboxPrevious,
 [dir] .btn-group #cboxSlideshow,
 [dir] .input-group .btn,
+[dir] .hideShowPassword-wrapper .btn,
+.hideShowPassword-wrapper [dir] .input-group .hideShowPassword-toggle,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle,
 [dir] .input-group #cboxClose,
+[dir] .hideShowPassword-wrapper #cboxClose,
 [dir] .input-group #cboxNext,
+[dir] .hideShowPassword-wrapper #cboxNext,
 [dir] .input-group #cboxPrevious,
-[dir] .input-group #cboxSlideshow {
+[dir] .hideShowPassword-wrapper #cboxPrevious,
+[dir] .input-group #cboxSlideshow,
+[dir] .hideShowPassword-wrapper #cboxSlideshow {
   margin-right: 0;
   transform: translateY(0);
 }
 
 [dir] .btn-sm,
 [dir] .btn-group-sm > .btn,
+[dir] .hideShowPassword-wrapper .btn-group-sm > .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .btn-group-sm > .hideShowPassword-toggle,
 [dir] #cboxClose,
 [dir] #cboxNext,
 [dir] #cboxPrevious,
@@ -13811,6 +14150,8 @@ button.section-darker:focus {
 
 [dir] .btn-lg,
 [dir] .btn-group-lg > .btn,
+[dir] .hideShowPassword-wrapper .btn-group-lg > .hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .btn-group-lg > .hideShowPassword-toggle,
 [dir] .btn-group-lg > #cboxClose,
 [dir] .btn-group-lg > #cboxNext,
 [dir] .btn-group-lg > #cboxPrevious,
@@ -13846,11 +14187,15 @@ button.section-darker:focus {
 }
 
 [dir] .btn svg:not(:first-child),
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle svg:not(:first-child),
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle svg:not(:first-child),
 [dir] #cboxClose svg:not(:first-child),
 [dir] #cboxNext svg:not(:first-child),
 [dir] #cboxPrevious svg:not(:first-child),
 [dir] #cboxSlideshow svg:not(:first-child),
 [dir] .btn i:not(:first-child),
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle i:not(:first-child),
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle i:not(:first-child),
 [dir] #cboxClose i:not(:first-child),
 [dir] #cboxNext i:not(:first-child),
 [dir] #cboxPrevious i:not(:first-child),
@@ -13859,11 +14204,15 @@ button.section-darker:focus {
 }
 
 [dir] .btn svg:not(:last-child),
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle svg:not(:last-child),
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle svg:not(:last-child),
 [dir] #cboxClose svg:not(:last-child),
 [dir] #cboxNext svg:not(:last-child),
 [dir] #cboxPrevious svg:not(:last-child),
 [dir] #cboxSlideshow svg:not(:last-child),
 [dir] .btn i:not(:last-child),
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle i:not(:last-child),
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle i:not(:last-child),
 [dir] #cboxClose i:not(:last-child),
 [dir] #cboxNext i:not(:last-child),
 [dir] #cboxPrevious i:not(:last-child),
@@ -13938,6 +14287,8 @@ button.section-darker:focus {
 
 [dir] .btn-icon-only.btn-sm,
 [dir] .btn-group-sm > .btn-icon-only.btn,
+[dir] .hideShowPassword-wrapper .btn-group-sm > .btn-icon-only.hideShowPassword-toggle,
+.hideShowPassword-wrapper [dir] .btn-group-sm > .btn-icon-only.hideShowPassword-toggle,
 [dir] .btn-icon-only#cboxClose,
 [dir] .btn-icon-only#cboxNext,
 [dir] .btn-icon-only#cboxPrevious,
@@ -15165,47 +15516,72 @@ textarea[resize="horizontal"] {
   background-color: rgba(26, 26, 26, 0.5);
 }
 
-.input-group {
+.input-group,
+.hideShowPassword-wrapper {
   box-shadow: none;
   border-radius: 0.25rem;
   transition: all 0.15s ease;
 }
 
 .input-group .form-control,
+.hideShowPassword-wrapper .form-control,
 .input-group input[type=text],
+.hideShowPassword-wrapper input[type=text],
 .input-group .select2-container .select2-selection--single,
 .select2-container .input-group .select2-selection--single,
+.hideShowPassword-wrapper .select2-container .select2-selection--single,
+.select2-container .hideShowPassword-wrapper .select2-selection--single,
 .input-group .select2-dropdown .select2-search__field,
-.select2-dropdown .input-group .select2-search__field {
+.select2-dropdown .input-group .select2-search__field,
+.hideShowPassword-wrapper .select2-dropdown .select2-search__field,
+.select2-dropdown .hideShowPassword-wrapper .select2-search__field {
   box-shadow: none;
 }
 
 .input-group .form-control:not(:first-child),
+.hideShowPassword-wrapper .form-control:not(:first-child),
 .input-group input:not(:first-child)[type=text],
+.hideShowPassword-wrapper input:not(:first-child)[type=text],
 .input-group .select2-container .select2-selection--single:not(:first-child),
 .select2-container .input-group .select2-selection--single:not(:first-child),
+.hideShowPassword-wrapper .select2-container .select2-selection--single:not(:first-child),
+.select2-container .hideShowPassword-wrapper .select2-selection--single:not(:first-child),
 .input-group .select2-dropdown .select2-search__field:not(:first-child),
-.select2-dropdown .input-group .select2-search__field:not(:first-child) {
+.select2-dropdown .input-group .select2-search__field:not(:first-child),
+.hideShowPassword-wrapper .select2-dropdown .select2-search__field:not(:first-child),
+.select2-dropdown .hideShowPassword-wrapper .select2-search__field:not(:first-child) {
   border-left: 0;
   padding-left: 0;
 }
 
 .input-group .form-control:not(:last-child),
+.hideShowPassword-wrapper .form-control:not(:last-child),
 .input-group input:not(:last-child)[type=text],
+.hideShowPassword-wrapper input:not(:last-child)[type=text],
 .input-group .select2-container .select2-selection--single:not(:last-child),
 .select2-container .input-group .select2-selection--single:not(:last-child),
+.hideShowPassword-wrapper .select2-container .select2-selection--single:not(:last-child),
+.select2-container .hideShowPassword-wrapper .select2-selection--single:not(:last-child),
 .input-group .select2-dropdown .select2-search__field:not(:last-child),
-.select2-dropdown .input-group .select2-search__field:not(:last-child) {
+.select2-dropdown .input-group .select2-search__field:not(:last-child),
+.hideShowPassword-wrapper .select2-dropdown .select2-search__field:not(:last-child),
+.select2-dropdown .hideShowPassword-wrapper .select2-search__field:not(:last-child) {
   border-right: 0;
   padding-right: 0;
 }
 
 .input-group .form-control:focus,
+.hideShowPassword-wrapper .form-control:focus,
 .input-group input:focus[type=text],
+.hideShowPassword-wrapper input:focus[type=text],
 .input-group .select2-container .select2-selection--single:focus,
 .select2-container .input-group .select2-selection--single:focus,
+.hideShowPassword-wrapper .select2-container .select2-selection--single:focus,
+.select2-container .hideShowPassword-wrapper .select2-selection--single:focus,
 .input-group .select2-dropdown .select2-search__field:focus,
-.select2-dropdown .input-group .select2-search__field:focus {
+.select2-dropdown .input-group .select2-search__field:focus,
+.hideShowPassword-wrapper .select2-dropdown .select2-search__field:focus,
+.select2-dropdown .hideShowPassword-wrapper .select2-search__field:focus {
   box-shadow: none;
 }
 
@@ -15235,7 +15611,8 @@ textarea[resize="horizontal"] {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
 }
 
-.focused .input-group {
+.focused .input-group,
+.focused .hideShowPassword-wrapper {
   box-shadow: none;
 }
 
@@ -17092,12 +17469,15 @@ textarea[resize="horizontal"] {
 .section-components > .navbar + .navbar,
 .section-components > .progress + .progress,
 .section-components > .progress + .btn,
+.hideShowPassword-wrapper .section-components > .progress + .hideShowPassword-toggle,
 [dir] .section-components > .progress + #cboxClose,
 [dir] .section-components > .progress + #cboxNext,
 [dir] .section-components > .progress + #cboxPrevious,
 [dir] .section-components > .progress + #cboxSlideshow,
 .section-components .badge,
 .section-components .btn,
+.section-components .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper .section-components .hideShowPassword-toggle,
 .section-components [dir] #cboxClose,
 [dir] .section-components #cboxClose,
 .section-components [dir] #cboxNext,
@@ -17116,6 +17496,8 @@ textarea[resize="horizontal"] {
 }
 
 .section-components .btn-group .btn,
+.section-components .btn-group .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper .section-components .btn-group .hideShowPassword-toggle,
 .section-components .btn-group [dir] #cboxClose,
 [dir] .section-components .btn-group #cboxClose,
 .section-components .btn-group [dir] #cboxNext,
@@ -17140,6 +17522,8 @@ textarea[resize="horizontal"] {
 }
 
 .section-components .modal-footer .btn,
+.section-components .modal-footer .hideShowPassword-wrapper .hideShowPassword-toggle,
+.hideShowPassword-wrapper .section-components .modal-footer .hideShowPassword-toggle,
 .section-components .modal-footer [dir] #cboxClose,
 [dir] .section-components .modal-footer #cboxClose,
 .section-components .modal-footer [dir] #cboxNext,
@@ -19604,7 +19988,17 @@ caption {
   border-top: 0.0625rem solid #dee2e6;
 }
 
-.input-group > .select2-container {
+.hideShowPassword-wrapper {
+  display: flex !important;
+}
+
+.hideShowPassword-wrapper .hideShowPassword-toggle {
+  position: initial !important;
+  margin-top: 0 !important;
+}
+
+.input-group > .select2-container,
+.hideShowPassword-wrapper > .select2-container {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
@@ -19872,7 +20266,9 @@ caption {
   background-color: #7485e8;
 }
 
-[dir] .btn-secondary:hover {
+[dir] .btn-secondary:hover,
+[dir] .hideShowPassword-wrapper .hideShowPassword-toggle:hover,
+.hideShowPassword-wrapper [dir] .hideShowPassword-toggle:hover {
   background-color: white;
 }
 
@@ -21669,23 +22065,28 @@ table.tv_tree i.dates {
   width: 100%;
 }
 
-.input-group .twitter-typeahead {
+.input-group .twitter-typeahead,
+.hideShowPassword-wrapper .twitter-typeahead {
   display: block !important;
 }
 
-.input-group .twitter-typeahead .tt-dropdown-menu {
+.input-group .twitter-typeahead .tt-dropdown-menu,
+.hideShowPassword-wrapper .twitter-typeahead .tt-dropdown-menu {
   top: 2rem !important;
 }
 
-.input-group.input-group-lg .twitter-typeahead .tt-dropdown-menu {
+.input-group.input-group-lg .twitter-typeahead .tt-dropdown-menu,
+.input-group-lg.hideShowPassword-wrapper .twitter-typeahead .tt-dropdown-menu {
   top: 2.75rem !important;
 }
 
-.input-group.input-group-sm .twitter-typeahead .tt-dropdown-menu {
+.input-group.input-group-sm .twitter-typeahead .tt-dropdown-menu,
+.input-group-sm.hideShowPassword-wrapper .twitter-typeahead .tt-dropdown-menu {
   top: 1.75rem !important;
 }
 
-.input-group > .twitter-typeahead {
+.input-group > .twitter-typeahead,
+.hideShowPassword-wrapper > .twitter-typeahead {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;

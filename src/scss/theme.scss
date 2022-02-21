@@ -84,9 +84,18 @@ input[type=text] {
     @extend .form-control;
 }
 
-button:not(.btn):not(.close) {
-//    @extend .btn;
-//    @extend .btn-primary;
+
+// Login
+.hideShowPassword-wrapper {
+    display: flex !important; // Replace the default "block"
+    @extend .input-group;
+    .hideShowPassword-toggle {
+        @extend .btn;
+        @extend .btn-secondary;
+
+        position: initial !important; // Replace the default "absolute"
+        margin-top: 0 !important; // Replace the default "-21.5px"
+    }
 }
 
 select {
