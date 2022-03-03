@@ -30,7 +30,7 @@ function scss() {
     ];
 
     // noinspection JSCheckFunctionSignatures
-    return gulp.src('src/scss/theme.scss')
+    return gulp.src('src/scss/*.scss')
         .pipe(sass())
         .pipe(postcss(plugins))
         .pipe(gulp.dest('resources/css'))

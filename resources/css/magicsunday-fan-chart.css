@@ -1,0 +1,20 @@
+/************************************************
+                Argon Light Theme
+             Originally made by jchue
+  Under the Internet Systems Consortium License
+  https://github.com/jchue/argon-webtrees-theme
+
+       Forked and maintained by Evan Galli
+             Under the same licence
+ https://github.com/06Games/Webtrees-ArgonLight
+************************************************
+          Magicsunday's fan chart addon
+***********************************************/
+
+.wt-route-webtrees-fan-chart > div.tooltip table {
+  border-collapse: initial;
+}
+
+.wt-route-webtrees-fan-chart > div.tooltip table th {
+  background: none;
+}

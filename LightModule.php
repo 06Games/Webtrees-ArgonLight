@@ -16,7 +16,6 @@ namespace EvanG\Themes\LightTheme;
 
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
-use Fisharebest\Webtrees\Webtrees;
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeTrait;
@@ -26,6 +25,13 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
     use ModuleCustomTrait, ModuleThemeTrait;
 
     public function title(): string { return 'Argon Light'; }
+    public function description(): string { return 'A light theme for Webtrees based on Argon Design System'; }
+    public function customModuleAuthorName(): string { return 'EvanG'; }
+    public function customModuleVersion(): string { return '1.1.0'; }
+    public function customModuleSupportUrl(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/issues'; }
+    public function customModuleLatestVersion(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/releases/latest'; }
+    public function resourcesFolder(): string { return __DIR__ . '/resources/'; }
+    public function stylesheets(): array { return [$this->assetUrl('css/theme.css'), $this->assetUrl('css/magicsunday-fan-chart.css')]; }
 
     public function parameter($parameter_name)
     {
@@ -48,15 +54,12 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
         return $parameters[$parameter_name];
     }
 
-    /**
-     * Bootstrap the module
-     */
     public function boot(): void
     {
         // Register a namespace for our views.
-        View::registerNamespace($this->name(), $this->customResourcesFolder() . 'views/');
+        View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
 
-        // Argon views
+        /** Argon views **/
 
         // Site Layout
         View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
@@ -92,41 +95,9 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
         View::registerCustomView('::lists/sources-table', $this->name() . '::lists/sources-table'); // Remove small class from table
 
 
-        // My views
+        /** My views **/
         View::registerCustomView('::lists/individuals-table', $this->name() . '::lists/individuals-table');
         View::registerCustomView('::lists/families-table', $this->name() . '::lists/families-table');
         View::registerCustomView('::individual-page-menu', $this->name() . '::individual-page-menu');
     }
-
-    public function resourcesFolder(): string { return __DIR__ . '/resources/'; }
-    public function customResourcesFolder(): string { return Webtrees::ROOT_DIR . Webtrees::MODULES_PATH . 'light/resources/'; }
-    public function customAssetUrl(string $asset): string
-    {
-        $file = $this->customResourcesFolder() . $asset;
-        $hash = filemtime($file); // Add the file's modification time to the URL, so we can set long expiry cache headers.
-        return route('module', [
-            'module' => '_light_',
-            'action' => 'Asset',
-            'asset'  => $asset,
-            'hash'   => $hash,
-        ]);
-    }
-
-    /**
-     * Add our own stylesheet to the existing stylesheets.
-     *
-     * @return array
-     */
-    public function stylesheets(): array
-    {
-        $stylesheets[] = $this->customAssetUrl('css/theme.css');
-        return $stylesheets;
-    }
-
-    /**
-     * Add our own scripts.
-     *
-     * @return array
-     */
-    public function scripts(): array { return []; }
 }
