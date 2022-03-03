@@ -1,8 +1,10 @@
 {
   "name": "argon-light",
-  "version": "1.1.0",
   "description": "A light theme for Webtrees based on Argon Design System",
   "author": "Evan Galli",
+  "homepage": "https://github.com/06Games/Webtrees-ArgonLight",
+  "repository": "github:06Games/Webtrees-ArgonLight",
+  "version": "1.1.0",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.0",

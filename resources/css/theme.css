@@ -7,6 +7,8 @@
        Forked and maintained by Evan Galli
              Under the same licence
  https://github.com/06Games/Webtrees-ArgonLight
+************************************************
+                   Main theme
 ***********************************************/
 
 /*!
@@ -20465,6 +20467,10 @@ caption {
 .twitter-typeahead .tt-dropdown-menu,
 .twitter-typeahead .tt-menu {
   z-index: 2000;
+}
+
+.dropdown-header {
+  color: #6c757d;
 }
 
 .modal {

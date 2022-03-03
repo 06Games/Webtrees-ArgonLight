@@ -7,6 +7,8 @@
        Forked and maintained by Evan Galli
              Under the same licence
  https://github.com/06Games/Webtrees-ArgonLight
+************************************************
+                   Main theme
 ***********************************************/
 
 $card-border-width: 0.188rem;
@@ -555,6 +557,9 @@ select {
 
 .dropdown-menu {
   z-index: 2000;
+}
+.dropdown-header {
+    color: #6c757d;
 }
 
 .modal {
