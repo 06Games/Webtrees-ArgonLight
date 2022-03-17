@@ -5,5 +5,18 @@ It adds a modern light theme to webtrees based on [Argon Design System](https://
 
 This module is brought to you by [Evan Galli](https://github.com/06Games) under the [ISC License](https://choosealicense.com/licenses/isc/)
 
+## Screenshots
+|               Home               |                  Statistics                  |
+|:--------------------------------:|:--------------------------------------------:|
+| ![Home](.github/assets/home.png) | ![Statistics](.github/assets/statistics.png) |
+
+|                  Individual                  |               Event                |
+|:--------------------------------------------:|:----------------------------------:|
+| ![Individual](.github/assets/individual.png) | ![Event](.github/assets/event.png) |
+
+|                     Interactive tree                     | [Magicsunday's Pedigree chart](https://github.com/magicsunday/webtrees-pedigree-chart) |
+|:--------------------------------------------------------:|:--------------------------------------------------------------------------------------:|
+| ![Interactive tree](.github/assets/interactive-tree.png) |       ![Magicsunday's Pedigree chart ](.github/assets/magicsunday-pedigree.png)        |
+
 ## Development
 This module uses [composer](https://getcomposer.org/) and [gulp](https://gulpjs.com/) to manage its dependencies
