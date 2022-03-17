@@ -19935,6 +19935,10 @@ body {
   min-width: 350px;
 }
 
+.wt-footers {
+  text-align: center;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 75vw;
