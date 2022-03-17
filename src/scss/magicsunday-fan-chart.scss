@@ -12,10 +12,11 @@
 ***********************************************/
 
 .wt-route-webtrees-fan-chart {
-  & > div.tooltip table {
-    border-collapse: initial;
-    th {
-      background: none;
+    & > div.tooltip table {
+        border-collapse: initial;
+
+        th {
+            background: none;
+        }
     }
-  }
 }

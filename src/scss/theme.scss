@@ -21,8 +21,9 @@ $table-cell-padding-sm: 0.75rem;
 $f-color: #fff4f9;
 $m-color: #f4fdff;
 $u-color: #fff;
+$x-color: #fceaa1;
 
-$box-shadow-xs: 0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
+$box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 
 @import "argon/argon";
 @import "argon/bootstrap/spinners";
@@ -30,11 +31,11 @@ $box-shadow-xs: 0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
 @import "leaflet/leaflet"; // Maps
 @import "beautify-marker/beautify-marker"; // Map markers
 
-body{
+body {
     min-width: 350px;
 }
 
-.wt-footers{
+.wt-footers {
     text-align: center;
 }
 
@@ -95,6 +96,7 @@ input[type=text] {
 .hideShowPassword-wrapper {
     display: flex !important; // Replace the default "block"
     @extend .input-group;
+
     .hideShowPassword-toggle {
         @extend .btn;
         @extend .btn-secondary;
@@ -296,10 +298,11 @@ select {
         display: none;
     }
 
-    .accordion-button{
-        &:focus{
+    .accordion-button {
+        &:focus {
             box-shadow: none;
         }
+
         &:not(.collapsed) {
             &,
             &:focus {
@@ -311,8 +314,9 @@ select {
 }
 
 // Spinner
-[dir] .wt-ajax-load:empty{
+[dir] .wt-ajax-load:empty {
     height: 2rem;
+
     &::before {
         content: '';
         position: absolute;
@@ -360,15 +364,15 @@ select {
 }
 
 // Silhouettes in chart boxes
-.icon-silhouette-F {
+.icon-silhouette-f {
     content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAyCAQAAABxRNqrAAAD+ElEQVR4AaWUb0xbVRjGXyoOBmPBbTH+yQY4dAubigtD1skAmePPVkDppNhRwCKwUgXCWlpKe95zadmmMwvRDy5Z1MwlZjPRDwxjNJJo+GYkLtOZGWLGB0xM1MWgk4C5r+SeNPcGbtKe+nty27TNec57et73ARl8WewJfo/++dThUSfeB3KcSwOo3dzyHjsLgBsxG7MA6loHfvEtBj4Ld0WyIRnQAqv0PzC8w3bESbEzrBtncAG/i7w/OOebbQ48PfHK5bBDEbWagxm4FQuwFG24Z+Sx5pqTgd6rHuKEmhghhf+KzCpfxc7blWBHNB3MYZm4DwfxKi6iWLaCX3hvRq4rmoUQU8VvjPg/2MsssB63JVyCHH/F+CIVtUU8vnytVO3ZDms5scXvZXMGi8QSZh2YBkaaC/ovjYrdNRsJqzfRaFWd47oyQpyYjE28+mbQsWY5Qn5JI6ZycaffsCzQqSxoXo4RU5lERZwGqe+u791IMRipKThOUWEkocBvnq7juWBkj6W+sZMUSSNGeEM5z4tYGuiUZtad9hKXtuKq59PwxTMbQadkU+2Hw5JWog1G6dWPQk1j+gyW5tR8MiSsJM04tU8EG6O6Vdmmmg/kDyjGesjRKYwE5ZttU35hJW+2D4xYM6vRSWOE8lrEPDDyVHrDSf2AktoLRuofdf8QJSZ1MPG3M0Iv3gtxDmbUT3LxtUQbMGJiYt9CfQKrsuv+8MkMssqI/zvwt29F25xjpn5/6RV9TbcjJGMV+9w22bekZWstGgen8v6mm1L5dGe449jZ9uUg4be4DYxU5tvmg8RVliCfkLSEWuFjL+SfOFj1cc81pVJJByNlGc++3kqJYzi83DffPR1yR7VKrI+37IT1PFNUNzOYsLMi851N+wvAHD0b6i94SUnUS7fGd0AirDmHJ1x0mhRVISE0a9mf8BFITMWu56bt1LUqF7WRm0bMmvYW5kNiDqQdyjqy/Wix/aGXcl/OLr/Uo5p02m20giylLa6FkFkORECW/SUtPwYI12sKZHmy0HE9aDLEOIeHQI4Du103RsyqWsJxkGFnrkcJ3TEfI5xECyRPw/gQmSaYqvVWNSRLcXHPbNg4kfEsE4O1wjgki015jTixNZkZJj+dWn0Y8WuRLZAMewu7pkOGw4nq2M+BdzrfaH3b+aX7z4HvYxWQDHUez7Kix7N4n2K1oFGUV+Z6vm3iQUjMw1vbLvtFCOpGF1g+yFN11P07Fxbi9S6GMBdSYIM91i9qEhm+gE7MhFQo2d0+E7dZ1TRa0QKp0eDsJiV+Z+cwD1KlcJvjYpAUGqXQ18yKGZA65aWNS71LvVfcx+yb4f9RkVO168UN/WmQEv8BWtevBS+ro80AAAAASUVORK5CYII=");
 }
 
-.icon-silhouette-M {
+.icon-silhouette-m {
     content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAyCAQAAABxRNqrAAACbUlEQVR4AaWUS0hUURjHP3xAoJuKKDIwN4GzEheh44z3NtmDJAvdqDmBhUZkQqRMzsg9372TLnrkylWbIAqEIBLctevhJghc1KYIF9WiRZtcJPj9Awu7eq73cfz9mcXA8OP7nznno3C4jyc5z5X8gFcYDP7KKUoOV/ASg4XhizD4FY/xrviavfyIV3mNoUX+fZ7E0VTxjDZNkPI311MYajFK45O9CxENPmYkyv3gYvuLMx44aQ5oouaa8edKWBKrhjWVPX4RCpw8vzRVx9C0iUgY3ER+Kquu/VDCMEqB/GScqzBUCT8kP5bKg6HARiE/9kAGw8IwTI78WBMtuG2qmqDNtC3eNK1YpM1YdweEzWQXtqq606Y3q5G2kvk4KiZTkU7WKZgUfEo6zks2mUp/0LdmjTYDtD2fHh4xKSe8rC+ZqYyUoJL/ey7p2O/PwGCLVgepajvhGW0FXbU7l0wlCuoQBZNOpkJvjrYj+9aLffAKyifSaP8+svHDcE0ZZ4sUhj1lIYcOHJdJCVOVkO2gKOxau87a1/ZpIrzeAsUlM18KV81TXNpfKwlV/Yw/1Uox6rmMUDzaFpzoDZGiOFz5rKKfzIc49fqdbe8Tw8U0pv5+r6MoupddCRY56MFJWLBxGoUlNUfhHDl4HSpA4671In0j25yrOVZtN1pz7V8oCrugn0tZhpC9Q0npXnW18+l7k9pDSTncMAYlG5r1dJXJhBOznvgmkklY58iM/v9HLiyjaKonM1KnShvFPLn8raGWTOl85olaL+ag6wVVkDmDUHDB6MPRLtoJrZfyyOM8Wu+1VNPOsHusspW3jTV/AC4z+BByxrV6AAAAAElFTkSuQmCC");
 }
 
-.icon-silhouette-U {
+.icon-silhouette-u {
     content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAyCAQAAABxRNqrAAAB2ElEQVR4Ae3UMWhTQQDG8WvAIVUEXZQWlHYQqZOlrVArRRsQBRWqjUhFUlQKFcXSh5BYe19eFQRBsjmKmyA4iHHQMYJidFQRBd0EBzHiFr3P6XH6uHvcXdf3/9bwg7scT+Q5lIcN2IUGHuMT3qGJVQytFMOgQTwHU2uWx0KoDyCUZqAkwer72S2+0F0N6UlKzj880uMDDaUhvSvcP+FDrdooqWKWn/lQT0HbYjVH4XpEFNGGslF1LnB4ryvVi9dgFjV62J1qB1Dm0Mo64HmOjLtT97KufZYbe92pczZI8jpLX4R76Lc/0YiTt4VPaFluSlV4YNCPOmo+3jKnX+wpCL/w0YQtsXTZF+rBDRM193V4p/ANx01v6sTbgaI/dcpEzbwR/uGB6YCLn3f0+TEFnDT/g9f+XFqoFdyhSdwHoSyPtCvvYNSF2YZX+GWHpAJB/MQTDGQxW3ELBDVinP5FQ/aboQo62ZAB+74yL9Kh7MEkmAJlN7r5P9QHhq7G09PpN6RCIKliVn5raB2+gcFTEXdPJNR2dMIpyZgjF/VbWisVJdRm/IAKx5Y5tiSSZAsMvHhV51mOT4mk+qarL6usBazKCzz4SPzb4vqZqWNnQnaotC/9MczL+wt62AQGzYp3ZAAAAABJRU5ErkJggg==");
 }
 
@@ -403,10 +407,10 @@ select {
 
 @each $color, $value in $theme-colors {
     [dir] .btn-#{$color} {
-      &:hover {
-          background-color: lighten(theme-color(#{$color}), 5%);
-      }
-  }
+        &:hover {
+            background-color: lighten(theme-color(#{$color}), 5%);
+        }
+    }
 }
 
 [dir] .btn-link {
@@ -456,13 +460,13 @@ select {
                 }
 
                 &.menu-pending {
-                  a {
-                    color: theme-color("warning");
+                    a {
+                        color: theme-color("warning");
 
-                    &:hover {
-                        color: darken(theme-color("warning"), 20%);
+                        &:hover {
+                            color: darken(theme-color("warning"), 20%);
+                        }
                     }
-                  }
                 }
             }
         }
@@ -560,14 +564,15 @@ select {
  */
 
 .dropdown-menu {
-  z-index: 2000;
+    z-index: 2000;
 }
+
 .dropdown-header {
     color: #6c757d;
 }
 
 .modal {
-  z-index: 1052;
+    z-index: 1052;
 }
 
 .modal-header {
@@ -637,7 +642,7 @@ ul.pagination {
 
 // Preferred name
 .starredname {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Calendar Modals */
@@ -709,16 +714,20 @@ div[id^=caldiv] {
     }
 }
 
-.wt-gender-M {
+.wt-sex-m {
     background-color: $m-color;
 }
 
-.wt-gender-F {
+.wt-sex-f {
     background-color: $f-color;
 }
 
-.wt-gender-U {
+.wt-sex-u {
     background-color: $u-color;
+}
+
+.wt-sex-x {
+    background-color: $x-color;
 }
 
 .wt-new {
@@ -813,26 +822,26 @@ div[id^=caldiv] {
 }
 
 .marker-cluster-small {
-    background-color: rgba(181,226,140,.6);
+    background-color: rgba(181, 226, 140, .6);
 
     div {
-        background-color: rgba(110,204,57,.6);
+        background-color: rgba(110, 204, 57, .6);
     }
 }
 
 .marker-cluster-medium {
-    background-color: rgba(241,211,87,.6);
+    background-color: rgba(241, 211, 87, .6);
 
     div {
-        background-color: rgba(240,194,12,.6);
+        background-color: rgba(240, 194, 12, .6);
     }
 }
 
 .marker-cluster-large {
-    background-color: rgba(253,156,115,.6);
+    background-color: rgba(253, 156, 115, .6);
 
     div {
-        background-color: rgba(241,128,23,.6);
+        background-color: rgba(241, 128, 23, .6);
     }
 }
 
@@ -884,18 +893,18 @@ div[id^=caldiv] {
 .leaflet-cluster-anim {
     .leaflet-marker-icon,
     .leaflet-marker-shadow {
-        -webkit-transition: -webkit-transform 0.3s ease-out,opacity 0.3s ease-in;
-        -moz-transition: -moz-transform 0.3s ease-out,opacity 0.3s ease-in;
-        -o-transition: -o-transform 0.3s ease-out,opacity 0.3s ease-in;
-        transition: transform 0.3s ease-out,opacity 0.3s ease-in;
+        -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+        -moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+        -o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-in;
     }
 }
 
 .leaflet-cluster-spider-leg {
-    -webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out,-webkit-stroke-opacity 0.3s ease-in;
-    -moz-transition: -moz-stroke-dashoffset 0.3s ease-out,-moz-stroke-opacity 0.3s ease-in;
-    -o-transition: -o-stroke-dashoffset 0.3s ease-out,-o-stroke-opacity 0.3s ease-in;
-    transition: stroke-dashoffset 0.3s ease-out,stroke-opacity 0.3s ease-in;
+    -webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out, -webkit-stroke-opacity 0.3s ease-in;
+    -moz-transition: -moz-stroke-dashoffset 0.3s ease-out, -moz-stroke-opacity 0.3s ease-in;
+    -o-transition: -o-stroke-dashoffset 0.3s ease-out, -o-stroke-opacity 0.3s ease-in;
+    transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
 }
 
 /*****
@@ -1228,9 +1237,7 @@ table.tv_tree {
             background-color: $f-color;
         }
 
-        .icon-silhouette-F,
-        .icon-silhouette-M,
-        .icon-silhouette-U {
+        .icon-silhouette {
             [dir=ltr] {
                 float: left;
             }
@@ -1386,6 +1393,10 @@ table.tv_tree {
 
     .wt-chart-box-u {
         background-color: $u-color;
+    }
+
+    .wt-chart-box-x {
+        background-color: $x-color;
     }
 
     .wt-chart-box-zoom-dropdown {
