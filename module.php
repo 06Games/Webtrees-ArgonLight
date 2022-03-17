@@ -12,4 +12,5 @@
 ***********************************************/
 
 namespace EvanG\Themes\LightTheme;
+include "LightModule.php";
 return new LightTheme();
