@@ -767,30 +767,44 @@ div[id^=caldiv] {
     box-shadow: $box-shadow-sm;
 }
 
-.wt-places-tab-sidebar {
-    padding: 0;
+.wt-place-hierarchy-wrapper {
+    height: 70vh;
+}
 
-    li.gchart {
-        border-bottom: $border-width solid $border-color;
-        font-size: $font-size-sm !important;
-        padding: 1.5rem;
+.wt-places-tab-wrapper {
+    height: 70vh;
 
-        .tab-pane & {
-            font-size: $font-size-xs !important;
-            padding: 1rem;
-        }
+    .wt-places-tab-map,
+    .wt-places-tab-sidebar {
+        height: 100%;
+    }
 
-        &:hover {
-            cursor: pointer;
-        }
+    .wt-places-tab-sidebar {
+        padding: 0;
+        overflow-y: auto;
 
-        // Currently selected
-        &.messagebox {
-            background-color: $gray-100;
-        }
+        li.gchart {
+            border-bottom: $border-width solid $border-color;
+            font-size: $font-size-sm !important;
+            padding: 1.5rem;
 
-        > div {
-            margin-bottom: 0.625rem;
+            .tab-pane & {
+                font-size: $font-size-xs !important;
+                padding: 1rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            // Currently selected
+            &.messagebox {
+                background-color: $gray-100;
+            }
+
+            > div {
+                margin-bottom: 0.625rem;
+            }
         }
     }
 }

@@ -20663,30 +20663,44 @@ div[id^=caldiv] table table tr:first-child td a,
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-.wt-places-tab-sidebar {
-  padding: 0;
+.wt-place-hierarchy-wrapper {
+  height: 70vh;
 }
 
-.wt-places-tab-sidebar li.gchart {
+.wt-places-tab-wrapper {
+  height: 70vh;
+}
+
+.wt-places-tab-wrapper .wt-places-tab-map,
+  .wt-places-tab-wrapper .wt-places-tab-sidebar {
+  height: 100%;
+}
+
+.wt-places-tab-wrapper .wt-places-tab-sidebar {
+  padding: 0;
+  overflow-y: auto;
+}
+
+.wt-places-tab-wrapper .wt-places-tab-sidebar li.gchart {
   border-bottom: 0.0625rem solid #e9ecef;
   font-size: 0.875rem !important;
   padding: 1.5rem;
 }
 
-.tab-pane .wt-places-tab-sidebar li.gchart {
+.tab-pane .wt-places-tab-wrapper .wt-places-tab-sidebar li.gchart {
   font-size: 0.75rem !important;
   padding: 1rem;
 }
 
-.wt-places-tab-sidebar li.gchart:hover {
+.wt-places-tab-wrapper .wt-places-tab-sidebar li.gchart:hover {
   cursor: pointer;
 }
 
-.wt-places-tab-sidebar li.gchart.messagebox {
+.wt-places-tab-wrapper .wt-places-tab-sidebar li.gchart.messagebox {
   background-color: #f6f9fc;
 }
 
-.wt-places-tab-sidebar li.gchart > div {
+.wt-places-tab-wrapper .wt-places-tab-sidebar li.gchart > div {
   margin-bottom: 0.625rem;
 }
 
