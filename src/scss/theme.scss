@@ -771,15 +771,15 @@ div[id^=caldiv] {
     height: 70vh;
 }
 
-.wt-places-tab-wrapper {
+.wt-pedigree-map-wrapper {
     height: 70vh;
 
-    .wt-places-tab-map,
-    .wt-places-tab-sidebar {
+    .wt-map,
+    .wt-pedigree-map-sidebar {
         height: 100%;
     }
 
-    .wt-places-tab-sidebar {
+    .wt-pedigree-map-sidebar {
         padding: 0;
         overflow-y: auto;
 
@@ -2228,7 +2228,7 @@ table.tv_tree {
 
                 &:hover,
                 &.tt-cursor {
-                    @extend .dropdown-item:hover;
+                    @extend .dropdown-item, :hover;
                     cursor: pointer;
                 }
             }
@@ -2236,11 +2236,11 @@ table.tv_tree {
     }
 
     .active.tt-suggestion {
-        @extend .dropdown-item.active;
+        @extend .dropdown-item, .active;
     }
 
 
     .disabled.tt-suggestion {
-        @extend .dropdown-item.disabled;
+        @extend .dropdown-item, .disabled;
     }
 }
