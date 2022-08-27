@@ -22,6 +22,21 @@ const del = require('del');
 
 /* Sass/CSS */
 
+function buildWebtreesCss(){
+    const plugins = [
+        require('postcss-import')
+    ];
+
+    return gulp.src('src/css/*.css')
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest('resources/css'))
+        .pipe(postcss([ require("cssnano") ]))
+        .pipe(rename(function(path) {
+            path.extname = ".min.css";
+        }))
+        .pipe(gulp.dest('resources/css'))
+}
+
 function scss() {
     const plugins = [
         require('autoprefixer'),
@@ -86,7 +101,7 @@ function watch() {
 exports.watch = watch;
 exports.build = gulp.series(
     clean,
-    gulp.parallel(scss, jsTranspile),
+    gulp.parallel(buildWebtreesCss, scss, jsTranspile),
     gulp.parallel(cssBuild, jsBuild, copyViews, copyModule)
 );
-exports.default = gulp.parallel(scss, jsTranspile);
+exports.default = gulp.parallel(buildWebtreesCss, scss, jsTranspile);

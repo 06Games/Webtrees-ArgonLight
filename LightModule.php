@@ -31,7 +31,7 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
     public function customModuleSupportUrl(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/issues'; }
     public function customModuleLatestVersion(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/releases/latest'; }
     public function resourcesFolder(): string { return __DIR__ . '/resources/'; }
-    public function stylesheets(): array { return [$this->assetUrl('css/theme.css'), $this->assetUrl('css/magicsunday-fan-chart.css')]; }
+    public function stylesheets(): array { return [$this->assetUrl('css/imports.css'), $this->assetUrl('css/theme.css'), $this->assetUrl('css/magicsunday-fan-chart.css')]; }
 
     public function parameter($parameter_name)
     {

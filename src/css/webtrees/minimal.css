@@ -1,0 +1,934 @@
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2022 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/* The minimal theme */
+@import "_base.css";
+
+:root {
+    --chart-line-radius: 1rem;
+    --chart-line: solid gray thin;
+    --link-color-hover: #0a58ca;
+    --link-color: #0d6efd;
+    --link-decoration-hover: underline;
+    --link-decoration: underline;
+    --sex-f-bg: #ffffff;
+    --sex-f-fg: #888888;
+    --sex-m-bg: #ffffff;
+    --sex-m-fg: #888888;
+    --sex-u-bg: #ffffff;
+    --sex-u-fg: #888888;
+    --sex-x-bg: #ffffff;
+    --sex-x-fg: #888888;
+}
+
+/* Override Bootstrap formatting */
+.btn-link {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.table-given-name {
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table {
+    border-collapse: separate;
+}
+
+/*
+ * Pages have the following high-level structure:
+ *
+ * wt-global wt-theme-<THEME> wt-route-<ROUTE>
+ * +---wt-header-wrapper
+ * |   +---wt-header-container
+ * |       +---wt-header-content
+ * |           +---wt-accessibility-links
+ * |           +---wt-site-logo
+ * |           +---wt-site-title
+ * |           +---wt-header-search
+ * |           |   +---wt-header-search-form
+ * |           |       +---wt-header-search-field
+ * |           |       +---wt-header-search-button
+ * |           +---wt-secondary-navigation
+ * |           |   +---wt-user-menu
+ * |           +---wt-primary-navigation
+ * |               +---wt-genealogy-menu
+ * +---wt-main-wrapper
+ * |   +---wt-main-container
+ * |       +---wt-main-content
+ * |           +---wt-messages
+ * |           +---wt-page-title
+ * |           +---wt-page-options wt-page-options-xxxxx
+ * |           +---wt-page-content
+ * +---wt-footers
+ *     +---wt-footer wt-footer-xxxxx
+ */
+
+.wt-global {
+    /* Avoid extremes of black and white.  It is better for users with dyslexia. */
+    color: #0a0a0a;
+    background-color: #f9f9f9;
+}
+
+.wt-header-wrapper {
+}
+
+.wt-header-container {
+    margin-top: 1rem;
+}
+
+.wt-header-content {
+}
+
+.wt-accessibility-links {
+}
+
+.wt-site-logo {
+    display: none;
+}
+
+.wt-site-title {
+    order: 1;
+    flex: 1 1 auto;
+    width: auto;
+    font-size: 1.75rem;
+}
+
+.wt-header-search {
+    order: 3;
+    flex: 0 0 15rem;
+}
+
+.wt-header-search-form {
+}
+
+.wt-header-search-field {
+}
+
+.wt-header-search-button {
+}
+
+.wt-secondary-navigation {
+    order: 2;
+    flex: 0 0 auto;
+    width: auto;
+    white-space: nowrap;
+}
+
+.wt-user-menu {
+    flex-wrap: nowrap;
+}
+
+.wt-user-menu .nav-link {
+    padding: 0.5rem;
+}
+
+.wt-primary-navigation {
+    order: 4;
+    /* Extend to full page width */
+    flex: 0 1 100vw;
+    max-width: 100vw;
+    /* Recalculate margins for content */
+    margin: 0 calc(50% - 50vw);
+    padding: 0 calc(50vw - 50%);
+    border-bottom: 2px solid #aaa;
+}
+
+.wt-genealogy-menu {
+    justify-content: center;
+}
+
+.wt-genealogy-menu .nav-link {
+    padding: 0.5rem;
+}
+
+.wt-main-container {
+    /* Space between the header/footer and the main content. */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.wt-main {
+}
+
+.wt-messages {
+}
+
+.wt-page-title {
+    text-align: center;
+}
+
+.wt-page-content {
+    margin-top: 1rem;
+}
+
+.wt-footers {
+}
+
+.wt-footer {
+}
+
+.wt-footer-contact {
+}
+
+.wt-footer-cookies {
+    background: #aaa;
+    color: #fff;
+    transition: height 0.5s;
+}
+
+.wt-footer-page-views {
+}
+
+.wt-footer-powered-by {
+}
+
+.wt-footer-powered-by-webtrees {
+}
+
+/*
+ * The tree/user home pages
+ *
+ * wt-home-page / wt-user-page
+ * +---wt-main-blocks
+ * |   +---wt-block, wt-block-AAA
+ * |   +---wt-block, wt-block-BBB
+ * |   +---wt-block, wt-block-CCC
+ * +---wt-side-blocks
+ *     +---wt-block, wt-block-XXX
+ *     +---wt-block, wt-block-YYY
+ *     +---wt-block, wt-block-ZZZ
+ *
+ * Each block as the structure
+ * wt-block, wt-block-XXX
+ * +---wt-block-header, wt-block-header-XXX
+ * +---wt-block-content, wt-block-content-XXX
+ */
+
+.wt-block {
+    border: solid #000 1px;
+}
+
+.wt-block-header {
+    background-color: #fff;
+}
+
+.wt-block-content {
+}
+
+.wt-block-content .list_table {
+    border-spacing: 1px;
+    border: solid #000 1px;
+    border-right: 0;
+}
+
+.wt-block-content .list_value,
+.wt-block-content .list_value_wrap {
+    border: 0;
+    border-top: solid #000 1px;
+    border-right: solid #000 1px;
+}
+
+/*
+ * The individual page.
+ *
+ * wt-route-individual
+ * +---wt-header-wrapper
+ */
+.wt-individual-silhouette-f {
+    content: url(images/individual-silhouette-female.png);
+}
+
+.wt-individual-silhouette-m {
+    content: url(images/individual-silhouette-male.png);
+}
+
+.wt-individual-silhouette-u,
+.wt-individual-silhouette-x {
+    content: url(images/individual-silhouette-unknown.png);
+}
+
+/*
+ * Chart-boxes are used to build the various charts.
+ * Each type of chart will set its own size and hide/show content.
+ *
+ * wt-chart-box
+ * +--- wt-chart-box-thumbnail
+ * +--- wt-chart-box-extra
+ *      +--- wt-chart-box-zoom
+ *           +--- wt-chart-box-icon
+ *           +--- wt-chart-box-dropdown wt-chart-box-zoom-dropdown
+ *      +--- wt-chart-box-links
+ *           +--- wt-chart-box-icon
+ *           +--- wt-chart-box-dropdown wt-chart-box-links-dropdown
+ * +--- wt-chart-box-name
+ * +--- wt-chart-box-lifespan
+ * +--- wt-chart-box-facts
+ *     +--- wt-chart-box-fact
+ */
+.wt-chart-box {
+    height: 5rem;
+    padding: 2px;
+    line-height: 1.1;
+    border: solid gray thin;
+}
+
+.wt-chart-box-f,
+.wt-chart-box-f .wt-chart-box-dropdown {
+    background: var(--sex-f-bg);
+    border: solid var(--sex-f-fg) thin;
+}
+
+.wt-chart-box-m,
+.wt-chart-box-m .wt-chart-box-dropdown {
+    background: var(--sex-m-bg);
+    border: solid var(--sex-m-fg) thin;
+}
+
+.wt-chart-box-u,
+.wt-chart-box-u .wt-chart-box-dropdown {
+    background: var(--sex-u-bg);
+    border: solid var(--sex-u-fg) thin;
+}
+
+.wt-chart-box-x,
+.wt-chart-box-x .wt-chart-box-dropdown {
+    background: var(--sex-x-bg);
+    border: solid var(--sex-x-fg) thin;
+}
+
+/* ---Pending edits--- */
+.wt-new {
+    outline: solid thin blue;
+}
+
+.wt-old {
+    outline: solid thin red;
+}
+
+.list_value,
+.list_value_wrap {
+    border: solid #000 1px;
+    vertical-align: top;
+    padding: 4px;
+}
+
+.list_table {
+    margin: 0 auto;
+}
+
+.filtersH,
+.filtersF {
+    margin: 4px;
+}
+
+.filtersH img {
+    margin-bottom: 2px;
+}
+
+.list-charts {
+    text-align: center;
+}
+
+#place-hierarchy h2,
+#place-hierarchy h4 {
+    text-align: center;
+}
+
+/* ======== Block styles ===== */
+.block {
+    background-color: #fff;
+    color: #555;
+    border: solid #ccc 1px;
+    padding: 3px;
+    vertical-align: top;
+}
+
+.blockcontent {
+    margin: 5px;
+    overflow: auto;
+}
+
+.blockcontent .list_table {
+    border-spacing: 0;
+    border: solid #555 1px;
+    border-right: 0;
+}
+
+.blockcontent .list_value,
+.blockcontent .list_value_wrap {
+    border: 0;
+    border-top: solid #555 1px;
+    border-right: solid #555 1px;
+}
+
+.blockheader {
+    font-weight: bold;
+}
+
+/* end Block styles */
+
+.user_welcome_block table,
+.gedcom_block_block table {
+    margin: auto;
+}
+
+.user_welcome_block td,
+.gedcom_block_block td {
+    width: 33%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.user_welcome_block i,
+.gedcom_block_block i {
+    background-image: none;
+    height: 0;
+    width: 0;
+}
+
+/* Table of genealogical facts */
+.wt-facts-table caption {
+    caption-side: top;
+}
+
+.wt-facts-table th {
+    border: 1px solid #000;
+    font-weight: normal;
+    min-width: 20%;
+}
+
+.wt-facts-table td {
+    border: solid #000 1px;
+}
+
+.parentdeath {
+    padding: 1px;
+}
+
+/* ==== FAQ table styles ===== */
+table.faq {
+    background-color: #ddd;
+    margin: 5px 0 50px 5px;
+    width: 98%;
+}
+
+table.faq tr:nth-child(odd) td {
+    background-color: #fff;
+}
+
+div.faq_title {
+    background-color: #ddd;
+    margin: 1em 0;
+    padding: .25em;
+    font-weight: bold;
+    width: 98%;
+}
+
+div.faq_body {
+    clear: both;
+    padding: 0 1em;
+}
+
+.faq_top {
+    float: right;
+}
+
+#indi_note {
+    margin: 0 0 5px;
+}
+
+.indi_table {
+    clear: left;
+}
+
+.label {
+    font-weight: bold;
+}
+
+#indi_note .fact_NOTE {
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+#indi_note .fact_SOUR {
+    margin: 3px 0;
+}
+
+#indi_note .fact_SOUR a {
+    font-size: 100%;
+}
+
+#indi_note .fact_NOTE,
+#indi_note .fact_SOUR {
+    clear: both;
+}
+
+.odometer {
+    font-family: courier, monospace;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+}
+
+.upcoming_events_block button,
+.todays_events_block button {
+    margin: 0 20px;
+}
+
+/* Sidebar - Family navigator */
+
+/* Sidebar - Descendants */
+#sb_content_descendancy {
+    margin-top: 5px;
+}
+
+#sb_desc_content {
+    margin-left: 3px;
+    font-size: 0.8em;
+}
+
+#sb_desc_content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sb_desc_indi_li {
+    list-style-type: none;
+}
+
+/* Individuals and Families */
+#sidebar-content-individuals,
+#sidebar-content-families {
+    margin-top: 5px;
+}
+
+.sb_indi_surname_li,
+.sb_fam_surname_li {
+    list-style-image: url(icons/plus.png);
+}
+
+.name_tree_div ul {
+    padding: 0;
+    margin: 0;
+}
+
+.name_tree_div li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Clippings */
+#sb_clippings_content ul {
+    padding: 0;
+    margin: 0;
+}
+
+#sb_clippings_content li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+/* ====== Charts Styles ======== */
+
+#people label {
+    display: block;
+}
+
+/*-- Fan chart ---- */
+.fan_chart_menu {
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 100;
+}
+
+#fan_chart ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+/* Lifespans chart */
+.wt-lifespans-subtitle {
+    text-align: center;
+}
+
+.wt-lifespans-scale {
+    white-space: nowrap;
+}
+
+.wt-lifespans-decade {
+    width: 70px;
+    height: 60px;
+    display: inline-block;
+    background-image: url(images/lifespan-decade.png);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: 70px 37px;
+}
+
+.wt-lifespans-individuals {
+    background: #fafafa;
+}
+
+.wt-lifespans-individual {
+
+}
+
+.wt-lifespans-summary {
+    background: #ffffff;
+    border: thin solid #000;
+    z-index: 1;
+}
+
+.wt-lifespans-summary-link {
+    font-weight: bold;
+}
+
+/*-- Pedigree ---- */
+.tvertline {
+    vertical-align: bottom;
+}
+
+.optionbox, .descriptionbox {
+    border: solid #000 1px;
+    vertical-align: top;
+    padding: 3px;
+}
+
+#childbox {
+    padding: 5px;
+    position: absolute;
+    display: none;
+    text-align: start;
+    white-space: nowrap;
+    top: 20px;
+    left: 0;
+}
+
+.layout3 #childbox {
+    top: auto;
+    bottom: 20px;
+}
+
+.person0, .person1, .person2, .person3, .person4, .person5 {
+    border:outset #555 1px;
+    vertical-align:top;
+}
+.person0{
+    background-color:#eee;
+}
+
+.person1{
+    background-color:#bfbfbf;
+}
+
+.person2{
+    background-color:#999;
+}
+
+.person3{
+    background-color:#dfdfdf;
+}
+
+.person4{
+    background-color:#eee;
+}
+
+.person5{
+    background-color:#fefefe;
+}
+
+/*-- timeline  --*/
+#timeline_chart {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*
+ * Any element that is loaded dynamically has the class wt-ajax-load.
+ * We can provide a "loading" placeholder for empty elements with this class.
+ */
+.wt-ajax-load:empty {
+    height: 32px;
+    background: url(images/loading-32x32.gif) no-repeat 50% 50%;
+}
+
+/*
+ * Default icons are provided by FontAwesome.
+ */
+.wt-icon-anniversary {
+}
+
+.wt-icon-arrow-down {
+}
+
+a > .wt-icon-arrow-down:hover {
+}
+
+.wt-icon-arrow-left {
+}
+
+a > .wt-icon-arrow-left:hover {
+}
+
+.wt-icon-arrow-right {
+}
+
+a > .wt-icon-arrow-right:hover {
+}
+
+.wt-icon-arrow-up {
+}
+
+a > .wt-icon-arrow-up:hover {
+}
+
+.wt-icon-bing-maps {
+}
+
+.wt-icon-calendar {
+}
+
+.wt-icon-collapse {
+}
+
+.wt-icon-coordinates {
+}
+
+.wt-icon-copy {
+}
+
+.wt-icon-delete {
+}
+
+.wt-icon-edit {
+}
+
+.wt-icon-expand {
+}
+
+.wt-icon-family {
+}
+
+.wt-icon-google-maps {
+}
+
+.wt-icon-help {
+}
+
+.wt-icon-individual {
+}
+
+.wt-icon-keyboard {
+}
+
+.wt-icon-media {
+}
+
+.wt-icon-note {
+}
+
+.wt-icon-openstreetmap {
+}
+
+.wt-icon-preferences {
+}
+
+.wt-icon-reorder {
+}
+
+.wt-icon-repository {
+}
+
+.wt-icon-sex-f {
+    color: var(--sex-m-fg);
+}
+
+.wt-icon-sex-m {
+    color: var(--sex-m-fg);
+}
+
+.wt-icon-sex-u {
+    color: var(--sex-u-fg);
+}
+
+.wt-icon-sex-x {
+    color: var(--sex-u-fg);
+}
+
+.wt-icon-source {
+}
+
+.wt-icon-submitter {
+}
+
+.wt-icon-warning {
+}
+
+.wt-icon-zoom-in {
+}
+
+.wt-icon-zoom-out {
+}
+
+/* Miscellaneous images */
+.icon-cfamily {
+}
+
+.icon-childless {
+    content: url(images/childless.png);
+}
+
+.icon-children {
+    content: url(images/children.png);
+}
+
+.icon-edit_indi {
+    content: url(minimal/images/edit_indi.png);
+}
+
+.icon-fam-list {
+    content: url(minimal/images/sfamily.png);
+}
+
+.icon-indi-list {
+    content: url(minimal/images/indis.png);
+}
+
+.icon-loading-small {
+    content: url(images/indicator.gif);
+}
+
+.icon-loading-large {
+    content: url(images/loading-32x32.gif);
+}
+
+.icon-minus {
+    content: url(icons/minus.png);
+}
+
+.icon-mypage {
+    content: url(minimal/images/mypage.png);
+}
+
+.icon-plus {
+    content: url(icons/plus.png);
+}
+
+.icon-resn-confidential {
+    content: none;
+}
+
+.icon-resn-locked {
+    content: none;
+}
+
+.icon-resn-none {
+    content: none;
+}
+
+.icon-resn-privacy {
+    content: none;
+}
+
+.icon-rings {
+    content: url(images/rings.png);
+}
+
+.icon-selected {
+    content: url(minimal/images/selected.png);
+}
+
+.icon-sfamily {
+    content: url(minimal/images/sfamily.png);
+}
+
+/* Silhouettes on charts */
+.icon-silhouette-f {
+    content: url(minimal/images/silhouette_female_small.png);
+}
+
+.icon-silhouette-m {
+    content: url(minimal/images/silhouette_male_small.png);
+}
+
+.icon-silhouette-u,
+.icon-silhouette-x {
+    content: url(minimal/images/silhouette_unknown_small.png);
+}
+
+.icon-indis {
+    content: url(minimal/images/indis.png);
+}
+
+.icon-pedigree {
+    content: url(minimal/images/pedigree.png);
+}
+
+/* Census assistant */
+.wt-census-assistant-form-control:focus {
+    min-width: 12rem;
+}
+
+/* Some blocks show a reduced version on the right-hand side. */
+.wt-side-blocks .wt-side-block-optional {
+    display: none !important;
+}
+
+/* my page chart enhancements */
+.wt-block-content-charts {
+    overflow: auto;
+}
+
+/* Some charts are wider than the page. */
+.wt-chart {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.wt-calendar-month {
+    border-collapse: collapse;
+}
+
+.wt-calendar-month .wt-page-options-label,
+.wt-calendar-month .wt-page-options-value {
+    border: solid grey thin;
+    padding: 0.2rem;
+}
+
+/* Forms */
+.col-form-label {
+    font-weight: bold;
+}
+
+/* Accordions */
+.accordion .wt-icon-expand,
+.accordion .wt-icon-collapse {
+    display: none;
+}
+
+.accordion-button:after {
+    display: block;
+}
