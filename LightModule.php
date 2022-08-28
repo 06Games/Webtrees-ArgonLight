@@ -61,9 +61,6 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
 
         /** Argon views **/
 
-        // Site Layout
-        View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
-
         // Site Footer
         View::registerCustomView('::modules/powered-by-webtrees/footer', $this->name() . '::modules/powered-by-webtrees/footer'); // Remove text-center class
         View::registerCustomView('::modules/contact-links/footer', $this->name() . '::modules/contact-links/footer'); // Remove text-center and padding classes
