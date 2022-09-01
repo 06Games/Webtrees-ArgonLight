@@ -5,7 +5,7 @@
       <paths name="Webtrees">
         <serverdata>
           <mappings>
-            <mapping deploy="modules_v4/light" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/modules_v4/light" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

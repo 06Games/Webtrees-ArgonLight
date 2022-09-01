@@ -85,11 +85,7 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
         View::registerCustomView('::modules/faq/show', $this->name() . '::modules/faq/show'); // Adjust TOC and back-to-top anchor
 
         // Lists
-        View::registerCustomView('::lists/surnames-table', $this->name() . '::lists/surnames-table'); // Remove small and bordered classes from table
         View::registerCustomView('::modules/place-hierarchy/list', $this->name() . '::modules/place-hierarchy/list'); // Make list header a heading
-        View::registerCustomView('::lists/repositories-table', $this->name() . '::lists/repositories-table'); // Remove small and bordered classes from table
-        View::registerCustomView('::lists/notes-table', $this->name() . '::lists/notes-table'); // Remove small and bordered classes from table
-        View::registerCustomView('::lists/sources-table', $this->name() . '::lists/sources-table'); // Remove small class from table
 
 
         /** My views **/
