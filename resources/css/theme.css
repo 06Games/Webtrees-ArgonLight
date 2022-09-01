@@ -15751,11 +15751,6 @@ button.section-darker:focus {
   left: 8rem;
 }
 
-.center {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .h-100vh {
   height: 100vh !important;
 }
@@ -23744,7 +23739,8 @@ div[id^=caldiv] table table tr:not(:first-child) td.optionbox a {
 #tv_tree,
 table#tvTreeBorder td,
 table#tvTreeBorder td#tv_tree_top,
-table#tvTreeBorder td#tv_tree_topleft table#tvTreeBorder td#tv_tree_bottom,
+table#tvTreeBorder td#tv_tree_topleft,
+table#tvTreeBorder td#tv_tree_bottom,
 table#tvTreeBorder td#tv_tree_bottomleft,
 table#tvTreeBorder td#tv_tree_bottomright,
 table#tvTreeBorder td#tv_tree_left,
@@ -24071,7 +24067,7 @@ table.tv_tree i.dates {
 .person_box .wt-chart-box-zoom-dropdown,
 .wt-family-members .wt-chart-box-zoom-dropdown {
   border: none;
-  color: theme-colors("default");
+  color: #172b4d;
   font-size: 0.875rem;
   padding: 0.625rem;
 }
