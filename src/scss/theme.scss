@@ -12,6 +12,7 @@
 ***********************************************/
 
 $compact-header: false !default;
+$header-breakpoint: xxl;
 
 $card-border-width: 0.188rem;
 $card-spacer-y: 0.5rem;
@@ -444,11 +445,6 @@ select {
     z-index: 1052;
     padding: 5px 0;
 
-    $header-breakpoint: xl;
-    @if $compact-header {
-        $header-breakpoint: xxl !global;
-    }
-
     .wt-header-container {
         padding: 5px 1rem;
         margin: 0;
@@ -498,12 +494,14 @@ select {
 
                 @if not $compact-header {
                     flex-grow: 1;
-                    flex-basis: 60%;
                 }
 
                 @include media-breakpoint-up($header-breakpoint) {
                     @if $compact-header {
                         max-width: calc(100% - 35em);
+                    }
+                    @else{
+                        flex-basis: calc(100% - 30em - 15px);
                     }
                     max-height: 2.25em;
                     line-height: 1;
@@ -531,7 +529,7 @@ select {
                     flex-grow: 1;
                 } @else {
                     @include media-breakpoint-up($header-breakpoint) {
-                        flex-basis: 30%;
+                        flex-basis: 30em;
                         .nav {
                             justify-content: flex-end;
                         }
@@ -569,7 +567,7 @@ select {
                             justify-content: flex-end;
                         }
                     } @else {
-                        flex-basis: 70%;
+                        flex-basis: 65%;
                     }
                 }
 
@@ -652,10 +650,25 @@ select {
                         transition: all 0.15s linear;
 
                         color: theme-color("white");
-                        padding: 0.75rem 0.25rem;
+                        padding: 0.75rem 0.4rem;
 
                         &:hover {
                             color: darken(theme-color("white"), 20%);
+                        }
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 1em;
+                            height: 1em;
+                            vertical-align: sub;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                        @include media-breakpoint-only(sm){
+                            &::before {
+                                display: none;
+                            }
                         }
 
                         @include media-breakpoint-down(sm) {
@@ -665,12 +678,14 @@ select {
                             padding: 0;
                             margin: 0.25em 1em 0.5em;
                             &::before {
-                                content: "";
-                                display: block;
                                 width: 100%;
                                 height: 100%;
-                                background-repeat: no-repeat;
-                                background-position: center;
+                            }
+                        }
+
+                        @include media-breakpoint-up($header-breakpoint) {
+                            &.dropdown-toggle::after {
+                                margin-left: 0.05em;
                             }
                         }
                     }
