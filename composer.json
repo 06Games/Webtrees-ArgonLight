@@ -1,9 +1,8 @@
 {
-    "name": "evang/light-theme",
+    "name": "evang/argon-light",
     "description": "A light theme for Webtrees based on Argon Design System",
     "homepage": "https://github.com/06Games/Webtrees-ArgonLight",
     "readme": "./README.md",
-    "version": "1.1.0",
     "license": "ISC",
     "type": "webtrees-module",
     "keywords": [
@@ -28,6 +27,6 @@
         }
     },
     "require": {
-        "fisharebest/webtrees": "^2.0"
+        "fisharebest/webtrees": "^2.1"
     }
 }
