@@ -27,7 +27,7 @@ use Illuminate\Support\Collection;
     <a href="<?= e($row->record->url()) ?>" class="<?= $n >= $limit_low && $rows->count() > $limit_high ? 'd-none' : '' ?> list-group-item list-group-item-action">
         <span class="d-block"><?= $row->record->fullName() ?></span>
 
-        <?php if ($row->record->lastChangeTimestamp()->unix() !== 0) : ?>
+        <?php if ($row->record->lastChangeTimestamp()->timestamp() !== 0) : ?>
             <small class="d-block">
                 <?php if ($show_user) : ?>
                     <?= /* I18N: [a record was] Changed on <date/time> by <user> */I18N::translate('Changed on %1$s by %2$s', view('components/datetime', ['timestamp' => $row->record->lastChangeTimestamp()]), e($row->record->lastChangeUser())) ?>
