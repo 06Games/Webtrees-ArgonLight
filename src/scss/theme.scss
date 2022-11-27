@@ -456,7 +456,7 @@ select {
             align-items: center;
             padding: 0.25rem 0.5rem;
 
-            @if not $compact-header{
+            @if not $compact-header {
                 flex-wrap: wrap;
             }
 
@@ -499,8 +499,7 @@ select {
                 @include media-breakpoint-up($header-breakpoint) {
                     @if $compact-header {
                         max-width: calc(100% - 35em);
-                    }
-                    @else{
+                    } @else {
                         flex-basis: calc(100% - 30em - 15px);
                     }
                     max-height: 2.25em;
@@ -665,7 +664,8 @@ select {
                             background-repeat: no-repeat;
                             background-position: center;
                         }
-                        @include media-breakpoint-only(sm){
+
+                        @include media-breakpoint-only(sm) {
                             &::before {
                                 display: none;
                             }
@@ -1476,6 +1476,39 @@ table.tv_tree {
 /*****
  * User Page
  */
+
+
+.wt-block-content-gedcom_news {
+    .news_box {
+
+        padding-bottom: 1em;
+        border-bottom: 1px solid color("light");
+
+        &:not(:last-of-type) {
+            margin-bottom: 2em;
+        }
+
+        &:last-of-type {
+            margin-bottom: 1em;
+        }
+
+        .news_title {
+            font-size: 1.15em;
+        }
+
+        .news_date {
+            font-size: 0.9em;
+        }
+
+        & > .news_date ~ [dir] {
+            margin: 1em 0 1em 1em;
+        }
+
+        & > hr {
+            display: none;
+        }
+    }
+}
 
 .wt-block-content-user_messages {
     label {
