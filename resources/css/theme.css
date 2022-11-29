@@ -24087,6 +24087,20 @@ table.tv_tree i.dates {
   padding: 0.5rem 0.625rem;
 }
 
+.wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-family-members .wt-chart-box .wt-chart-box-thumbnail img {
+  border-radius: 5px;
+}
+
+.wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-name,
+.wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-lifespan,
+.wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-facts,
+.wt-family-members .wt-chart-box .wt-chart-box-name,
+.wt-family-members .wt-chart-box .wt-chart-box-lifespan,
+.wt-family-members .wt-chart-box .wt-chart-box-facts {
+  margin-left: 45px;
+}
+
 .wt-block-gedcom_favorites .wt-chart-box-icon > i,
 .wt-family-members .wt-chart-box-icon > i {
   width: 1.25rem;

@@ -1572,6 +1572,16 @@ table.tv_tree {
         margin-bottom: 0.125rem;
         margin-top: 0.125rem;
         padding: 0.5rem 0.625rem;
+
+        .wt-chart-box-thumbnail img {
+            border-radius: 5px;
+        }
+
+        .wt-chart-box-name,
+        .wt-chart-box-lifespan,
+        .wt-chart-box-facts{
+            margin-left: 50px;
+        }
     }
 
     .wt-chart-box-icon > i {
