@@ -578,7 +578,8 @@ select {
                     background-image: url("../img/project-diagram-solid.svg");
                 }
 
-                .menu-list .nav-link::before {
+                .menu-list .nav-link::before,
+                .menu-fancy-treeview .nav-link::before {
                     background-image: url("../img/list-alt-regular.svg");
                 }
 
