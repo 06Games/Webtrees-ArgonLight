@@ -1560,6 +1560,16 @@ table.tv_tree {
 // Also includes Family page (since it utilizes many of the same components but lacks a chart wrapper class)
 .wt-block-gedcom_favorites,
 .wt-family-members {
+    .wt-chart-box {
+
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-xs;
+    }
+}
+
+.wt-block-gedcom_favorites,
+.wt-family-members,
+.wt-tab-relatives {
     td {
         border-bottom: none;
     }
@@ -1570,8 +1580,6 @@ table.tv_tree {
 
     .wt-chart-box {
         background: var(--white);
-        border-radius: $border-radius;
-        box-shadow: $box-shadow-xs;
         font-size: $font-size-xs;
         margin-bottom: 0.125rem;
         margin-top: 0.125rem;

@@ -24070,21 +24070,28 @@ table.tv_tree i.dates {
   margin-bottom: 0.25rem;
 }
 
+.wt-block-gedcom_favorites .wt-chart-box,
+.wt-family-members .wt-chart-box {
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
 .wt-block-gedcom_favorites td,
-.wt-family-members td {
+.wt-family-members td,
+.wt-tab-relatives td {
   border-bottom: none;
 }
 
 .wt-block-gedcom_favorites tr:first-child td,
-.wt-family-members tr:first-child td {
+.wt-family-members tr:first-child td,
+.wt-tab-relatives tr:first-child td {
   border-top: none;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box,
-.wt-family-members .wt-chart-box {
+.wt-family-members .wt-chart-box,
+.wt-tab-relatives .wt-chart-box {
   background: var(--white);
-  border-radius: 0.25rem;
-  box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
   font-size: 0.75rem;
   margin-bottom: 0.125rem;
   margin-top: 0.125rem;
@@ -24092,7 +24099,8 @@ table.tv_tree i.dates {
 }
 
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-thumbnail img,
-.wt-family-members .wt-chart-box .wt-chart-box-thumbnail img {
+.wt-family-members .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-tab-relatives .wt-chart-box .wt-chart-box-thumbnail img {
   border-radius: 5px;
 }
 
@@ -24101,48 +24109,59 @@ table.tv_tree i.dates {
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-facts,
 .wt-family-members .wt-chart-box .wt-chart-box-name,
 .wt-family-members .wt-chart-box .wt-chart-box-lifespan,
-.wt-family-members .wt-chart-box .wt-chart-box-facts {
+.wt-family-members .wt-chart-box .wt-chart-box-facts,
+.wt-tab-relatives .wt-chart-box .wt-chart-box-name,
+.wt-tab-relatives .wt-chart-box .wt-chart-box-lifespan,
+.wt-tab-relatives .wt-chart-box .wt-chart-box-facts {
   margin-left: 50px;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-name,
-.wt-family-members .wt-chart-box .wt-chart-box-name {
+.wt-family-members .wt-chart-box .wt-chart-box-name,
+.wt-tab-relatives .wt-chart-box .wt-chart-box-name {
   font-size: 1.1em;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-icon,
-.wt-family-members .wt-chart-box-icon {
+.wt-family-members .wt-chart-box-icon,
+.wt-tab-relatives .wt-chart-box-icon {
   font-size: 1rem;
   vertical-align: middle;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-icon > i,
-.wt-family-members .wt-chart-box-icon > i {
+.wt-family-members .wt-chart-box-icon > i,
+.wt-tab-relatives .wt-chart-box-icon > i {
   height: 1rem;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-f,
-.wt-family-members .wt-chart-box-f {
+.wt-family-members .wt-chart-box-f,
+.wt-tab-relatives .wt-chart-box-f {
   background-color: #fff4f9;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-m,
-.wt-family-members .wt-chart-box-m {
+.wt-family-members .wt-chart-box-m,
+.wt-tab-relatives .wt-chart-box-m {
   background-color: #f4fdff;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-u,
-.wt-family-members .wt-chart-box-u {
+.wt-family-members .wt-chart-box-u,
+.wt-tab-relatives .wt-chart-box-u {
   background-color: #fff;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-x,
-.wt-family-members .wt-chart-box-x {
+.wt-family-members .wt-chart-box-x,
+.wt-tab-relatives .wt-chart-box-x {
   background-color: #fceaa1;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-zoom-dropdown,
-.wt-family-members .wt-chart-box-zoom-dropdown {
+.wt-family-members .wt-chart-box-zoom-dropdown,
+.wt-tab-relatives .wt-chart-box-zoom-dropdown {
   border: none;
   color: #172b4d;
   font-size: 0.875rem;
@@ -24150,19 +24169,22 @@ table.tv_tree i.dates {
 }
 
 .wt-block-gedcom_favorites .wt-chart-horizontal-spacer,
-.wt-family-members .wt-chart-horizontal-spacer {
+.wt-family-members .wt-chart-horizontal-spacer,
+.wt-tab-relatives .wt-chart-horizontal-spacer {
   width: 1rem;
 }
 
 .wt-block-gedcom_favorites .wt-chart-horizontal-line,
-.wt-family-members .wt-chart-horizontal-line {
+.wt-family-members .wt-chart-horizontal-line,
+.wt-tab-relatives .wt-chart-horizontal-line {
   border-bottom: 0.0625rem solid #e9ecef;
   height: 50%;
   width: 1rem;
 }
 
 .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
-.wt-family-members .wt-chart-horizontal-first-child {
+.wt-family-members .wt-chart-horizontal-first-child,
+.wt-tab-relatives .wt-chart-horizontal-first-child {
   border-top: 0.0625rem solid #e9ecef;
   height: 50%;
   position: relative;
@@ -24170,52 +24192,61 @@ table.tv_tree i.dates {
 }
 
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
-[dir=ltr] .wt-family-members .wt-chart-horizontal-first-child {
+[dir=ltr] .wt-family-members .wt-chart-horizontal-first-child,
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-child {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0.25rem 0 0;
 }
 
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
-[dir=rtl] .wt-family-members .wt-chart-horizontal-first-child {
+[dir=rtl] .wt-family-members .wt-chart-horizontal-first-child,
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-child {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0.25rem 0 0 0;
 }
 
 .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
-.wt-family-members .wt-chart-horizontal-middle-child {
+.wt-family-members .wt-chart-horizontal-middle-child,
+.wt-tab-relatives .wt-chart-horizontal-middle-child {
   height: 100%;
 }
 
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
-[dir=ltr] .wt-family-members .wt-chart-horizontal-middle-child {
+[dir=ltr] .wt-family-members .wt-chart-horizontal-middle-child,
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-middle-child {
   border-right: 0.0625rem solid #e9ecef;
 }
 
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
-[dir=rtl] .wt-family-members .wt-chart-horizontal-middle-child {
+[dir=rtl] .wt-family-members .wt-chart-horizontal-middle-child,
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-middle-child {
   border-left: 0.0625rem solid #e9ecef;
 }
 
 .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
-.wt-family-members .wt-chart-horizontal-last-child {
+.wt-family-members .wt-chart-horizontal-last-child,
+.wt-tab-relatives .wt-chart-horizontal-last-child {
   border-bottom: 0.0625rem solid #e9ecef;
   height: 50%;
 }
 
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
-[dir=ltr] .wt-family-members .wt-chart-horizontal-last-child {
+[dir=ltr] .wt-family-members .wt-chart-horizontal-last-child,
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-child {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0.25rem 0;
 }
 
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
-[dir=rtl] .wt-family-members .wt-chart-horizontal-last-child {
+[dir=rtl] .wt-family-members .wt-chart-horizontal-last-child,
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-child {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0 0.25rem;
 }
 
 .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
-.wt-family-members .wt-chart-horizontal-first-parent {
+.wt-family-members .wt-chart-horizontal-first-parent,
+.wt-tab-relatives .wt-chart-horizontal-first-parent {
   border-top: 0.0625rem solid #e9ecef;
   height: 50%;
   position: relative;
@@ -24223,31 +24254,36 @@ table.tv_tree i.dates {
 }
 
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
-[dir=ltr] .wt-family-members .wt-chart-horizontal-first-parent {
+[dir=ltr] .wt-family-members .wt-chart-horizontal-first-parent,
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-parent {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0.25rem 0 0 0;
 }
 
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
-[dir=rtl] .wt-family-members .wt-chart-horizontal-first-parent {
+[dir=rtl] .wt-family-members .wt-chart-horizontal-first-parent,
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-parent {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0.25rem 0 0;
 }
 
 .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
-.wt-family-members .wt-chart-horizontal-last-parent {
+.wt-family-members .wt-chart-horizontal-last-parent,
+.wt-tab-relatives .wt-chart-horizontal-last-parent {
   border-bottom: 0.0625rem solid #e9ecef;
   height: 50%;
 }
 
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
-[dir=ltr] .wt-family-members .wt-chart-horizontal-last-parent {
+[dir=ltr] .wt-family-members .wt-chart-horizontal-last-parent,
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-parent {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0 0.25rem;
 }
 
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
-[dir=rtl] .wt-family-members .wt-chart-horizontal-last-parent {
+[dir=rtl] .wt-family-members .wt-chart-horizontal-last-parent,
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-parent {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0.25rem 0;
 }
