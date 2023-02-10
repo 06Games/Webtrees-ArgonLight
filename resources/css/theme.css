@@ -22453,6 +22453,10 @@ caption {
   padding-top: 0;
 }
 
+.dataTables_wrapper > div:not(.d-flex) {
+  overflow-x: auto;
+}
+
 [dir] table td,
 [dir] table th,
 [dir] table thead th,
@@ -24098,7 +24102,7 @@ table.tv_tree i.dates {
 .wt-family-members .wt-chart-box .wt-chart-box-name,
 .wt-family-members .wt-chart-box .wt-chart-box-lifespan,
 .wt-family-members .wt-chart-box .wt-chart-box-facts {
-  margin-left: 45px;
+  margin-left: 50px;
 }
 
 .wt-block-gedcom_favorites .wt-chart-box-icon > i,

@@ -57,6 +57,10 @@ caption {
     padding-top: 0;
 }
 
+.dataTables_wrapper > div:not(.d-flex) {
+    overflow-x: auto;
+}
+
 [dir] table,
 [dir] .table {
     td,

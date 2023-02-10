@@ -5,7 +5,6 @@
       <sourceFolder url="file://$MODULE_DIR$/" isTestSource="false" packagePrefix="EvanG\Themes\LightTheme\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/middlewares/client-ip" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fisharebest/webtrees" />
