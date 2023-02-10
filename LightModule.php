@@ -31,7 +31,7 @@ class LightTheme extends AbstractModule implements ModuleCustomInterface, Module
 
     public function customModuleAuthorName(): string { return 'EvanG'; }
 
-    public function customModuleVersion(): string { return '1.1.1'; }
+    public function customModuleVersion(): string { return '1.1.2'; }
 
     public function customModuleLatestVersionUrl(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/raw/main/version.txt'; }
 
