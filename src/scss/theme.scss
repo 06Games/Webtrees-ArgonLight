@@ -447,7 +447,7 @@ select {
     }
 }
 
-[dir] header {
+[dir] body > header {
     background-color: theme-color("default");
     box-shadow: 0 10px 20px rgba(50, 50, 93, .2);
     z-index: 1052;
