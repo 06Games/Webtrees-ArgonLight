@@ -72,7 +72,7 @@ $primary:       #5e72e4 !default;
 $secondary:     #f4f5f7 !default;
 $success:       $green !default;
 $info:          $teal !default;
-$warning:       $orange !default;
+$warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-500 !default;
 $dark:          $gray-900 !default;
@@ -687,7 +687,7 @@ $alert-border-radius: $border-radius !default;
 
 $alert-bg-level: -2 !default;
 $alert-border-level: -2 !default;
-$alert-color-level: 0 !default;
+$alert-color-level: 4 !default;
 
 
 // List group

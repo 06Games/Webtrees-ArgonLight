@@ -21,10 +21,6 @@
     }
 }
 
-.alert:not(.alert-secondary) {
-    color: $white;
-}
-
 [class*="alert-"] {
     .alert-link {
         color: $white; 
