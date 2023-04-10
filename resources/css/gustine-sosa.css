@@ -1,0 +1,20 @@
+/************************************************
+                Argon Light Theme
+             Originally made by jchue
+  Under the Internet Systems Consortium License
+  https://github.com/jchue/argon-webtrees-theme
+
+       Forked and maintained by Evan Galli
+             Under the same licence
+ https://github.com/06Games/Webtrees-ArgonLight
+************************************************
+              Gustine's SOSA addon
+***********************************************/
+
+#sidebar-content-_sosa20_.collapse:not(.show) {
+  display: none;
+}
+
+#sidebar-content-_sosa20_ #wt-sidebar-sosa1 {
+  border: none !important;
+}
