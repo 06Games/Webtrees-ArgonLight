@@ -1085,6 +1085,9 @@ div[id^=caldiv] {
 [dir] .img-thumbnail {
     text-align: center;
 }
+.wt-family-navigator-family .wt-family-navigator-label + td{
+    background-color: inherit;
+}
 
 /* Families Tab */
 

@@ -23597,6 +23597,10 @@ div[id^=caldiv] table table tr:not(:first-child) td.optionbox a {
   text-align: center;
 }
 
+.wt-family-navigator-family .wt-family-navigator-label + td {
+  background-color: inherit;
+}
+
 
 /* Families Tab */
 
