@@ -927,7 +927,12 @@ div[id^=caldiv] {
 
     .wt-map,
     .wt-map-sidebar {
-        height: 100%;
+        @include media-breakpoint-up(sm) {
+            height: 100%;
+        }
+        @include media-breakpoint-down(sm) {
+            height: 50%;
+        }
     }
 
     .wt-map-sidebar {

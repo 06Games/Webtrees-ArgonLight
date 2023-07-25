@@ -23430,13 +23430,26 @@ div[id^=caldiv] table table tr:not(:first-child) td.optionbox a {
   height: 70vh;
 }
 
-.wt-places-tab-wrapper .wt-map,
+@media (min-width: 576px) {
+  .wt-places-tab-wrapper .wt-map,
 .wt-places-tab-wrapper .wt-map-sidebar,
 .wt-place-hierarchy-wrapper .wt-map,
 .wt-place-hierarchy-wrapper .wt-map-sidebar,
 .wt-pedigree-map-wrapper .wt-map,
 .wt-pedigree-map-wrapper .wt-map-sidebar {
-  height: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .wt-places-tab-wrapper .wt-map,
+.wt-places-tab-wrapper .wt-map-sidebar,
+.wt-place-hierarchy-wrapper .wt-map,
+.wt-place-hierarchy-wrapper .wt-map-sidebar,
+.wt-pedigree-map-wrapper .wt-map,
+.wt-pedigree-map-wrapper .wt-map-sidebar {
+    height: 50%;
+  }
 }
 
 .wt-places-tab-wrapper .wt-map-sidebar,
