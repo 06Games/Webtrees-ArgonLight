@@ -914,29 +914,23 @@ div[id^=caldiv] {
 
 /* Maps (Pedigree Page, Place Hierarchy Page, Place Hierarhy Tab) */
 
-.osm-wrapper,
-.osm-user-map {
-    height: 70vh;
-}
-
-.osm-wrapper {
+.wt-places-tab-wrapper {
     border-radius: $border-radius;
     box-shadow: $box-shadow-sm;
 }
 
-.wt-place-hierarchy-wrapper {
-    height: 70vh;
-}
-
-.wt-pedigree-map-wrapper {
+.wt-places-tab-wrapper, // Individual place tab
+.wt-place-hierarchy-wrapper, // Place list
+.wt-pedigree-map-wrapper // Pedigree map
+{
     height: 70vh;
 
     .wt-map,
-    .wt-pedigree-map-sidebar {
+    .wt-map-sidebar {
         height: 100%;
     }
 
-    .wt-pedigree-map-sidebar {
+    .wt-map-sidebar {
         padding: 0;
         overflow-y: auto;
 

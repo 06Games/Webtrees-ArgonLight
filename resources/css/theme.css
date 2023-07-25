@@ -23419,62 +23419,87 @@ div[id^=caldiv] table table tr:not(:first-child) td.optionbox a {
 
 /* Maps (Pedigree Page, Place Hierarchy Page, Place Hierarhy Tab) */
 
-.osm-wrapper,
-.osm-user-map {
-  height: 70vh;
-}
-
-.osm-wrapper {
+.wt-places-tab-wrapper {
   border-radius: 0.25rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-.wt-place-hierarchy-wrapper {
-  height: 70vh;
-}
-
+.wt-places-tab-wrapper,
+.wt-place-hierarchy-wrapper,
 .wt-pedigree-map-wrapper {
   height: 70vh;
 }
 
+.wt-places-tab-wrapper .wt-map,
+.wt-places-tab-wrapper .wt-map-sidebar,
+.wt-place-hierarchy-wrapper .wt-map,
+.wt-place-hierarchy-wrapper .wt-map-sidebar,
 .wt-pedigree-map-wrapper .wt-map,
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar {
+.wt-pedigree-map-wrapper .wt-map-sidebar {
   height: 100%;
 }
 
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar {
+.wt-places-tab-wrapper .wt-map-sidebar,
+.wt-place-hierarchy-wrapper .wt-map-sidebar,
+.wt-pedigree-map-wrapper .wt-map-sidebar {
   padding: 0;
   overflow-y: auto;
 }
 
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart {
+.wt-places-tab-wrapper .wt-map-sidebar li.gchart,
+.wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart,
+.wt-pedigree-map-wrapper .wt-map-sidebar li.gchart {
   border-bottom: 0.0625rem solid #e9ecef;
   font-size: 0.875rem !important;
   padding: 1.5rem;
 }
 
-.tab-pane .wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart {
+.tab-pane .wt-places-tab-wrapper .wt-map-sidebar li.gchart,
+.tab-pane .wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart,
+.tab-pane .wt-pedigree-map-wrapper .wt-map-sidebar li.gchart {
   font-size: 0.75rem !important;
   padding: 1rem;
 }
 
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart:hover,
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion:hover,
-.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart.tt-suggestion:hover,
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
-.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart.tt-suggestion.tt-cursor,
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion:hover,
-.twitter-typeahead .tt-menu .tt-dataset .wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart.tt-suggestion:hover,
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
-.twitter-typeahead .tt-menu .tt-dataset .wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart.tt-suggestion.tt-cursor {
+.wt-places-tab-wrapper .wt-map-sidebar li.gchart:hover,
+.wt-places-tab-wrapper .wt-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion:hover,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-places-tab-wrapper .wt-map-sidebar li.gchart.tt-suggestion:hover,
+.wt-places-tab-wrapper .wt-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-places-tab-wrapper .wt-map-sidebar li.gchart.tt-suggestion.tt-cursor,
+.wt-places-tab-wrapper .wt-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion:hover,
+.twitter-typeahead .tt-menu .tt-dataset .wt-places-tab-wrapper .wt-map-sidebar li.gchart.tt-suggestion:hover,
+.wt-places-tab-wrapper .wt-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
+.twitter-typeahead .tt-menu .tt-dataset .wt-places-tab-wrapper .wt-map-sidebar li.gchart.tt-suggestion.tt-cursor,
+.wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart:hover,
+.wt-place-hierarchy-wrapper .wt-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion:hover,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart.tt-suggestion:hover,
+.wt-place-hierarchy-wrapper .wt-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart.tt-suggestion.tt-cursor,
+.wt-place-hierarchy-wrapper .wt-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion:hover,
+.twitter-typeahead .tt-menu .tt-dataset .wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart.tt-suggestion:hover,
+.wt-place-hierarchy-wrapper .wt-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
+.twitter-typeahead .tt-menu .tt-dataset .wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart.tt-suggestion.tt-cursor,
+.wt-pedigree-map-wrapper .wt-map-sidebar li.gchart:hover,
+.wt-pedigree-map-wrapper .wt-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion:hover,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-pedigree-map-wrapper .wt-map-sidebar li.gchart.tt-suggestion:hover,
+.wt-pedigree-map-wrapper .wt-map-sidebar .twitter-typeahead .tt-dropdown-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .wt-pedigree-map-wrapper .wt-map-sidebar li.gchart.tt-suggestion.tt-cursor,
+.wt-pedigree-map-wrapper .wt-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion:hover,
+.twitter-typeahead .tt-menu .tt-dataset .wt-pedigree-map-wrapper .wt-map-sidebar li.gchart.tt-suggestion:hover,
+.wt-pedigree-map-wrapper .wt-map-sidebar .twitter-typeahead .tt-menu .tt-dataset li.gchart.tt-suggestion.tt-cursor,
+.twitter-typeahead .tt-menu .tt-dataset .wt-pedigree-map-wrapper .wt-map-sidebar li.gchart.tt-suggestion.tt-cursor {
   cursor: pointer;
 }
 
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart.messagebox {
+.wt-places-tab-wrapper .wt-map-sidebar li.gchart.messagebox,
+.wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart.messagebox,
+.wt-pedigree-map-wrapper .wt-map-sidebar li.gchart.messagebox {
   background-color: #f6f9fc;
 }
 
-.wt-pedigree-map-wrapper .wt-pedigree-map-sidebar li.gchart > div {
+.wt-places-tab-wrapper .wt-map-sidebar li.gchart > div,
+.wt-place-hierarchy-wrapper .wt-map-sidebar li.gchart > div,
+.wt-pedigree-map-wrapper .wt-map-sidebar li.gchart > div {
   margin-bottom: 0.625rem;
 }
 
