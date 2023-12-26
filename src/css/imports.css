@@ -11,4 +11,4 @@
                    CSS imports
 ***********************************************/
 
-@import "webtrees/_base.css";
+@import "../../vendor/fisharebest/webtrees/resources/css/_base.css";
