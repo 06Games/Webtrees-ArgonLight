@@ -12,7 +12,7 @@
 
 declare(strict_types=1);
 
-namespace EvanG\Themes\LightTheme;
+namespace EvanG\Themes\Argon;
 
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
@@ -21,7 +21,7 @@ use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeTrait;
 use Fisharebest\Webtrees\View;
 
-class LightTheme extends AbstractModule implements ModuleCustomInterface, ModuleThemeInterface
+class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, ModuleThemeInterface
 {
     use ModuleCustomTrait, ModuleThemeTrait;
 

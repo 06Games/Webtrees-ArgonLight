@@ -11,6 +11,6 @@
  https://github.com/06Games/Webtrees-ArgonLight
 ***********************************************/
 
-namespace EvanG\Themes\LightTheme;
-include "LightModule.php";
-return new LightTheme();
+namespace EvanG\Themes\Argon;
+include "ArgonLightTheme.php";
+return new ArgonLightTheme();
