@@ -7335,8 +7335,10 @@ select {
 }
 
 .page-link,
-.paginate_button.previous a::after,
-.paginate_button.next a::after {
+.pagination a.page-link.first::after,
+.pagination a.page-link.previous::after,
+.pagination a.page-link.next::after,
+.pagination a.page-link.last::after {
   position: relative;
   display: block;
   padding: 0.5rem 0.75rem;
@@ -7352,24 +7354,42 @@ select {
 .twitter-typeahead .tt-dropdown-menu .tt-dataset .page-link.tt-suggestion.tt-cursor,
 .twitter-typeahead .tt-menu .tt-dataset .page-link.tt-suggestion:hover,
 .twitter-typeahead .tt-menu .tt-dataset .page-link.tt-suggestion.tt-cursor,
-.paginate_button.previous a:hover::after,
-.paginate_button.previous .twitter-typeahead .tt-dropdown-menu .tt-dataset a.tt-suggestion:hover::after,
-.twitter-typeahead .tt-dropdown-menu .tt-dataset .paginate_button.previous a.tt-suggestion:hover::after,
-.paginate_button.previous .twitter-typeahead .tt-dropdown-menu .tt-dataset a.tt-suggestion.tt-cursor::after,
-.twitter-typeahead .tt-dropdown-menu .tt-dataset .paginate_button.previous a.tt-suggestion.tt-cursor::after,
-.paginate_button.previous .twitter-typeahead .tt-menu .tt-dataset a.tt-suggestion:hover::after,
-.twitter-typeahead .tt-menu .tt-dataset .paginate_button.previous a.tt-suggestion:hover::after,
-.paginate_button.previous .twitter-typeahead .tt-menu .tt-dataset a.tt-suggestion.tt-cursor::after,
-.twitter-typeahead .tt-menu .tt-dataset .paginate_button.previous a.tt-suggestion.tt-cursor::after,
-.paginate_button.next a:hover::after,
-.paginate_button.next .twitter-typeahead .tt-dropdown-menu .tt-dataset a.tt-suggestion:hover::after,
-.twitter-typeahead .tt-dropdown-menu .tt-dataset .paginate_button.next a.tt-suggestion:hover::after,
-.paginate_button.next .twitter-typeahead .tt-dropdown-menu .tt-dataset a.tt-suggestion.tt-cursor::after,
-.twitter-typeahead .tt-dropdown-menu .tt-dataset .paginate_button.next a.tt-suggestion.tt-cursor::after,
-.paginate_button.next .twitter-typeahead .tt-menu .tt-dataset a.tt-suggestion:hover::after,
-.twitter-typeahead .tt-menu .tt-dataset .paginate_button.next a.tt-suggestion:hover::after,
-.paginate_button.next .twitter-typeahead .tt-menu .tt-dataset a.tt-suggestion.tt-cursor::after,
-.twitter-typeahead .tt-menu .tt-dataset .paginate_button.next a.tt-suggestion.tt-cursor::after {
+.pagination a.page-link.first:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.first.tt-suggestion:hover::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.first.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.first.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.first.tt-suggestion.tt-cursor::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.first.tt-suggestion:hover::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.first.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.first.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.first.tt-suggestion.tt-cursor::after,
+.pagination a.page-link.previous:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.previous.tt-suggestion:hover::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.previous.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.previous.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.previous.tt-suggestion.tt-cursor::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.previous.tt-suggestion:hover::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.previous.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.previous.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.previous.tt-suggestion.tt-cursor::after,
+.pagination a.page-link.next:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.next.tt-suggestion:hover::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.next.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.next.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.next.tt-suggestion.tt-cursor::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.next.tt-suggestion:hover::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.next.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.next.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.next.tt-suggestion.tt-cursor::after,
+.pagination a.page-link.last:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.last.tt-suggestion:hover::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.last.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-dropdown-menu .tt-dataset a.page-link.last.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-dropdown-menu .tt-dataset .pagination a.page-link.last.tt-suggestion.tt-cursor::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.last.tt-suggestion:hover::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.last.tt-suggestion:hover::after,
+.pagination .twitter-typeahead .tt-menu .tt-dataset a.page-link.last.tt-suggestion.tt-cursor::after,
+.twitter-typeahead .tt-menu .tt-dataset .pagination a.page-link.last.tt-suggestion.tt-cursor::after {
   z-index: 2;
   color: #8898aa;
   text-decoration: none;
@@ -7378,37 +7398,51 @@ select {
 }
 
 .page-link:focus,
-.paginate_button.previous a:focus::after,
-.paginate_button.next a:focus::after {
+.pagination a.page-link.first:focus::after,
+.pagination a.page-link.previous:focus::after,
+.pagination a.page-link.next:focus::after,
+.pagination a.page-link.last:focus::after {
   z-index: 2;
   outline: 0;
   box-shadow: none;
 }
 
 .page-item:first-child .page-link,
-.page-item:first-child .paginate_button.previous a::after,
-.paginate_button.previous .page-item:first-child a::after,
-.page-item:first-child .paginate_button.next a::after,
-.paginate_button.next .page-item:first-child a::after {
+.page-item:first-child .pagination a.page-link.first::after,
+.pagination .page-item:first-child a.page-link.first::after,
+.page-item:first-child .pagination a.page-link.previous::after,
+.pagination .page-item:first-child a.page-link.previous::after,
+.page-item:first-child .pagination a.page-link.next::after,
+.pagination .page-item:first-child a.page-link.next::after,
+.page-item:first-child .pagination a.page-link.last::after,
+.pagination .page-item:first-child a.page-link.last::after {
   margin-left: 0;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
 
 .page-item:last-child .page-link,
-.page-item:last-child .paginate_button.previous a::after,
-.paginate_button.previous .page-item:last-child a::after,
-.page-item:last-child .paginate_button.next a::after,
-.paginate_button.next .page-item:last-child a::after {
+.page-item:last-child .pagination a.page-link.first::after,
+.pagination .page-item:last-child a.page-link.first::after,
+.page-item:last-child .pagination a.page-link.previous::after,
+.pagination .page-item:last-child a.page-link.previous::after,
+.page-item:last-child .pagination a.page-link.next::after,
+.pagination .page-item:last-child a.page-link.next::after,
+.page-item:last-child .pagination a.page-link.last::after,
+.pagination .page-item:last-child a.page-link.last::after {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
 
 .page-item.active .page-link,
-.page-item.active .paginate_button.previous a::after,
-.paginate_button.previous .page-item.active a::after,
-.page-item.active .paginate_button.next a::after,
-.paginate_button.next .page-item.active a::after {
+.page-item.active .pagination a.page-link.first::after,
+.pagination .page-item.active a.page-link.first::after,
+.page-item.active .pagination a.page-link.previous::after,
+.pagination .page-item.active a.page-link.previous::after,
+.page-item.active .pagination a.page-link.next::after,
+.pagination .page-item.active a.page-link.next::after,
+.page-item.active .pagination a.page-link.last::after,
+.pagination .page-item.active a.page-link.last::after {
   z-index: 1;
   color: #fff;
   background-color: #5e72e4;
@@ -7416,10 +7450,14 @@ select {
 }
 
 .page-item.disabled .page-link,
-.page-item.disabled .paginate_button.previous a::after,
-.paginate_button.previous .page-item.disabled a::after,
-.page-item.disabled .paginate_button.next a::after,
-.paginate_button.next .page-item.disabled a::after {
+.page-item.disabled .pagination a.page-link.first::after,
+.pagination .page-item.disabled a.page-link.first::after,
+.page-item.disabled .pagination a.page-link.previous::after,
+.pagination .page-item.disabled a.page-link.previous::after,
+.page-item.disabled .pagination a.page-link.next::after,
+.pagination .page-item.disabled a.page-link.next::after,
+.page-item.disabled .pagination a.page-link.last::after,
+.pagination .page-item.disabled a.page-link.last::after {
   color: #8898aa;
   pointer-events: none;
   cursor: auto;
@@ -7428,57 +7466,81 @@ select {
 }
 
 .pagination-lg .page-link,
-.pagination-lg .paginate_button.previous a::after,
-.paginate_button.previous .pagination-lg a::after,
-.pagination-lg .paginate_button.next a::after,
-.paginate_button.next .pagination-lg a::after {
+.pagination-lg .pagination a.page-link.first::after,
+.pagination .pagination-lg a.page-link.first::after,
+.pagination-lg .pagination a.page-link.previous::after,
+.pagination .pagination-lg a.page-link.previous::after,
+.pagination-lg .pagination a.page-link.next::after,
+.pagination .pagination-lg a.page-link.next::after,
+.pagination-lg .pagination a.page-link.last::after,
+.pagination .pagination-lg a.page-link.last::after {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
 .pagination-lg .page-item:first-child .page-link,
-.pagination-lg .page-item:first-child .paginate_button.previous a::after,
-.paginate_button.previous .pagination-lg .page-item:first-child a::after,
-.pagination-lg .page-item:first-child .paginate_button.next a::after,
-.paginate_button.next .pagination-lg .page-item:first-child a::after {
+.pagination-lg .page-item:first-child .pagination a.page-link.first::after,
+.pagination .pagination-lg .page-item:first-child a.page-link.first::after,
+.pagination-lg .page-item:first-child .pagination a.page-link.previous::after,
+.pagination .pagination-lg .page-item:first-child a.page-link.previous::after,
+.pagination-lg .page-item:first-child .pagination a.page-link.next::after,
+.pagination .pagination-lg .page-item:first-child a.page-link.next::after,
+.pagination-lg .page-item:first-child .pagination a.page-link.last::after,
+.pagination .pagination-lg .page-item:first-child a.page-link.last::after {
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
 }
 
 .pagination-lg .page-item:last-child .page-link,
-.pagination-lg .page-item:last-child .paginate_button.previous a::after,
-.paginate_button.previous .pagination-lg .page-item:last-child a::after,
-.pagination-lg .page-item:last-child .paginate_button.next a::after,
-.paginate_button.next .pagination-lg .page-item:last-child a::after {
+.pagination-lg .page-item:last-child .pagination a.page-link.first::after,
+.pagination .pagination-lg .page-item:last-child a.page-link.first::after,
+.pagination-lg .page-item:last-child .pagination a.page-link.previous::after,
+.pagination .pagination-lg .page-item:last-child a.page-link.previous::after,
+.pagination-lg .page-item:last-child .pagination a.page-link.next::after,
+.pagination .pagination-lg .page-item:last-child a.page-link.next::after,
+.pagination-lg .page-item:last-child .pagination a.page-link.last::after,
+.pagination .pagination-lg .page-item:last-child a.page-link.last::after {
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
 }
 
 .pagination-sm .page-link,
-.pagination-sm .paginate_button.previous a::after,
-.paginate_button.previous .pagination-sm a::after,
-.pagination-sm .paginate_button.next a::after,
-.paginate_button.next .pagination-sm a::after {
+.pagination-sm .pagination a.page-link.first::after,
+.pagination .pagination-sm a.page-link.first::after,
+.pagination-sm .pagination a.page-link.previous::after,
+.pagination .pagination-sm a.page-link.previous::after,
+.pagination-sm .pagination a.page-link.next::after,
+.pagination .pagination-sm a.page-link.next::after,
+.pagination-sm .pagination a.page-link.last::after,
+.pagination .pagination-sm a.page-link.last::after {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
 .pagination-sm .page-item:first-child .page-link,
-.pagination-sm .page-item:first-child .paginate_button.previous a::after,
-.paginate_button.previous .pagination-sm .page-item:first-child a::after,
-.pagination-sm .page-item:first-child .paginate_button.next a::after,
-.paginate_button.next .pagination-sm .page-item:first-child a::after {
+.pagination-sm .page-item:first-child .pagination a.page-link.first::after,
+.pagination .pagination-sm .page-item:first-child a.page-link.first::after,
+.pagination-sm .page-item:first-child .pagination a.page-link.previous::after,
+.pagination .pagination-sm .page-item:first-child a.page-link.previous::after,
+.pagination-sm .page-item:first-child .pagination a.page-link.next::after,
+.pagination .pagination-sm .page-item:first-child a.page-link.next::after,
+.pagination-sm .page-item:first-child .pagination a.page-link.last::after,
+.pagination .pagination-sm .page-item:first-child a.page-link.last::after {
   border-top-left-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem;
 }
 
 .pagination-sm .page-item:last-child .page-link,
-.pagination-sm .page-item:last-child .paginate_button.previous a::after,
-.paginate_button.previous .pagination-sm .page-item:last-child a::after,
-.pagination-sm .page-item:last-child .paginate_button.next a::after,
-.paginate_button.next .pagination-sm .page-item:last-child a::after {
+.pagination-sm .page-item:last-child .pagination a.page-link.first::after,
+.pagination .pagination-sm .page-item:last-child a.page-link.first::after,
+.pagination-sm .page-item:last-child .pagination a.page-link.previous::after,
+.pagination .pagination-sm .page-item:last-child a.page-link.previous::after,
+.pagination-sm .page-item:last-child .pagination a.page-link.next::after,
+.pagination .pagination-sm .page-item:last-child a.page-link.next::after,
+.pagination-sm .page-item:last-child .pagination a.page-link.last::after,
+.pagination .pagination-sm .page-item:last-child a.page-link.last::after {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
 }
@@ -18777,18 +18839,26 @@ textarea[resize=horizontal] {
 }
 
 .page-item.active .page-link,
-.page-item.active .paginate_button.previous a::after,
-.paginate_button.previous .page-item.active a::after,
-.page-item.active .paginate_button.next a::after,
-.paginate_button.next .page-item.active a::after {
+.page-item.active .pagination a.page-link.first::after,
+.pagination .page-item.active a.page-link.first::after,
+.page-item.active .pagination a.page-link.previous::after,
+.pagination .page-item.active a.page-link.previous::after,
+.page-item.active .pagination a.page-link.next::after,
+.pagination .page-item.active a.page-link.next::after,
+.page-item.active .pagination a.page-link.last::after,
+.pagination .page-item.active a.page-link.last::after {
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 .page-item .page-link,
-.page-item .paginate_button.previous a::after,
-.paginate_button.previous .page-item a::after,
-.page-item .paginate_button.next a::after,
-.paginate_button.next .page-item a::after,
+.page-item .pagination a.page-link.first::after,
+.pagination .page-item a.page-link.first::after,
+.page-item .pagination a.page-link.previous::after,
+.pagination .page-item a.page-link.previous::after,
+.page-item .pagination a.page-link.next::after,
+.pagination .page-item a.page-link.next::after,
+.page-item .pagination a.page-link.last::after,
+.pagination .page-item a.page-link.last::after,
 .page-item span {
   display: flex;
   align-items: center;
@@ -18802,10 +18872,14 @@ textarea[resize=horizontal] {
 }
 
 .pagination-lg .page-item .page-link,
-.pagination-lg .page-item .paginate_button.previous a::after,
-.paginate_button.previous .pagination-lg .page-item a::after,
-.pagination-lg .page-item .paginate_button.next a::after,
-.paginate_button.next .pagination-lg .page-item a::after,
+.pagination-lg .page-item .pagination a.page-link.first::after,
+.pagination .pagination-lg .page-item a.page-link.first::after,
+.pagination-lg .page-item .pagination a.page-link.previous::after,
+.pagination .pagination-lg .page-item a.page-link.previous::after,
+.pagination-lg .page-item .pagination a.page-link.next::after,
+.pagination .pagination-lg .page-item a.page-link.next::after,
+.pagination-lg .page-item .pagination a.page-link.last::after,
+.pagination .pagination-lg .page-item a.page-link.last::after,
 .pagination-lg .page-item span {
   width: 46px;
   height: 46px;
@@ -18813,10 +18887,14 @@ textarea[resize=horizontal] {
 }
 
 .pagination-sm .page-item .page-link,
-.pagination-sm .page-item .paginate_button.previous a::after,
-.paginate_button.previous .pagination-sm .page-item a::after,
-.pagination-sm .page-item .paginate_button.next a::after,
-.paginate_button.next .pagination-sm .page-item a::after,
+.pagination-sm .page-item .pagination a.page-link.first::after,
+.pagination .pagination-sm .page-item a.page-link.first::after,
+.pagination-sm .page-item .pagination a.page-link.previous::after,
+.pagination .pagination-sm .page-item a.page-link.previous::after,
+.pagination-sm .page-item .pagination a.page-link.next::after,
+.pagination .pagination-sm .page-item a.page-link.next::after,
+.pagination-sm .page-item .pagination a.page-link.last::after,
+.pagination .pagination-sm .page-item a.page-link.last::after,
 .pagination-sm .page-item span {
   width: 30px;
   height: 30px;
@@ -23273,13 +23351,21 @@ ul.pagination {
 
 /* Hack for Pagination Arrows */
 
-.paginate_button.previous a,
-.paginate_button.next a {
+.pagination a.page-link.first,
+.pagination a.first.page-link::after,
+.pagination a.page-link.previous,
+.pagination a.previous.page-link::after,
+.pagination a.page-link.next,
+.pagination a.next.page-link::after,
+.pagination a.page-link.last,
+.pagination a.last.page-link::after {
   visibility: hidden;
 }
 
-.paginate_button.previous a::after,
-.paginate_button.next a::after {
+.pagination a.page-link.first::after,
+.pagination a.page-link.previous::after,
+.pagination a.page-link.next::after,
+.pagination a.page-link.last::after {
   border-radius: 50%;
   display: block;
   height: 36px;
@@ -23292,12 +23378,20 @@ ul.pagination {
   width: 36px;
 }
 
-.paginate_button.previous a::after {
+.pagination a.page-link.first::after {
+  content: "«";
+}
+
+.pagination a.page-link.previous::after {
   content: "‹";
 }
 
-.paginate_button.next a::after {
+.pagination a.page-link.next::after {
   content: "›";
+}
+
+.pagination a.page-link.last::after {
+  content: "»";
 }
 
 

@@ -98,7 +98,7 @@ input[type=text] {
     @extend .form-control;
 }
 
-.alert a{
+.alert a {
     color: inherit;
 }
 
@@ -759,9 +759,11 @@ ul.pagination {
 
 /* Hack for Pagination Arrows */
 
-.paginate_button.previous,
-.paginate_button.next {
-    a {
+.pagination a.page-link {
+    &.first,
+    &.previous,
+    &.next,
+    &.last {
         visibility: hidden;
 
         &::after {
@@ -778,14 +780,22 @@ ul.pagination {
             width: 36px;
         }
     }
-}
 
-.paginate_button.previous a::after {
-    content: "\2039";
-}
+    &.first::after {
+        content: "\00AB";
+    }
 
-.paginate_button.next a::after {
-    content: "\203A";
+    &.previous::after {
+        content: "\2039";
+    }
+
+    &.next::after {
+        content: "\203A";
+    }
+
+    &.last::after {
+        content: "\00BB";
+    }
 }
 
 /*****
@@ -1084,7 +1094,8 @@ div[id^=caldiv] {
 [dir] .img-thumbnail {
     text-align: center;
 }
-.wt-family-navigator-family .wt-family-navigator-label + td{
+
+.wt-family-navigator-family .wt-family-navigator-label + td {
     background-color: inherit;
 }
 
