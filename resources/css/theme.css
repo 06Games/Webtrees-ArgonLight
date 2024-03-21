@@ -22545,7 +22545,11 @@ caption {
   font-size: 0.875rem;
 }
 
+[dir] table thead,
+[dir] table tfoot,
 [dir] table th,
+[dir] .table thead,
+[dir] .table tfoot,
 [dir] .table th {
   background-color: #f6f9fc;
 }

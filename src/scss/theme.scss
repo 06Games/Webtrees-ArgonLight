@@ -72,7 +72,7 @@ caption {
         font-size: $font-size-sm;
     }
 
-    th {
+    thead, tfoot, th {
         background-color: $gray-100;
     }
 
