@@ -760,10 +760,10 @@ ul.pagination {
 /* Hack for Pagination Arrows */
 
 .pagination a.page-link {
-    &.first,
-    &.previous,
-    &.next,
-    &.last {
+    &.first, &[data-dt-idx="first"],
+    &.previous, &[data-dt-idx="previous"],
+    &.next, &[data-dt-idx="next"],
+    &.last, &[data-dt-idx="last"] {
         visibility: hidden;
 
         &::after {
@@ -781,19 +781,19 @@ ul.pagination {
         }
     }
 
-    &.first::after {
+    &.first::after, &[data-dt-idx="first"]::after {
         content: "\00AB";
     }
 
-    &.previous::after {
+    &.previous::after, &[data-dt-idx="previous"]::after {
         content: "\2039";
     }
 
-    &.next::after {
+    &.next::after, &[data-dt-idx="next"]::after {
         content: "\203A";
     }
 
-    &.last::after {
+    &.last::after, &[data-dt-idx="last"]::after {
         content: "\00BB";
     }
 }
