@@ -20,3 +20,9 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
 
 ## Development
 This module uses [composer](https://getcomposer.org/) and [gulp](https://gulpjs.com/) to manage its dependencies
+
+```shell
+composer install
+npm install
+gulp
+```
