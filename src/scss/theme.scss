@@ -759,7 +759,7 @@ ul.pagination {
 
 /* Hack for Pagination Arrows */
 
-.pagination a.page-link {
+.pagination .page-link {
     &.first, &[data-dt-idx="first"],
     &.previous, &[data-dt-idx="previous"],
     &.next, &[data-dt-idx="next"],
