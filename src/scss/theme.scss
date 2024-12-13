@@ -70,6 +70,12 @@ caption {
     tbody td {
         border: none;
         font-size: $font-size-sm;
+
+      border-right: $table-border-width solid $table-border-color;
+
+      &:first-child {
+        border-left: $table-border-width solid $table-border-color;
+      }
     }
 
     thead, tfoot, th {

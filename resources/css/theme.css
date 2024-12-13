@@ -22584,6 +22584,20 @@ caption {
 [dir] .table tbody td {
   border: none;
   font-size: 0.875rem;
+  border-right: 0.0625rem solid #dee2e6;
+}
+
+[dir] table td:first-child,
+[dir] table th:first-child,
+[dir] table thead th:first-child,
+[dir] table tbody th:first-child,
+[dir] table tbody td:first-child,
+[dir] .table td:first-child,
+[dir] .table th:first-child,
+[dir] .table thead th:first-child,
+[dir] .table tbody th:first-child,
+[dir] .table tbody td:first-child {
+  border-left: 0.0625rem solid #dee2e6;
 }
 
 [dir] table thead,
