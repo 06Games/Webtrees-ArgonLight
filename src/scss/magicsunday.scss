@@ -8,15 +8,30 @@
              Under the same licence
  https://github.com/06Games/Webtrees-ArgonLight
 ************************************************
-          Magicsunday's fan chart addon
+              Magicsunday's addons
 ***********************************************/
 
-.wt-route-webtrees-fan-chart {
-    & > div.tooltip table {
-        border-collapse: initial;
+.wt-route-webtrees {
+  &-pedigree-chart,
+  &-descendants-chart,
+  &-fan-chart {
+    .icon {
+      width: auto;
+      height: auto;
 
-        th {
-            background: none;
-        }
+      svg {
+        font-size: 1rem;
+      }
     }
+  }
+
+  &-fan-chart {
+    & > div.tooltip table {
+      border-collapse: initial;
+
+      th {
+        background: none;
+      }
+    }
+  }
 }

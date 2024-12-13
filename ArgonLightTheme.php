@@ -45,7 +45,7 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
         return [
             $this->assetUrl('css/imports.css'),
             $this->assetUrl('css/theme.css'),
-            $this->assetUrl('css/magicsunday-fan-chart.css'),
+            $this->assetUrl('css/magicsunday.css'),
             $this->assetUrl('css/gustine-sosa.css')
         ];
     }
