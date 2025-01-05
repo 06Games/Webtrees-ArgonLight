@@ -23600,10 +23600,13 @@ div[id^=caldiv] table table tr:not(:first-child) td.optionbox a {
 }
 
 @media (min-width: 576px) {
+  .wt-places-tab-wrapper > [class^=col-],
   .wt-places-tab-wrapper .wt-map,
   .wt-places-tab-wrapper .wt-map-sidebar,
+  .wt-place-hierarchy-wrapper > [class^=col-],
   .wt-place-hierarchy-wrapper .wt-map,
   .wt-place-hierarchy-wrapper .wt-map-sidebar,
+  .wt-pedigree-map-wrapper > [class^=col-],
   .wt-pedigree-map-wrapper .wt-map,
   .wt-pedigree-map-wrapper .wt-map-sidebar {
     height: 100%;
@@ -23611,10 +23614,13 @@ div[id^=caldiv] table table tr:not(:first-child) td.optionbox a {
 }
 
 @media (max-width: 575.98px) {
+  .wt-places-tab-wrapper > [class^=col-],
   .wt-places-tab-wrapper .wt-map,
   .wt-places-tab-wrapper .wt-map-sidebar,
+  .wt-place-hierarchy-wrapper > [class^=col-],
   .wt-place-hierarchy-wrapper .wt-map,
   .wt-place-hierarchy-wrapper .wt-map-sidebar,
+  .wt-pedigree-map-wrapper > [class^=col-],
   .wt-pedigree-map-wrapper .wt-map,
   .wt-pedigree-map-wrapper .wt-map-sidebar {
     height: 50%;

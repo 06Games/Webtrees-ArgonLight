@@ -941,6 +941,7 @@ div[id^=caldiv] {
 {
   height: 70vh;
 
+  & > [class^=col-],
   .wt-map,
   .wt-map-sidebar {
     @include media-breakpoint-up(sm) {
