@@ -358,7 +358,7 @@ select {
 }
 
 .icon-pedigree {
-  content: url("../img/icon-pedigree.svg");;
+  content: url("../img/icon-pedigree.svg");
 }
 
 // Children column in individual and family lists
@@ -903,12 +903,53 @@ div[id^=caldiv] {
   background-color: $x-color;
 }
 
-.wt-new {
-  box-shadow: 0 0 0 2px $teal;
-}
+[dir] .wt-new, [dir] .wt-old {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: -2px;
 
-.wt-old {
-  box-shadow: 0 0 0 2px $orange;
+  th {
+    padding-left: 2.5rem;
+  }
+
+  th::before {
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: left;
+    margin-left: -1.5rem;
+    margin-top: -0.6rem;
+  }
+
+  &.wt-new th::before {
+    content: "+";
+  }
+
+  &.wt-old th::before {
+    content: "-";
+  }
+
+  @each $class in wt-new, wt-old {
+    $color: map-get((
+            wt-new: $teal,
+            wt-old: $orange
+    ), $class);
+
+    &.#{$class} {
+      outline-color: $color;
+
+      th {
+        background-color: mix(white, $color, 80%);
+
+        &::before {
+          color: $color;
+        }
+      }
+
+      td {
+        background-color: mix(white, $color, 90%);
+      }
+    }
+  }
 }
 
 .label {

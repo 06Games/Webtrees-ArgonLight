@@ -16146,11 +16146,6 @@ button.section-darker:focus {
   vertical-align: middle;
 }
 
-[class*=alert-] .alert-link {
-  color: #fff;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
-}
-
 .alert-heading {
   font-weight: 600;
   font-size: 1.5rem;
@@ -23561,12 +23556,75 @@ div[id^=caldiv] table table tr:not(:first-child) td.optionbox a {
   background-color: #fceaa1;
 }
 
-.wt-new {
-  box-shadow: 0 0 0 2px #11cdef;
+[dir] .wt-new,
+[dir] .wt-old {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: -2px;
 }
 
-.wt-old {
-  box-shadow: 0 0 0 2px #fb6340;
+[dir] .wt-new th,
+[dir] .wt-old th {
+  padding-left: 2.5rem;
+}
+
+[dir] .wt-new th::before,
+[dir] .wt-old th::before {
+  font-size: 1.5rem;
+  font-weight: bold;
+  float: left;
+  margin-left: -1.5rem;
+  margin-top: -0.6rem;
+}
+
+[dir] .wt-new.wt-new th::before,
+[dir] .wt-old.wt-new th::before {
+  content: "+";
+}
+
+[dir] .wt-new.wt-old th::before,
+[dir] .wt-old.wt-old th::before {
+  content: "-";
+}
+
+[dir] .wt-new.wt-new,
+[dir] .wt-old.wt-new {
+  outline-color: #11cdef;
+}
+
+[dir] .wt-new.wt-new th,
+[dir] .wt-old.wt-new th {
+  background-color: #cff5fc;
+}
+
+[dir] .wt-new.wt-new th::before,
+[dir] .wt-old.wt-new th::before {
+  color: #11cdef;
+}
+
+[dir] .wt-new.wt-new td,
+[dir] .wt-old.wt-new td {
+  background-color: #e7fafd;
+}
+
+[dir] .wt-new.wt-old,
+[dir] .wt-old.wt-old {
+  outline-color: #fb6340;
+}
+
+[dir] .wt-new.wt-old th,
+[dir] .wt-old.wt-old th {
+  background-color: #fee0d9;
+}
+
+[dir] .wt-new.wt-old th::before,
+[dir] .wt-old.wt-old th::before {
+  color: #fb6340;
+}
+
+[dir] .wt-new.wt-old td,
+[dir] .wt-old.wt-old td {
+  background-color: #ffefec;
 }
 
 .label {

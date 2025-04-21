@@ -21,13 +21,6 @@
     }
 }
 
-[class*="alert-"] {
-    .alert-link {
-        color: $white; 
-        border-bottom: 1px dotted rgba($white, .5);
-    }
-}
-
 .alert-heading {
     font-weight: $font-weight-bold;
     font-size: $h4-font-size;
