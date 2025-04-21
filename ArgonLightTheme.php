@@ -33,7 +33,7 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
 
     public function customModuleVersion(): string
     {
-        return '1.1.6';
+        return '1.1.7';
     }
 
     public function customModuleLatestVersionUrl(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/raw/main/version.txt'; }
