@@ -549,6 +549,10 @@ select {
           }
         }
 
+        .menu-pending .nav-link::before {
+          background-image: url("../img/shield-alt-solid.svg");
+        }
+
         .menu-mymenu .nav-link::before {
           background-image: url("../img/user-solid.svg");
         }
@@ -615,6 +619,10 @@ select {
 
         .menu-faq .nav-link::before {
           background-image: url("../img/comments-solid.svg");
+        }
+
+        .menu-clippings .nav-link::before {
+          background-image: url("../img/shopping-cart-solid.svg");
         }
 
         .jp-main-menu-manual .nav-link::before {
@@ -907,6 +915,7 @@ div[id^=caldiv] {
   outline-style: solid;
   outline-width: 2px;
   outline-offset: -2px;
+  padding: 5px;
 
   th {
     padding-left: 2.5rem;
