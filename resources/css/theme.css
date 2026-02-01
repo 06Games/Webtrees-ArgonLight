@@ -24354,26 +24354,50 @@ table.tv_tree i.dates {
 }
 
 .wt-block-gedcom_favorites .wt-chart-box,
-.wt-family-members .wt-chart-box {
+.wt-family-members .wt-chart-box,
+.wt-chart-relationships .wt-chart-box,
+.wt-chart-ancestors .wt-chart-box,
+.wt-chart-descendants .wt-chart-box,
+.wt-chart-pedigree .wt-chart-box,
+.wt-chart-family-book .wt-chart-box,
+.wt-chart-hourglass .wt-chart-box {
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
 }
 
+.wt-tab-relatives td,
 .wt-block-gedcom_favorites td,
 .wt-family-members td,
-.wt-tab-relatives td {
+.wt-chart-relationships td,
+.wt-chart-ancestors td,
+.wt-chart-descendants td,
+.wt-chart-pedigree td,
+.wt-chart-family-book td,
+.wt-chart-hourglass td {
   border-bottom: none;
 }
 
+.wt-tab-relatives tr:first-child td,
 .wt-block-gedcom_favorites tr:first-child td,
 .wt-family-members tr:first-child td,
-.wt-tab-relatives tr:first-child td {
+.wt-chart-relationships tr:first-child td,
+.wt-chart-ancestors tr:first-child td,
+.wt-chart-descendants tr:first-child td,
+.wt-chart-pedigree tr:first-child td,
+.wt-chart-family-book tr:first-child td,
+.wt-chart-hourglass tr:first-child td {
   border-top: none;
 }
 
+.wt-tab-relatives .wt-chart-box,
 .wt-block-gedcom_favorites .wt-chart-box,
 .wt-family-members .wt-chart-box,
-.wt-tab-relatives .wt-chart-box {
+.wt-chart-relationships .wt-chart-box,
+.wt-chart-ancestors .wt-chart-box,
+.wt-chart-descendants .wt-chart-box,
+.wt-chart-pedigree .wt-chart-box,
+.wt-chart-family-book .wt-chart-box,
+.wt-chart-hourglass .wt-chart-box {
   background: var(--white);
   font-size: 0.75rem;
   margin-bottom: 0.125rem;
@@ -24381,192 +24405,393 @@ table.tv_tree i.dates {
   padding: 0.5rem 0.625rem;
 }
 
+.wt-tab-relatives .wt-chart-box .wt-chart-box-thumbnail img,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-thumbnail img,
 .wt-family-members .wt-chart-box .wt-chart-box-thumbnail img,
-.wt-tab-relatives .wt-chart-box .wt-chart-box-thumbnail img {
+.wt-chart-relationships .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-chart-ancestors .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-chart-descendants .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-chart-pedigree .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-chart-family-book .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-chart-hourglass .wt-chart-box .wt-chart-box-thumbnail img {
   border-radius: 5px;
 }
 
+.wt-tab-relatives .wt-chart-box .wt-chart-box-name,
+.wt-tab-relatives .wt-chart-box .wt-chart-box-lifespan,
+.wt-tab-relatives .wt-chart-box .wt-chart-box-facts,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-name,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-lifespan,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-facts,
 .wt-family-members .wt-chart-box .wt-chart-box-name,
 .wt-family-members .wt-chart-box .wt-chart-box-lifespan,
 .wt-family-members .wt-chart-box .wt-chart-box-facts,
-.wt-tab-relatives .wt-chart-box .wt-chart-box-name,
-.wt-tab-relatives .wt-chart-box .wt-chart-box-lifespan,
-.wt-tab-relatives .wt-chart-box .wt-chart-box-facts {
+.wt-chart-relationships .wt-chart-box .wt-chart-box-name,
+.wt-chart-relationships .wt-chart-box .wt-chart-box-lifespan,
+.wt-chart-relationships .wt-chart-box .wt-chart-box-facts,
+.wt-chart-ancestors .wt-chart-box .wt-chart-box-name,
+.wt-chart-ancestors .wt-chart-box .wt-chart-box-lifespan,
+.wt-chart-ancestors .wt-chart-box .wt-chart-box-facts,
+.wt-chart-descendants .wt-chart-box .wt-chart-box-name,
+.wt-chart-descendants .wt-chart-box .wt-chart-box-lifespan,
+.wt-chart-descendants .wt-chart-box .wt-chart-box-facts,
+.wt-chart-pedigree .wt-chart-box .wt-chart-box-name,
+.wt-chart-pedigree .wt-chart-box .wt-chart-box-lifespan,
+.wt-chart-pedigree .wt-chart-box .wt-chart-box-facts,
+.wt-chart-family-book .wt-chart-box .wt-chart-box-name,
+.wt-chart-family-book .wt-chart-box .wt-chart-box-lifespan,
+.wt-chart-family-book .wt-chart-box .wt-chart-box-facts,
+.wt-chart-hourglass .wt-chart-box .wt-chart-box-name,
+.wt-chart-hourglass .wt-chart-box .wt-chart-box-lifespan,
+.wt-chart-hourglass .wt-chart-box .wt-chart-box-facts {
   margin-left: 50px;
 }
 
+.wt-tab-relatives .wt-chart-box .wt-chart-box-name,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-name,
 .wt-family-members .wt-chart-box .wt-chart-box-name,
-.wt-tab-relatives .wt-chart-box .wt-chart-box-name {
+.wt-chart-relationships .wt-chart-box .wt-chart-box-name,
+.wt-chart-ancestors .wt-chart-box .wt-chart-box-name,
+.wt-chart-descendants .wt-chart-box .wt-chart-box-name,
+.wt-chart-pedigree .wt-chart-box .wt-chart-box-name,
+.wt-chart-family-book .wt-chart-box .wt-chart-box-name,
+.wt-chart-hourglass .wt-chart-box .wt-chart-box-name {
   font-size: 1.1em;
 }
 
+.wt-tab-relatives .wt-chart-box .wt-chart-box-extra,
+.wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-extra,
+.wt-family-members .wt-chart-box .wt-chart-box-extra,
+.wt-chart-relationships .wt-chart-box .wt-chart-box-extra,
+.wt-chart-ancestors .wt-chart-box .wt-chart-box-extra,
+.wt-chart-descendants .wt-chart-box .wt-chart-box-extra,
+.wt-chart-pedigree .wt-chart-box .wt-chart-box-extra,
+.wt-chart-family-book .wt-chart-box .wt-chart-box-extra,
+.wt-chart-hourglass .wt-chart-box .wt-chart-box-extra {
+  display: grid;
+  grid-auto-columns: 15px;
+  grid-auto-flow: column;
+  gap: 2px;
+}
+
+.wt-tab-relatives .wt-chart-box .wt-chart-box-extra *,
+.wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-extra *,
+.wt-family-members .wt-chart-box .wt-chart-box-extra *,
+.wt-chart-relationships .wt-chart-box .wt-chart-box-extra *,
+.wt-chart-ancestors .wt-chart-box .wt-chart-box-extra *,
+.wt-chart-descendants .wt-chart-box .wt-chart-box-extra *,
+.wt-chart-pedigree .wt-chart-box .wt-chart-box-extra *,
+.wt-chart-family-book .wt-chart-box .wt-chart-box-extra *,
+.wt-chart-hourglass .wt-chart-box .wt-chart-box-extra * {
+  max-width: 100%;
+}
+
+.wt-tab-relatives .wt-chart-box-icon,
 .wt-block-gedcom_favorites .wt-chart-box-icon,
 .wt-family-members .wt-chart-box-icon,
-.wt-tab-relatives .wt-chart-box-icon {
+.wt-chart-relationships .wt-chart-box-icon,
+.wt-chart-ancestors .wt-chart-box-icon,
+.wt-chart-descendants .wt-chart-box-icon,
+.wt-chart-pedigree .wt-chart-box-icon,
+.wt-chart-family-book .wt-chart-box-icon,
+.wt-chart-hourglass .wt-chart-box-icon {
   font-size: 1rem;
   vertical-align: middle;
 }
 
+.wt-tab-relatives .wt-chart-box-icon > i,
 .wt-block-gedcom_favorites .wt-chart-box-icon > i,
 .wt-family-members .wt-chart-box-icon > i,
-.wt-tab-relatives .wt-chart-box-icon > i {
+.wt-chart-relationships .wt-chart-box-icon > i,
+.wt-chart-ancestors .wt-chart-box-icon > i,
+.wt-chart-descendants .wt-chart-box-icon > i,
+.wt-chart-pedigree .wt-chart-box-icon > i,
+.wt-chart-family-book .wt-chart-box-icon > i,
+.wt-chart-hourglass .wt-chart-box-icon > i {
   height: 1rem;
 }
 
+.wt-tab-relatives .wt-chart-box-f,
 .wt-block-gedcom_favorites .wt-chart-box-f,
 .wt-family-members .wt-chart-box-f,
-.wt-tab-relatives .wt-chart-box-f {
+.wt-chart-relationships .wt-chart-box-f,
+.wt-chart-ancestors .wt-chart-box-f,
+.wt-chart-descendants .wt-chart-box-f,
+.wt-chart-pedigree .wt-chart-box-f,
+.wt-chart-family-book .wt-chart-box-f,
+.wt-chart-hourglass .wt-chart-box-f {
   background-color: #fff4f9;
 }
 
+.wt-tab-relatives .wt-chart-box-m,
 .wt-block-gedcom_favorites .wt-chart-box-m,
 .wt-family-members .wt-chart-box-m,
-.wt-tab-relatives .wt-chart-box-m {
+.wt-chart-relationships .wt-chart-box-m,
+.wt-chart-ancestors .wt-chart-box-m,
+.wt-chart-descendants .wt-chart-box-m,
+.wt-chart-pedigree .wt-chart-box-m,
+.wt-chart-family-book .wt-chart-box-m,
+.wt-chart-hourglass .wt-chart-box-m {
   background-color: #f4fdff;
 }
 
+.wt-tab-relatives .wt-chart-box-u,
 .wt-block-gedcom_favorites .wt-chart-box-u,
 .wt-family-members .wt-chart-box-u,
-.wt-tab-relatives .wt-chart-box-u {
+.wt-chart-relationships .wt-chart-box-u,
+.wt-chart-ancestors .wt-chart-box-u,
+.wt-chart-descendants .wt-chart-box-u,
+.wt-chart-pedigree .wt-chart-box-u,
+.wt-chart-family-book .wt-chart-box-u,
+.wt-chart-hourglass .wt-chart-box-u {
   background-color: #fff;
 }
 
+.wt-tab-relatives .wt-chart-box-x,
 .wt-block-gedcom_favorites .wt-chart-box-x,
 .wt-family-members .wt-chart-box-x,
-.wt-tab-relatives .wt-chart-box-x {
+.wt-chart-relationships .wt-chart-box-x,
+.wt-chart-ancestors .wt-chart-box-x,
+.wt-chart-descendants .wt-chart-box-x,
+.wt-chart-pedigree .wt-chart-box-x,
+.wt-chart-family-book .wt-chart-box-x,
+.wt-chart-hourglass .wt-chart-box-x {
   background-color: #fceaa1;
 }
 
+.wt-tab-relatives .wt-chart-box-zoom-dropdown,
 .wt-block-gedcom_favorites .wt-chart-box-zoom-dropdown,
 .wt-family-members .wt-chart-box-zoom-dropdown,
-.wt-tab-relatives .wt-chart-box-zoom-dropdown {
+.wt-chart-relationships .wt-chart-box-zoom-dropdown,
+.wt-chart-ancestors .wt-chart-box-zoom-dropdown,
+.wt-chart-descendants .wt-chart-box-zoom-dropdown,
+.wt-chart-pedigree .wt-chart-box-zoom-dropdown,
+.wt-chart-family-book .wt-chart-box-zoom-dropdown,
+.wt-chart-hourglass .wt-chart-box-zoom-dropdown {
   border: none;
   color: #172b4d;
   font-size: 0.875rem;
   padding: 0.625rem;
 }
 
+.wt-tab-relatives .wt-chart-horizontal-spacer,
 .wt-block-gedcom_favorites .wt-chart-horizontal-spacer,
 .wt-family-members .wt-chart-horizontal-spacer,
-.wt-tab-relatives .wt-chart-horizontal-spacer {
+.wt-chart-relationships .wt-chart-horizontal-spacer,
+.wt-chart-ancestors .wt-chart-horizontal-spacer,
+.wt-chart-descendants .wt-chart-horizontal-spacer,
+.wt-chart-pedigree .wt-chart-horizontal-spacer,
+.wt-chart-family-book .wt-chart-horizontal-spacer,
+.wt-chart-hourglass .wt-chart-horizontal-spacer {
   width: 1rem;
 }
 
+.wt-tab-relatives .wt-chart-horizontal-line,
 .wt-block-gedcom_favorites .wt-chart-horizontal-line,
 .wt-family-members .wt-chart-horizontal-line,
-.wt-tab-relatives .wt-chart-horizontal-line {
+.wt-chart-relationships .wt-chart-horizontal-line,
+.wt-chart-ancestors .wt-chart-horizontal-line,
+.wt-chart-descendants .wt-chart-horizontal-line,
+.wt-chart-pedigree .wt-chart-horizontal-line,
+.wt-chart-family-book .wt-chart-horizontal-line,
+.wt-chart-hourglass .wt-chart-horizontal-line {
   border-bottom: 0.0625rem solid #e9ecef;
   height: 50%;
   width: 1rem;
 }
 
+.wt-tab-relatives .wt-chart-horizontal-first-child,
 .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
 .wt-family-members .wt-chart-horizontal-first-child,
-.wt-tab-relatives .wt-chart-horizontal-first-child {
+.wt-chart-relationships .wt-chart-horizontal-first-child,
+.wt-chart-ancestors .wt-chart-horizontal-first-child,
+.wt-chart-descendants .wt-chart-horizontal-first-child,
+.wt-chart-pedigree .wt-chart-horizontal-first-child,
+.wt-chart-family-book .wt-chart-horizontal-first-child,
+.wt-chart-hourglass .wt-chart-horizontal-first-child {
   border-top: 0.0625rem solid #e9ecef;
   height: 50%;
   position: relative;
   top: 50%;
 }
 
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-child,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-first-child,
-[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-child {
+[dir=ltr] .wt-chart-relationships .wt-chart-horizontal-first-child,
+[dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-first-child,
+[dir=ltr] .wt-chart-descendants .wt-chart-horizontal-first-child,
+[dir=ltr] .wt-chart-pedigree .wt-chart-horizontal-first-child,
+[dir=ltr] .wt-chart-family-book .wt-chart-horizontal-first-child,
+[dir=ltr] .wt-chart-hourglass .wt-chart-horizontal-first-child {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0.25rem 0 0;
 }
 
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-child,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-first-child,
-[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-child {
+[dir=rtl] .wt-chart-relationships .wt-chart-horizontal-first-child,
+[dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-first-child,
+[dir=rtl] .wt-chart-descendants .wt-chart-horizontal-first-child,
+[dir=rtl] .wt-chart-pedigree .wt-chart-horizontal-first-child,
+[dir=rtl] .wt-chart-family-book .wt-chart-horizontal-first-child,
+[dir=rtl] .wt-chart-hourglass .wt-chart-horizontal-first-child {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0.25rem 0 0 0;
 }
 
+.wt-tab-relatives .wt-chart-horizontal-middle-child,
 .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
 .wt-family-members .wt-chart-horizontal-middle-child,
-.wt-tab-relatives .wt-chart-horizontal-middle-child {
+.wt-chart-relationships .wt-chart-horizontal-middle-child,
+.wt-chart-ancestors .wt-chart-horizontal-middle-child,
+.wt-chart-descendants .wt-chart-horizontal-middle-child,
+.wt-chart-pedigree .wt-chart-horizontal-middle-child,
+.wt-chart-family-book .wt-chart-horizontal-middle-child,
+.wt-chart-hourglass .wt-chart-horizontal-middle-child {
   height: 100%;
 }
 
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-middle-child,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-middle-child,
-[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-middle-child {
+[dir=ltr] .wt-chart-relationships .wt-chart-horizontal-middle-child,
+[dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-middle-child,
+[dir=ltr] .wt-chart-descendants .wt-chart-horizontal-middle-child,
+[dir=ltr] .wt-chart-pedigree .wt-chart-horizontal-middle-child,
+[dir=ltr] .wt-chart-family-book .wt-chart-horizontal-middle-child,
+[dir=ltr] .wt-chart-hourglass .wt-chart-horizontal-middle-child {
   border-right: 0.0625rem solid #e9ecef;
 }
 
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-middle-child,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-middle-child,
-[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-middle-child {
+[dir=rtl] .wt-chart-relationships .wt-chart-horizontal-middle-child,
+[dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-middle-child,
+[dir=rtl] .wt-chart-descendants .wt-chart-horizontal-middle-child,
+[dir=rtl] .wt-chart-pedigree .wt-chart-horizontal-middle-child,
+[dir=rtl] .wt-chart-family-book .wt-chart-horizontal-middle-child,
+[dir=rtl] .wt-chart-hourglass .wt-chart-horizontal-middle-child {
   border-left: 0.0625rem solid #e9ecef;
 }
 
+.wt-tab-relatives .wt-chart-horizontal-last-child,
 .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
 .wt-family-members .wt-chart-horizontal-last-child,
-.wt-tab-relatives .wt-chart-horizontal-last-child {
+.wt-chart-relationships .wt-chart-horizontal-last-child,
+.wt-chart-ancestors .wt-chart-horizontal-last-child,
+.wt-chart-descendants .wt-chart-horizontal-last-child,
+.wt-chart-pedigree .wt-chart-horizontal-last-child,
+.wt-chart-family-book .wt-chart-horizontal-last-child,
+.wt-chart-hourglass .wt-chart-horizontal-last-child {
   border-bottom: 0.0625rem solid #e9ecef;
   height: 50%;
 }
 
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-child,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-last-child,
-[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-child {
+[dir=ltr] .wt-chart-relationships .wt-chart-horizontal-last-child,
+[dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-last-child,
+[dir=ltr] .wt-chart-descendants .wt-chart-horizontal-last-child,
+[dir=ltr] .wt-chart-pedigree .wt-chart-horizontal-last-child,
+[dir=ltr] .wt-chart-family-book .wt-chart-horizontal-last-child,
+[dir=ltr] .wt-chart-hourglass .wt-chart-horizontal-last-child {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0.25rem 0;
 }
 
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-child,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-last-child,
-[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-child {
+[dir=rtl] .wt-chart-relationships .wt-chart-horizontal-last-child,
+[dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-last-child,
+[dir=rtl] .wt-chart-descendants .wt-chart-horizontal-last-child,
+[dir=rtl] .wt-chart-pedigree .wt-chart-horizontal-last-child,
+[dir=rtl] .wt-chart-family-book .wt-chart-horizontal-last-child,
+[dir=rtl] .wt-chart-hourglass .wt-chart-horizontal-last-child {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0 0.25rem;
 }
 
+.wt-tab-relatives .wt-chart-horizontal-first-parent,
 .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
 .wt-family-members .wt-chart-horizontal-first-parent,
-.wt-tab-relatives .wt-chart-horizontal-first-parent {
+.wt-chart-relationships .wt-chart-horizontal-first-parent,
+.wt-chart-ancestors .wt-chart-horizontal-first-parent,
+.wt-chart-descendants .wt-chart-horizontal-first-parent,
+.wt-chart-pedigree .wt-chart-horizontal-first-parent,
+.wt-chart-family-book .wt-chart-horizontal-first-parent,
+.wt-chart-hourglass .wt-chart-horizontal-first-parent {
   border-top: 0.0625rem solid #e9ecef;
   height: 50%;
   position: relative;
   top: 50%;
 }
 
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-parent,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-first-parent,
-[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-parent {
+[dir=ltr] .wt-chart-relationships .wt-chart-horizontal-first-parent,
+[dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-first-parent,
+[dir=ltr] .wt-chart-descendants .wt-chart-horizontal-first-parent,
+[dir=ltr] .wt-chart-pedigree .wt-chart-horizontal-first-parent,
+[dir=ltr] .wt-chart-family-book .wt-chart-horizontal-first-parent,
+[dir=ltr] .wt-chart-hourglass .wt-chart-horizontal-first-parent {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0.25rem 0 0 0;
 }
 
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-parent,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-first-parent,
-[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-parent {
+[dir=rtl] .wt-chart-relationships .wt-chart-horizontal-first-parent,
+[dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-first-parent,
+[dir=rtl] .wt-chart-descendants .wt-chart-horizontal-first-parent,
+[dir=rtl] .wt-chart-pedigree .wt-chart-horizontal-first-parent,
+[dir=rtl] .wt-chart-family-book .wt-chart-horizontal-first-parent,
+[dir=rtl] .wt-chart-hourglass .wt-chart-horizontal-first-parent {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0.25rem 0 0;
 }
 
+.wt-tab-relatives .wt-chart-horizontal-last-parent,
 .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
 .wt-family-members .wt-chart-horizontal-last-parent,
-.wt-tab-relatives .wt-chart-horizontal-last-parent {
+.wt-chart-relationships .wt-chart-horizontal-last-parent,
+.wt-chart-ancestors .wt-chart-horizontal-last-parent,
+.wt-chart-descendants .wt-chart-horizontal-last-parent,
+.wt-chart-pedigree .wt-chart-horizontal-last-parent,
+.wt-chart-family-book .wt-chart-horizontal-last-parent,
+.wt-chart-hourglass .wt-chart-horizontal-last-parent {
   border-bottom: 0.0625rem solid #e9ecef;
   height: 50%;
 }
 
+[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-parent,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-last-parent,
-[dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-parent {
+[dir=ltr] .wt-chart-relationships .wt-chart-horizontal-last-parent,
+[dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-last-parent,
+[dir=ltr] .wt-chart-descendants .wt-chart-horizontal-last-parent,
+[dir=ltr] .wt-chart-pedigree .wt-chart-horizontal-last-parent,
+[dir=ltr] .wt-chart-family-book .wt-chart-horizontal-last-parent,
+[dir=ltr] .wt-chart-hourglass .wt-chart-horizontal-last-parent {
   border-left: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0 0.25rem;
 }
 
+[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-parent,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-last-parent,
-[dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-parent {
+[dir=rtl] .wt-chart-relationships .wt-chart-horizontal-last-parent,
+[dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-last-parent,
+[dir=rtl] .wt-chart-descendants .wt-chart-horizontal-last-parent,
+[dir=rtl] .wt-chart-pedigree .wt-chart-horizontal-last-parent,
+[dir=rtl] .wt-chart-family-book .wt-chart-horizontal-last-parent,
+[dir=rtl] .wt-chart-hourglass .wt-chart-horizontal-last-parent {
   border-right: 0.0625rem solid #e9ecef;
   border-radius: 0 0 0.25rem 0;
 }
@@ -24902,7 +25127,19 @@ table.tv_tree i.dates {
 
 /* Relationships Chart */
 
-.wt-chart-relationships .wt-chart-box-lifespan {
+.wt-chart-relationships table tbody tr td,
+.wt-chart-relationships table tbody tr:first-child td,
+.wt-chart-relationships table tbody tr td:first-child {
+  border: none;
+}
+
+.wt-chart-relationships .wt-chart-box {
+  width: 20rem;
+  min-height: 5rem;
+  border-radius: 5px;
+}
+
+.wt-chart-relationships .wt-chart-box .wt-chart-box-lifespan {
   display: none;
 }
 
