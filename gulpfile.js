@@ -95,13 +95,13 @@ function clean() {
 
 function watch() {
     gulp.watch(['src/scss/**/*.scss'], scss);
-    gulp.watch(['src/js/**/*.js'], jsTranspile);
+    //gulp.watch(['src/js/**/*.js'], jsTranspile);
 }
 
 exports.watch = watch;
 exports.build = gulp.series(
     clean,
-    gulp.parallel(buildWebtreesCss, scss, jsTranspile),
-    gulp.parallel(cssBuild, jsBuild, copyViews, copyModule)
+    gulp.parallel(buildWebtreesCss, scss),
+    gulp.parallel(cssBuild, copyViews, copyModule)
 );
-exports.default = gulp.parallel(buildWebtreesCss, scss, jsTranspile);
+exports.default = gulp.parallel(buildWebtreesCss, scss);

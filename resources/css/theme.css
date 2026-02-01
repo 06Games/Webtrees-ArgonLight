@@ -135,11 +135,11 @@ abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
   -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 address {
@@ -2456,10 +2456,7 @@ input[type=text]:focus {
   box-shadow: none, none;
 }
 
-.form-control::-moz-placeholder,
-.select2-dropdown .select2-search__field::-moz-placeholder,
-.select2-container .select2-selection--single::-moz-placeholder,
-input[type=text]::-moz-placeholder {
+.form-control::-moz-placeholder, .select2-dropdown .select2-search__field::-moz-placeholder, .select2-container .select2-selection--single::-moz-placeholder, input[type=text]::-moz-placeholder {
   color: #adb5bd;
   opacity: 1;
 }
@@ -3010,8 +3007,8 @@ select.is-invalid ~ .invalid-tooltip {
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.625rem 1.25rem;
@@ -6045,8 +6042,8 @@ select {
   border-radius: 0.25rem;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .custom-select:focus,
@@ -6172,8 +6169,8 @@ select::-ms-expand {
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .custom-range:focus {
@@ -6217,7 +6214,7 @@ select::-ms-expand {
 
 .custom-range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 .custom-range::-webkit-slider-thumb:active {
@@ -6255,7 +6252,7 @@ select::-ms-expand {
 
 .custom-range::-moz-range-thumb {
   -moz-appearance: none;
-  appearance: none;
+       appearance: none;
 }
 
 .custom-range::-moz-range-thumb:active {
@@ -7264,9 +7261,9 @@ select {
 @media (min-width: 576px) {
   .card-columns {
     -moz-column-count: 3;
-    column-count: 3;
+         column-count: 3;
     -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
+         column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
   }
@@ -8699,8 +8696,8 @@ button.close {
   background-color: transparent;
   border: 0;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 a.close.disabled,
@@ -17633,10 +17630,7 @@ input[type=text] {
   height: calc(2.75rem + 2px);
 }
 
-.form-control:focus::-moz-placeholder,
-.select2-dropdown .select2-search__field:focus::-moz-placeholder,
-.select2-container .select2-selection--single:focus::-moz-placeholder,
-input[type=text]:focus::-moz-placeholder {
+.form-control:focus::-moz-placeholder, .select2-dropdown .select2-search__field:focus::-moz-placeholder, .select2-container .select2-selection--single:focus::-moz-placeholder, input[type=text]:focus::-moz-placeholder {
   color: #adb5bd;
 }
 
@@ -17739,12 +17733,7 @@ textarea[resize=horizontal] {
   border-color: rgba(50, 151, 211, 0.25);
 }
 
-.has-success .form-control::-moz-placeholder,
-.has-success .select2-dropdown .select2-search__field::-moz-placeholder,
-.select2-dropdown .has-success .select2-search__field::-moz-placeholder,
-.has-success .select2-container .select2-selection--single::-moz-placeholder,
-.select2-container .has-success .select2-selection--single::-moz-placeholder,
-.has-success input[type=text]::-moz-placeholder {
+.has-success .form-control::-moz-placeholder, .has-success .select2-dropdown .select2-search__field::-moz-placeholder, .select2-dropdown .has-success .select2-search__field::-moz-placeholder, .has-success .select2-container .select2-selection--single::-moz-placeholder, .select2-container .has-success .select2-selection--single::-moz-placeholder, .has-success input[type=text]::-moz-placeholder {
   color: #2dce89;
 }
 
@@ -17781,12 +17770,7 @@ textarea[resize=horizontal] {
   border-color: rgba(50, 151, 211, 0.25);
 }
 
-.has-danger .form-control::-moz-placeholder,
-.has-danger .select2-dropdown .select2-search__field::-moz-placeholder,
-.select2-dropdown .has-danger .select2-search__field::-moz-placeholder,
-.has-danger .select2-container .select2-selection--single::-moz-placeholder,
-.select2-container .has-danger .select2-selection--single::-moz-placeholder,
-.has-danger input[type=text]::-moz-placeholder {
+.has-danger .form-control::-moz-placeholder, .has-danger .select2-dropdown .select2-search__field::-moz-placeholder, .select2-dropdown .has-danger .select2-search__field::-moz-placeholder, .has-danger .select2-container .select2-selection--single::-moz-placeholder, .select2-container .has-danger .select2-selection--single::-moz-placeholder, .has-danger input[type=text]::-moz-placeholder {
   color: #ffd600;
 }
 
@@ -20276,8 +20260,8 @@ article h5 + figure {
   margin: 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .datepicker table tr td {
@@ -20604,7 +20588,7 @@ article h5 + figure {
   -webkit-user-select: none;
   touch-action: none;
   -moz-user-select: none;
-  user-select: none;
+       user-select: none;
   box-sizing: border-box;
 }
 
@@ -21098,7 +21082,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: block;
   height: 28px;
   -moz-user-select: none;
-  user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
 
@@ -21126,7 +21110,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: block;
   min-height: 32px;
   -moz-user-select: none;
-  user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
 
@@ -21179,7 +21163,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .select2-results__option {
   padding: 6px;
   -moz-user-select: none;
-  user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
 
@@ -24917,11 +24901,6 @@ table.tv_tree i.dates {
 
 
 /* Relationships Chart */
-
-.wt-chart-relationships .wt-chart-box {
-  height: 5rem;
-  width: 15rem;
-}
 
 .wt-chart-relationships .wt-chart-box-lifespan {
   display: none;

@@ -24,5 +24,6 @@ This module uses [composer](https://getcomposer.org/) and [gulp](https://gulpjs.
 ```shell
 composer install
 npm install
+npm install --global gulp-cli
 gulp
 ```
