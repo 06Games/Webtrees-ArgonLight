@@ -1,5 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /************************************************
                 Argon Light Theme
              Originally made by jchue
@@ -12,6 +10,7 @@
 ************************************************
                    CSS imports
 ***********************************************/
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -26,9 +25,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Common formatting for all themes.
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -43,6 +44,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -57,26 +59,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Charts block
  */
+
 .wt-block.wt-block-charts {
     /* This strange workaround creates a new stacking context, which allows the absolutely-positioned */
     /* pedigree chart lines to be displayed. */
     opacity: 0.99;
 }
+
 .wt-block-charts .wt-chart-box {
     width: 15rem;
     height: 3.5rem;
 }
+
 .wt-block-charts .wt-chart-box .wt-chart-box-extra,
 .wt-block-charts .wt-chart-box .wt-chart-box-facts,
 .wt-block-charts .wt-chart-box .wt-chart-box-name-alt {
     display: none;
 }
+
 .wt-block-charts .wt-chart-box .wt-chart-box-lifespan {
     display: block;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -91,16 +99,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 .wt-block-tree_favorites .wt-chart-box-facts,
 .wt-block-user_favorites .wt-chart-box-facts {
     display: block;
 }
+
 .wt-block-tree_favorites .wt-chart-box-extra,
 .wt-block-user_favorites .wt-chart-box-extra,
 .wt-block-tree_favorites .wt-chart-box-lifespan,
 .wt-block-user_favorites .wt-chart-box-lifespan {
     display: none;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -115,6 +126,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -129,18 +141,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Ancestors chart
  */
+
 .wt-chart-ancestors .wt-chart-box {
     width: 20rem;
 }
+
 .wt-chart-ancestors .wt-chart-box-lifespan {
     display: none;
 }
+
 .wt-sosa-number {
     border: thin dotted grey;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -155,23 +172,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Compact chart
  *
  * wt-chart, wt-chart-compact
  * +---- wt-chart-compact-table
  */
+
 .wt-chart.wt-chart-compact {
     overflow-x: inherit;
 }
+
 .wt-chart-compact .wt-chart-box {
     min-width: 5rem;
 }
+
 .wt-chart-compact .wt-chart-box-thumbnail,
 .wt-chart-compact .wt-chart-box-extra,
 .wt-chart-compact .wt-chart-box-facts {
     display: none;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -186,18 +208,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Descendants chart
  */
+
 .wt-chart-descendants .wt-chart-box {
     width: 20rem;
 }
+
 .wt-chart-descendants .wt-chart-box-lifespan {
     display: none;
 }
+
 .wt-daboville-number {
     border: thin dotted grey;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -212,20 +239,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Family book chart
  *
  * wt-chart, wt-chart-family-book
  */
+
 .wt-chart-family-book .wt-chart-box {
     width: 15rem;
 }
+
 .wt-chart-family-book .wt-chart-box-lifespan {
     display: none;
 }
+
 .wt-chart-family-book .wt-family-break {
     page-break-before: always;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -240,11 +272,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Fan chart
  *
  * wt-chart, wt-chart-fan
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -259,20 +293,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Hourglass chart
  *
  * wt-chart, wt-chart-hourglass
  */
+
 .wt-chart-hourglass {
     overflow-y: auto;
 }
+
 .wt-chart-hourglass .wt-chart-box {
     width: 15rem;
 }
+
 .wt-chart-hourglass .wt-chart-box-lifespan {
     display: none;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -287,11 +326,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Interactive tree
  *
  * wt-chart, wt-chart-interactive
  */
+
 .tv_out {
     position: relative;
     overflow: hidden;
@@ -308,17 +349,21 @@
     align-items: center;
     justify-content: center;
 }
+
 .tv_out img {
     border: 0;
 }
+
 :fullscreen .tv_out {
     height: 100% !important;
 }
+
 .tv_in {
     clear: both;
     cursor: move;
     display: inline-block; /* prevent from blinking on IE */
 }
+
 .tv_in table.tv_tree,
 .tv_in table.tv_tree tbody,
 .tv_in table.tv_tree tr,
@@ -329,100 +374,133 @@
     background: none;
     font-size: 11px;
 }
+
 .tv_in table.tv_tree {
     border-collapse: collapse;
 }
+
 #tvbCompact {
     background-image: url(images/compact.png);
 }
+
 /* Border (also have class table.tv_tree) */
+
 table#tvTreeBorder td#tv_tree_topleft {
     background: none;
 }
+
 table#tvTreeBorder td#tv_tree_top {
     background: none;
 }
+
 table#tvTreeBorder td#tv_tree_top div{
     font-family: Arial,Verdana,sans-serif;
     font-size: 18px;
 }
+
 table#tvTreeBorder td#tv_tree_topright {
     background: none;
 }
+
 table#tvTreeBorder td#tv_tree_left {
     background: none;
 }
+
 table#tvTreeBorder td#tv_tree_right {
     background: none;
 }
+
 table#tvTreeBorder td#tv_tree_bottomleft {
     background: none;
 }
+
 table#tvTreeBorder td#tv_tree_bottom {
     background: none;
 }
+
 table#tvTreeBorder td#tv_tree_bottomright {
     background: none;
 }
+
 /* tree */
+
 table#tvTreeBorder td,
 #tv_tree {
     background: none;
 }
+
 /* horizontal and vertical lines color */
+
 #tv_tree div.tv_vline,
 #tv_tree div.tv_hline {
     background-color: #81A9CB; /* customizable :should be the same color than in background images of td.tv_vline_x */
 }
+
 /* TD container for a vertical line */
+
 #tv_tree table.tv_tree td.tv_vline {
     width: 1px;
     background: repeat-x 50% 50%;
     height: 100%; /* required */
 }
+
 #tv_tree table.tv_tree td.tv_vline_h {
     background-image: url(images/vline.gif); /* customizable: image color must be the same color than div.tv_vline and div.tv_hline */
 }
+
 #tv_tree table.tv_tree td.tv_vline_t {
     vertical-align: bottom;
     background-image: url(images/vline_t.gif); /* customizable: image color must be the same color than div.tv_vline and div.tv_hline */
 }
+
 #tv_tree table.tv_tree td.tv_vline_b {
     vertical-align: top;
     background-image: url(images/vline_b.gif); /* customizable: image color must be the same color than div.tv_vline and div.tv_hline */
 }
+
 #tv_tree table.tv_tree td.tv_vline_c,
 .tv_in table.tv_tree td.tv_vline_h {
     vertical-align: middle;
 }
+
 #tv_tree table.tv_tree td.tv_vline_c {
     height: 1px;
 }
+
 /* vertical line drawing */
+
 #tv_tree table.tv_tree div.tv_vline {
     width: 1px;
 }
+
 #tv_tree table.tv_tree div.tv_vline_t,
 #tv_tree table.tv_tree div.tv_vline_b {
     height: 50%;
 }
+
 #tv_tree table.tv_tree div.tv_vline_c {
     height: 1px;
     overflow: hidden; /* required for IE */
 }
+
 #tv_tree table.tv_tree div.tv_vline_h {
     height: 100%;
 }
+
 /* horizontal line drawing */
+
 #tv_tree td.tv_hline,
 #tv_tree div.tv_hline {
     overflow: hidden; /* required for IE */
     width: 8px; /* customizable */
 }
+
 #tv_tree div.tv_hline {
     height: 1px;
 }
+
 /* Person or couple(s) box style */
+
 #tv_tree div.tv_box {
     border: thin outset #81A9CB; /* customizable */
     background: #fffdfd; /* customizable */
@@ -435,29 +513,36 @@ table#tvTreeBorder td,
     border-radius: 4px; /* customizable */
     box-shadow: 1px 1px 2px #cfcfdf; /* customizable */
 }
+
 #tv_tree div.boxExpanded {
     width: 250px; /* customizable:initial expanded box width */
 }
+
 #tv_tree div.tv_box div.tvM {
     background: #f5fdff; /* customizable */
     color: #220000; /* customizable */
 }
+
 #tv_tree div.tv_box div.tvF {
     background: #fff8f5; /* customizable */
     color: #000022; /* customizable */
 }
+
 #tv_tree div.tv_box span.tvSexSymbol {
     font-weight: bold;
     font-family: x-large, serif; /*Arial Unicode MS, monospace; /* customizable, BUT test required for ALL browsers */
     vertical-align: top;
     margin: 1px;
 }
+
 #tv_tree div.tv_box span.tvM {
     color: #8f8fdf; /* customizable */
 }
+
 #tv_tree div.tv_box span.tvF {
     color: #df8f8f; /* customizable */
 }
+
 #tv_tree div.tv_box div.tvM,
 #tv_tree .tv_box div.tvF {
     clear: both;
@@ -466,26 +551,31 @@ table#tvTreeBorder td,
     padding: 1px 4px;
     border-radius: 4px; /* customizable */
 }
+
 #tv_tree div.tv_box i.dates {
     float: right;
     font-size: 75%;
     margin-left: 4px;
 }
+
 #tv_tree div.tv_box img.tv_treelink {
     height: 15px;
     width: 15px;
     float: right;
 }
+
 #tv_tree div.tv_box img.tv_box_loading {
     height: 12px;
     width: 12px;
     margin: 2px;
     float: right;
 }
+
 #tv_tree div.tv_box div.tv_person_expanded {
     min-height: 55px;
     padding: 2px;
 }
+
 #tv_tree div.tv_box img {
     float: left;
     margin: 2px;
@@ -493,13 +583,17 @@ table#tvTreeBorder td,
     max-width: 80px;
     width: auto;
 }
+
 #tv_tree div.tv_box .icon-silhouette {
     float: left;
 }
+
 #tv_tree div.tv_box div.tv_person_expanded a {
     font-weight: bold;
 }
+
 /* The toolbox style. Button's images come from the active theme */
+
 #tv_tools,
 #tvStylesSubmenu {
     display: inline-block;
@@ -514,18 +608,22 @@ table#tvTreeBorder td,
     border-radius: 4px; /* customizable */
     box-shadow: 1px 1px 2px #cfcfdf; /* customizable */
 }
+
 /* styles submenu */
+
 #tvStylesSubmenu {
     display: none;
     left: 0;
     top: 0;
     z-index: 91; /* just over tv_tools */
 }
+
 #tv_tools ul {
     list-style: none;
     margin: 0;
     padding: 0; /* required */
 }
+
 #tv_tools li.tv_button {
     float: left;
     position: relative;
@@ -539,20 +637,25 @@ table#tvTreeBorder td,
     background-color: #efefef; /* customizable */
     border-radius: 4px;
 }
+
 #tvStylesSubmenu li.tv_button {
     float : none;
 }
+
 #tv_tools li.tv_button a {
     margin: 0;
     display: block;
 }
+
 #tv_tools li.tv_button:hover {
     border: thin outset #fdfffd; /* customizable */
     cursor: pointer;
 }
+
 #tv_tools li.tvPressed {
     border: thin inset #ffffff; /* customizable */
 }
+
 #tv_tools ul li img {
     border: none;
     margin: 0;
@@ -563,12 +666,14 @@ table#tvTreeBorder td,
     text-align: center;
     vertical-align: middle;
 }
+
 #tv_tools ul li a.help img.icon {
     margin: 3px 0 0;
     padding: 0;
     width: 15px;
     height: 15px;
 }
+
 #tvToolsHandler {
     float: left;
     cursor: move;
@@ -578,9 +683,11 @@ table#tvTreeBorder td,
     margin: 2px;
     overflow: hidden; /* required for IE */
 }
+
 #tvToolsHandler:hover {
     border: thin outset #f6f6f6; /* customizable */
 }
+
 #tv_tree div.tv_box div.tvM,
 #tv_tree div.tv_box div.tvF {
     background: none;
@@ -589,9 +696,13 @@ table#tvTreeBorder td,
     margin: 0;
     padding: 0 4px;
 }
+
 .tvM {background-color: #DDF !important;}
+
 .tvF {background-color: #FDD !important;}
+
 .dashed {border-top: thin dashed #81A9CB !important;}
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -606,11 +717,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Lifespans chart
  *
  * wt-chart, wt-chart-lifespans
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -625,27 +738,34 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Pedigree chart
  *
  * wt-chart, wt-chart-pedigree
  */
+
 .wt-chart-pedigree {
     overflow-y: auto;
 }
+
 .wt-chart-pedigree-left .wt-chart-box,
 .wt-chart-pedigree-right .wt-chart-box {
     width: 15rem;
 }
+
 .wt-chart-pedigree-up .wt-chart-box,
 .wt-chart-pedigree-down .wt-chart-box {
     width: 10rem;
     height: 8rem;
 }
+
 .wt-chart-pedigree .wt-chart-box-lifespan {
     display: none;
 }
+
 /* Pedigree chart with oldest on the right */
+
 .wt-chart-pedigree-right .wt-pedigree-lines {
     right: 0;
     top: 25%;
@@ -656,12 +776,15 @@ table#tvTreeBorder td,
     width: 25%;
     height: 50%;
 }
+
 .wt-chart-pedigree-right .wt-generation-rev-2 > .wt-pedigree-lines {
     top: 12.5%;
     bottom: 12.5%;
     height: 75%;
 }
+
 /* Pedigree chart with oldest on the left */
+
 .wt-chart-pedigree-left .wt-pedigree-lines {
     left: 0;
     top: 25%;
@@ -672,15 +795,19 @@ table#tvTreeBorder td,
     width: 25%;
     height: 50%;
 }
+
 .wt-chart-pedigree-left .wt-generation-rev-2 > .wt-pedigree-lines {
     top: 12.5%;
     bottom: 12.5%;
     height: 75%;
 }
+
 /* Pedigree chart with oldest at the bottom */
+
 .wt-chart-pedigree-down {
     width: max-content;
 }
+
 .wt-chart-pedigree-down .wt-pedigree-lines {
     bottom: 0;
     left: 25%;
@@ -691,15 +818,19 @@ table#tvTreeBorder td,
     width: 50%;
     height: 25%;
 }
+
 .wt-chart-pedigree-down .wt-generation-rev-2 > .wt-pedigree-lines {
     left: 12.5%;
     right: 12.5%;
     width: 75%;
 }
+
 /* Pedigree chart with oldest at the top */
+
 .wt-chart-pedigree-up {
     width: max-content;
 }
+
 .wt-chart-pedigree-up .wt-pedigree-lines {
     top: 0;
     left: 25%;
@@ -710,11 +841,13 @@ table#tvTreeBorder td,
     width: 50%;
     height: 25%;
 }
+
 .wt-chart-pedigree-up .wt-generation-rev-2 > .wt-pedigree-lines {
     left: 12.5%;
     right: 12.5%;
     width: 75%;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -729,11 +862,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+
 /*
  * Pedigree map
  *
  * wt-chart, wt-chart-pedigree-map
  */
+
 :root {
     --wt-pedigree-map-gen-0: red;
     --wt-pedigree-map-gen-1: orange;
@@ -748,42 +883,55 @@ table#tvTreeBorder td,
     --wt-pedigree-map-gen-10: magenta;
     --wt-pedigree-map-gen-11: maroon;
 }
+
 .wt-pedigree-map-gen-0 {
     color: var(--wt-pedigree-map-gen-0);
 }
+
 .wt-pedigree-map-gen-1 {
     color: var(--wt-pedigree-map-gen-1);
 }
+
 .wt-pedigree-map-gen-2 {
     color: var(--wt-pedigree-map-gen-2);
 }
+
 .wt-pedigree-map-gen-3 {
     color: var(--wt-pedigree-map-gen-3);
 }
+
 .wt-pedigree-map-gen-4 {
     color: var(--wt-pedigree-map-gen-4);
 }
+
 .wt-pedigree-map-gen-5 {
     color: var(--wt-pedigree-map-gen-5);
 }
+
 .wt-pedigree-map-gen-6 {
     color: var(--wt-pedigree-map-gen-6);
 }
+
 .wt-pedigree-map-gen-7 {
     color: var(--wt-pedigree-map-gen-7);
 }
+
 .wt-pedigree-map-gen-8 {
     color: var(--wt-pedigree-map-gen-8);
 }
+
 .wt-pedigree-map-gen-9 {
     color: var(--wt-pedigree-map-gen-9);
 }
+
 .wt-pedigree-map-gen-10 {
     color: var(--wt-pedigree-map-gen-10);
 }
+
 .wt-pedigree-map-gen-11 {
     color: var(--wt-pedigree-map-gen-11);
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -798,17 +946,21 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+
 /*
  * Relationships chart
  *
  * wt-chart, wt-chart-relationships
  */
+
 .wt-chart-relationships .wt-chart-box {
     width: 15rem;
 }
+
 .wt-chart-relationships .wt-chart-box-lifespan {
     display: none;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -823,11 +975,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Statistics chart
  *
  * wt-chart, wt-chart-statistics
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -842,21 +996,26 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Timeline chart
  *
  * wt-chart, wt-chart-timeline
  */
+
 /* Lines for "vertical" charts, such as the ancestors and descendants chart. */
+
 .wt-chart-horizontal-indent {
     width: 3rem;
 }
+
 .wt-chart-vertical-line {
     width: 50%;
     height: 100%;
     right: 0;
     border-left: var(--chart-line);
 }
+
 .wt-chart-vertical-last-child-line {
     width: 50%;
     right: 0;
@@ -866,6 +1025,7 @@ table#tvTreeBorder td,
     border-bottom: var(--chart-line);
     border-radius: 0 0 0 var(--chart-line-radius);
 }
+
 .wt-chart-vertical-child-line {
     width: 50%;
     right: 0;
@@ -873,15 +1033,19 @@ table#tvTreeBorder td,
     top: 0;
     border-bottom: var(--chart-line);
 }
+
 /* Lines for horizontal trees, such as the family page */
+
 .wt-chart-horizontal-spacer {
     width: 1rem;
 }
+
 .wt-chart-horizontal-line {
     width: 1rem;
     height: 50%;
     border-bottom: var(--chart-line);
 }
+
 .wt-chart-horizontal-first-child {
     height: 50%;
     position: relative;
@@ -890,16 +1054,19 @@ table#tvTreeBorder td,
     border-right: var(--chart-line);
     border-radius: 0 var(--chart-line-radius) 0 0;
 }
+
 .wt-chart-horizontal-middle-child {
     height: 100%;
     border-right: var(--chart-line);
 }
+
 .wt-chart-horizontal-last-child {
     height: 50%;
     border-bottom: var(--chart-line);
     border-right: var(--chart-line);
     border-radius: 0 0 var(--chart-line-radius) 0;
 }
+
 .wt-chart-horizontal-first-parent {
     height: 50%;
     position: relative;
@@ -908,28 +1075,36 @@ table#tvTreeBorder td,
     border-left: var(--chart-line);
     border-radius: var(--chart-line-radius) 0 0 0;
 }
+
 .wt-chart-horizontal-last-parent {
     height: 50%;
     border-bottom: var(--chart-line);
     border-left: var(--chart-line);
     border-radius: 0 0 0 var(--chart-line-radius);
 }
+
 /* Buttons to expand/collapse other parts of the chart */
+
 .wt-chart-expansion-control > .chart-expand {
     display: none;
 }
+
 .wt-chart-expansion-control > .chart-collapse {
     display: inline;
 }
+
 .wt-chart-expansion-control.collapsed > .chart-expand {
     display: inline;
 }
+
 .wt-chart-expansion-control.collapsed > .chart-collapse {
     display: none;
 }
+
 .wt-chart-box-name {
     font-weight: bold;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -944,6 +1119,7 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * http://www.jacklmoore.com/colorbox
  *
@@ -975,25 +1151,30 @@ table#tvTreeBorder td,
  *           +----#cboxBottomCenter
  *           +----#cboxBottomRight
  */
+
 #cboxOverlay {
     position: fixed;
     width: 100%;
     height: 100%;
 }
+
 #cboxLoadingOverlay,
 #cboxLoadingGraphic {
     position: absolute;
     width: 100%;
     height: 100%;
 }
+
 #cboxOverlay,
 #colorbox {
     z-index: 9999;
 }
+
 #cboxContent,
 #cboxOverlay {
     background: #fff;
 }
+
 #cboxContent {
     overflow: hidden;
     position: relative;
@@ -1002,18 +1183,22 @@ table#tvTreeBorder td,
     border-radius: 0.5rem;
     box-sizing: content-box;
 }
+
 .cboxPhoto {
     margin: auto;
     display: block;
 }
+
 #cboxError {
     padding: 50px;
     border: 1px solid #ccc;
 }
+
 #cboxLoadedContent {
     margin-bottom: 28px;
     box-sizing: content-box;
 }
+
 #cboxTitle {
     background: #fff;
     position: absolute;
@@ -1021,9 +1206,11 @@ table#tvTreeBorder td,
     margin: 0 2rem 0 4.5rem;
     text-align: center;
 }
+
 #cboxLoadingGraphic {
     background: url(images/loading-32x32.gif) no-repeat center center;
 }
+
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
     background: #eee;
     border: 0;
@@ -1032,22 +1219,27 @@ table#tvTreeBorder td,
     padding: 0 0.5rem;
     position: absolute;
 }
+
 #cboxSlideshow {
     bottom: 0.25rem;
     right: 0.25rem;
 }
+
 #cboxPrevious {
     bottom: 0.25rem;
     left: 0.25rem;
 }
+
 #cboxNext {
     bottom: 0.25rem;
     left: 2.5rem;
 }
+
 #cboxClose {
     top: 0.25rem;
     right: 0.25rem;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1062,6 +1254,7 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1076,11 +1269,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Branches list
  *
  * wt-route-branches-list
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1095,6 +1290,7 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+
 /*
  * Individual and family list
  *
@@ -1111,21 +1307,27 @@ table#tvTreeBorder td,
  * +---wt-page-content
  *     +---wt-list, wt-{family,individual}-list
  */
+
 .wt-initials-list {
     font-size: 1.25rem;
 }
+
 .wt-initials-list-item {
     display: inline;
 }
+
 .wt-initials-list-item + .wt-initials-list-item::before {
     content: '|';
 }
+
 .wt-initial {
 }
+
 .wt-initial.active {
     color: #f00;
     font-weight: bold;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1140,11 +1342,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Media object list
  *
  * wt-route-media-list
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1159,11 +1363,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+
 /*
  * Note list
  *
  * wt-route-note-list
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1178,11 +1384,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Repository list
  *
  * wt-route-repository-list
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1197,11 +1405,13 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Source list
  *
  * wt-route-source-list
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1216,21 +1426,26 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Surname lists
  */
+
 .wt-surnames-tag-cloud {
     text-align: center;
 }
+
 .wt-surnames-tag-cloud-item {
     white-space: nowrap;
 }
+
 .wt-surnames-column-list {
     columns: 15rem;
     column-rule: solid thin gray;
     border: solid thin gray;
     padding: 0 1rem;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1245,38 +1460,48 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /* markdown formatting */
+
 .markdown {
     /* Pre-formatted text can break the layout. */
     overflow-wrap: break-word;
 }
+
 .markdown p code {
     /* Bootstrap makes code text red */
     color: inherit;
 }
+
 .markdown p {
     margin: 0 0 0.5rem;
 }
+
 .markdown blockquote p {
     border-left: solid thick lightgray;
     padding-left: 0.5rem;
 }
+
 .markdown table {
     border-collapse: collapse;
     margin-bottom: 5px;
 }
+
 .markdown th {
     font-weight: bold;
 }
+
 .markdown td,
 .markdown th {
     border: solid thin #000;
     padding: 3px;
 }
+
 .markdown img {
     max-width: 100%;
     height: auto;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1291,39 +1516,52 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 :root {
     --wt-map-height: 70vh;
  }
+
 /*
  * Formatting for LeafletJS based maps.
  */
+
 .leaflet-control-layers-selector {
     margin-right: 2px;
 }
+
 /* Default is 12px - a bit too small */
+
 .leaflet-container {
     font-size: 0.8rem;
 }
+
 /* No way to target parents-only... */
+
 .leaflet-layerstree-header-name {
     font-weight: bold;
 }
+
 .leaflet-layerstree-node .leaflet-layerstree-node .leaflet-layerstree-header-name {
     font-weight: normal;
 }
+
 .wt-map {
     height: var(--wt-map-height);
 }
+
 :fullscreen .wt-map {
     height: 100%;
 }
+
 .wt-map-sidebar {
     height: var(--wt-map-height);
     overflow-y: auto;
 }
+
 :fullscreen .wt-map-sidebar {
     height: 100%;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1338,6 +1576,7 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Icons for file types
  *
@@ -1345,27 +1584,34 @@ table#tvTreeBorder td,
  * https://www.flaticon.com/packs/file-formats-3"
  * Creative Commons BY 3.0
  */
+
 .wt-mime {
     background: url(images/mime.svg);
     display: inline-block;
     width: 48px;
     height: 48px;
 }
+
 .wt-mime-application-pdf {
     background: url(images/mime-application-pdf.svg);
 }
+
 .wt-mime-audio {
     background: url(images/mime-audio.svg);
 }
+
 .wt-mime-text {
     background: url(images/mime-text.svg);
 }
+
 .wt-mime-text-html {
     background: url(images/mime-text-html.svg);
 }
+
 .wt-mime-video {
     background: url(images/mime-video.svg);
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1380,41 +1626,50 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * On-screen keyboard, for entering characters that are not on the keyboard
  */
+
 .wt-osk {
     position: fixed;
     z-index: 1000;
     top: 1rem;
     display: none;
 }
+
 .wt-osk-keys {
     background: #eee;
     padding: 0.25rem;
     font-size: larger;
 }
+
 .wt-osk-group {
     display: inline-block;
     margin: 0.25rem;
     padding: 0.25rem 0;
 }
+
 .wt-osk-key {
     background: #ddd;
     border-radius: .25rem;
     padding: 0.25rem;
     cursor: pointer;
 }
+
 .wt-osk-key-shift {
     color: #aaa;
     font-size: smaller;
 }
+
 .wt-osk-keys.shifted .wt-osk-key {
     color: #aaa;
 }
+
 .wt-osk-keys.shifted .wt-osk-key-shift {
     color: #555;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1429,6 +1684,7 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1443,12 +1699,15 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+
 .wt-family-members .wt-chart-box {
     width: 22.5vw;
 }
+
 .wt-family-members .wt-chart-box-lifespan {
     display: none;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1463,21 +1722,27 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+
 /* Sortable lists */
+
 .wt-sortable-item .card-header {
     cursor: move;
 }
+
 /* Buttons to re-order items in a list */
+
 .wt-sortable-item:first-child .wt-btn-reorder-first,
 .wt-sortable-item:first-child .wt-btn-reorder-previous {
     cursor: not-allowed;
     opacity: 0.5;
 }
+
 .wt-sortable-item:last-child .wt-btn-reorder-next,
 .wt-sortable-item:last-child .wt-btn-reorder-last {
     cursor: not-allowed;
     opacity: 0.5;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1492,15 +1757,18 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Album tab
  *
  * wt-tabs-individual
  * +--- wt-tab-album
  */
+
 .wt-album-tab-caption {
     overflow: hidden;
 }
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2023 webtrees development team
@@ -1515,86 +1783,116 @@ table#tvTreeBorder td,
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /*
  * Close relatives tab
  *
  * wt-tabs-individual
  * +--- wt-tab-relatives
  */
+
 .wt-tab-relatives .wt-chart-box-lifespan {
     display: none;
 }
+
 /* Some icons need to be reversed on right-to-left pages */
+
 /* rtl:ignore */
+
 [dir=rtl] .wt-icon-flip-rtl
 {
     transform: scale(-1, 1);
 }
+
 /* rtl:ignore */
+
 td.align-digits,
 th.align-digits {
     text-align: right;
 }
+
 /* Keep the page as tall as the window, so the footer can remain at the bottom. */
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
+
 main {
     flex: 1;
 }
+
 /* Bootstrap 5 underlines links by default */
+
 a {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 /* Scrollbars */
+
 .wt-global {
     /* Prevent redraws when dynamic content requires a scrollbar. */
     overflow-y: scroll;
     /* Any wide content will have its own horizontal scrollbar */
     overflow-x: hidden;
 }
+
 /* Browsers only understand US English */
+
 [lang=en-AU] q,
 [lang=en-GB] q {
     quotes: "‘" "’" "“" "”";
 }
+
 /* Expand/collapse icons on accordions, etc. */
+
 [data-bs-toggle=collapse][aria-expanded=true] > .wt-icon-expand {
     display: none;
 }
+
 [data-bs-toggle=collapse][aria-expanded=false] > .wt-icon-collapse {
     display: none;
 }
+
 /* Accordions */
+
 .accordion-button,
 .accordion-button:not(.collapsed) {
     background-color: rgba(0,0,0,.03);
     color: currentcolor;
 }
+
 .accordion-button:after {
     display: none;
 }
+
 /* Link styling */
+
 a, .btn-link, .nav-link {
     color: var(--link-color);
     text-decoration: var(--link-decoration);
 }
+
 a:hover, .btn-link:hover, .nav-link:hover {
     color: var(--link-color-hover);
     text-decoration: var(--link-decoration-hover);
 }
+
 /* Some menus (e.g. languages) can be longer than a page */
+
 .dropdown-menu {
     max-height: 90vh;
     overflow-x: hidden;
     scrollbar-gutter: stable;
 }
+
 /* User-generated text */
+
 .ut {
     /* RTL text on LTR pages (or vice-versa) */
     unicode-bidi: isolate;
@@ -1602,30 +1900,39 @@ a:hover, .btn-link:hover, .nav-link:hover {
     /* Long words without spaces can break the page layout */
     overflow-wrap: break-word;
 }
+
 .wt-nested-edit-fields {
     padding-left: 1rem;
     margin-left: 1rem;
     border-left: solid 4px grey;
 }
+
 .wt-text-overflow-elipsis {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 /* Enter/exit fullscreen mode */
+
 .wt-icon-exit-fullscreen {
     display: none;
 }
+
 .wt-icon-enter-fullscreen {
     display: inline;
 }
+
 :fullscreen .wt-icon-exit-fullscreen {
     display: inline;
 }
+
 :fullscreen .wt-icon-enter-fullscreen {
     display: none;
 }
+
 /* Leaflet sets this to 1000, which conflicts with bootstrap dropdowns */
+
 .leaflet-bottom, .leaflet-top {
     z-index: 999;
 }
