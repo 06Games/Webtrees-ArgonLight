@@ -453,6 +453,11 @@ select {
   padding: 0;
 }
 
+// Detail toggle button
+.btn-text[data-bs-toggle="collapse"] {
+  vertical-align: baseline;
+}
+
 .card {
   border-color: rgba($black, .05);
 
@@ -856,11 +861,6 @@ ul.pagination {
 /*****
  * Webtrees
  */
-
-// Hide source details in facts by efault
-.source_citations {
-  display: none;
-}
 
 // Preferred name
 .starredname {

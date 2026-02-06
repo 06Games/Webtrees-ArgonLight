@@ -23100,6 +23100,10 @@ caption {
   padding: 0;
 }
 
+.btn-text[data-bs-toggle=collapse] {
+  vertical-align: baseline;
+}
+
 .card {
   border-color: rgba(0, 0, 0, 0.05);
 }
@@ -23491,10 +23495,6 @@ ul.pagination {
 /*****
  * Webtrees
  */
-
-.source_citations {
-  display: none;
-}
 
 .starredname {
   text-decoration: underline;
