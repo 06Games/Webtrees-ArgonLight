@@ -48,12 +48,13 @@ export default defineConfig(({ command, mode }) => {
         },
 
         plugins: [
-            isProd && viteStaticCopy({
+            viteStaticCopy({
                 targets: [
                     { src: '*.php', dest: '.' },
                     { src: 'resources', dest: '.', overwrite: false },
                     { src: "README.md", dest: '.' },
-                    { src: "LICENSE.md", dest: '.' }
+                    { src: "LICENSE.md", dest: '.' },
+                    { src: "composer.json", dest: '.' }
                 ]
             })
         ].filter(Boolean)
