@@ -28,13 +28,17 @@ $x-color: #fceaa1;
 
 $box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 
+@use "sass:map";
+@use "sass:color";
+
 @import "@argon/argon";
 @import "@argon/bootstrap/spinners";
 @import "@select2/core"; // Custom selection dropdowns
 @import "@leaflet/leaflet"; // Maps
 @import "@beautify-marker/beautify-marker"; // Map markers
+
 body {
-  min-width: map-get($grid-breakpoints, xs);
+  min-width: map.get($grid-breakpoints, xs);
 }
 
 .wt-footers {
@@ -443,7 +447,7 @@ select {
 @each $color, $value in $theme-colors {
   [dir] .btn-#{$color} {
     &:hover {
-      background-color: lighten(theme-color(#{$color}), 5%);
+      background-color: color.adjust(theme-color(#{$color}), $lightness: 5%);
     }
   }
 }
@@ -557,7 +561,7 @@ select {
           color: theme-color("white");
 
           &:hover {
-            color: darken(theme-color("white"), 20%);
+            color: color.adjust(theme-color("white"), $lightness: -20%);
           }
         }
       }
@@ -710,7 +714,7 @@ select {
             padding: 0.75rem 0.4rem;
 
             &:hover {
-              color: darken(theme-color("white"), 20%);
+              color: color.adjust(theme-color("white"), $lightness: -20%);
             }
 
             &::before {
@@ -979,14 +983,14 @@ div[id^=caldiv] {
   }
 
   @each $class in wt-new, wt-old {
-    $color: map-get((wt-new: $teal,
+    $color: map.get((wt-new: $teal,
           wt-old: $orange ), $class);
 
     &.#{$class} {
       outline-color: $color;
 
       th {
-        background-color: mix(white, $color, 80%);
+        background-color: color.mix(white, $color, 80%);
 
         &::before {
           color: $color;
@@ -994,7 +998,7 @@ div[id^=caldiv] {
       }
 
       td {
-        background-color: mix(white, $color, 90%);
+        background-color: color.mix(white, $color, 90%);
       }
     }
   }
@@ -2242,7 +2246,7 @@ table.tv_tree {
       color: theme-color("white");
 
       &:hover {
-        color: darken(theme-color("white"), 20%);
+        color: color.adjust(theme-color("white"), $lightness: -20%);
       }
     }
   }
@@ -2255,7 +2259,7 @@ table.tv_tree {
       color: $body-color;
 
       &:hover {
-        color: darken($body-color, 20%);
+        color: color.adjust($body-color, $lightness: -20%);
       }
     }
   }
@@ -2268,7 +2272,7 @@ table.tv_tree {
       color: theme-color("white");
 
       &:hover {
-        color: darken(theme-color("white"), 20%);
+        color: color.adjust(theme-color("white"), $lightness: -20%);
       }
     }
   }
@@ -2281,7 +2285,7 @@ table.tv_tree {
       color: theme-color("white");
 
       &:hover {
-        color: darken(theme-color("white"), 20%);
+        color: color.adjust(theme-color("white"), $lightness: -20%);
       }
     }
   }
@@ -2294,7 +2298,7 @@ table.tv_tree {
       color: theme-color("white");
 
       &:hover {
-        color: darken(theme-color("white"), 20%);
+        color: color.adjust(theme-color("white"), $lightness: -20%);
       }
     }
   }
@@ -2307,7 +2311,7 @@ table.tv_tree {
       color: theme-color("white");
 
       &:hover {
-        color: darken(theme-color("white"), 20%);
+        color: color.adjust(theme-color("white"), $lightness: -20%);
       }
     }
   }
