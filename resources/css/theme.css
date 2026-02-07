@@ -24370,6 +24370,7 @@ table.tv_tree i.dates {
 }
 
 .wt-block-gedcom_favorites .wt-chart-box,
+.wt-block-content-user_favorites .wt-chart-box,
 .wt-family-members .wt-chart-box,
 .wt-chart-relationships .wt-chart-box,
 .wt-chart-ancestors .wt-chart-box,
@@ -24383,6 +24384,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives td,
 .wt-block-gedcom_favorites td,
+.wt-block-content-user_favorites td,
 .wt-family-members td,
 .wt-chart-relationships td,
 .wt-chart-ancestors td,
@@ -24395,6 +24397,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives tr:first-child td,
 .wt-block-gedcom_favorites tr:first-child td,
+.wt-block-content-user_favorites tr:first-child td,
 .wt-family-members tr:first-child td,
 .wt-chart-relationships tr:first-child td,
 .wt-chart-ancestors tr:first-child td,
@@ -24407,6 +24410,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box,
 .wt-block-gedcom_favorites .wt-chart-box,
+.wt-block-content-user_favorites .wt-chart-box,
 .wt-family-members .wt-chart-box,
 .wt-chart-relationships .wt-chart-box,
 .wt-chart-ancestors .wt-chart-box,
@@ -24423,6 +24427,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box .wt-chart-box-thumbnail img,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-thumbnail img,
+.wt-block-content-user_favorites .wt-chart-box .wt-chart-box-thumbnail img,
 .wt-family-members .wt-chart-box .wt-chart-box-thumbnail img,
 .wt-chart-relationships .wt-chart-box .wt-chart-box-thumbnail img,
 .wt-chart-ancestors .wt-chart-box .wt-chart-box-thumbnail img,
@@ -24439,6 +24444,9 @@ table.tv_tree i.dates {
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-name,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-lifespan,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-facts,
+.wt-block-content-user_favorites .wt-chart-box .wt-chart-box-name,
+.wt-block-content-user_favorites .wt-chart-box .wt-chart-box-lifespan,
+.wt-block-content-user_favorites .wt-chart-box .wt-chart-box-facts,
 .wt-family-members .wt-chart-box .wt-chart-box-name,
 .wt-family-members .wt-chart-box .wt-chart-box-lifespan,
 .wt-family-members .wt-chart-box .wt-chart-box-facts,
@@ -24465,6 +24473,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box .wt-chart-box-name,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-name,
+.wt-block-content-user_favorites .wt-chart-box .wt-chart-box-name,
 .wt-family-members .wt-chart-box .wt-chart-box-name,
 .wt-chart-relationships .wt-chart-box .wt-chart-box-name,
 .wt-chart-ancestors .wt-chart-box .wt-chart-box-name,
@@ -24477,6 +24486,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box .wt-chart-box-extra,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-extra,
+.wt-block-content-user_favorites .wt-chart-box .wt-chart-box-extra,
 .wt-family-members .wt-chart-box .wt-chart-box-extra,
 .wt-chart-relationships .wt-chart-box .wt-chart-box-extra,
 .wt-chart-ancestors .wt-chart-box .wt-chart-box-extra,
@@ -24492,6 +24502,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box .wt-chart-box-extra *,
 .wt-block-gedcom_favorites .wt-chart-box .wt-chart-box-extra *,
+.wt-block-content-user_favorites .wt-chart-box .wt-chart-box-extra *,
 .wt-family-members .wt-chart-box .wt-chart-box-extra *,
 .wt-chart-relationships .wt-chart-box .wt-chart-box-extra *,
 .wt-chart-ancestors .wt-chart-box .wt-chart-box-extra *,
@@ -24504,6 +24515,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box-icon,
 .wt-block-gedcom_favorites .wt-chart-box-icon,
+.wt-block-content-user_favorites .wt-chart-box-icon,
 .wt-family-members .wt-chart-box-icon,
 .wt-chart-relationships .wt-chart-box-icon,
 .wt-chart-ancestors .wt-chart-box-icon,
@@ -24517,6 +24529,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box-icon > i,
 .wt-block-gedcom_favorites .wt-chart-box-icon > i,
+.wt-block-content-user_favorites .wt-chart-box-icon > i,
 .wt-family-members .wt-chart-box-icon > i,
 .wt-chart-relationships .wt-chart-box-icon > i,
 .wt-chart-ancestors .wt-chart-box-icon > i,
@@ -24529,6 +24542,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box-f,
 .wt-block-gedcom_favorites .wt-chart-box-f,
+.wt-block-content-user_favorites .wt-chart-box-f,
 .wt-family-members .wt-chart-box-f,
 .wt-chart-relationships .wt-chart-box-f,
 .wt-chart-ancestors .wt-chart-box-f,
@@ -24541,6 +24555,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box-m,
 .wt-block-gedcom_favorites .wt-chart-box-m,
+.wt-block-content-user_favorites .wt-chart-box-m,
 .wt-family-members .wt-chart-box-m,
 .wt-chart-relationships .wt-chart-box-m,
 .wt-chart-ancestors .wt-chart-box-m,
@@ -24553,6 +24568,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box-u,
 .wt-block-gedcom_favorites .wt-chart-box-u,
+.wt-block-content-user_favorites .wt-chart-box-u,
 .wt-family-members .wt-chart-box-u,
 .wt-chart-relationships .wt-chart-box-u,
 .wt-chart-ancestors .wt-chart-box-u,
@@ -24565,6 +24581,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box-x,
 .wt-block-gedcom_favorites .wt-chart-box-x,
+.wt-block-content-user_favorites .wt-chart-box-x,
 .wt-family-members .wt-chart-box-x,
 .wt-chart-relationships .wt-chart-box-x,
 .wt-chart-ancestors .wt-chart-box-x,
@@ -24577,6 +24594,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-box-zoom-dropdown,
 .wt-block-gedcom_favorites .wt-chart-box-zoom-dropdown,
+.wt-block-content-user_favorites .wt-chart-box-zoom-dropdown,
 .wt-family-members .wt-chart-box-zoom-dropdown,
 .wt-chart-relationships .wt-chart-box-zoom-dropdown,
 .wt-chart-ancestors .wt-chart-box-zoom-dropdown,
@@ -24592,6 +24610,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-horizontal-spacer,
 .wt-block-gedcom_favorites .wt-chart-horizontal-spacer,
+.wt-block-content-user_favorites .wt-chart-horizontal-spacer,
 .wt-family-members .wt-chart-horizontal-spacer,
 .wt-chart-relationships .wt-chart-horizontal-spacer,
 .wt-chart-ancestors .wt-chart-horizontal-spacer,
@@ -24604,6 +24623,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-horizontal-line,
 .wt-block-gedcom_favorites .wt-chart-horizontal-line,
+.wt-block-content-user_favorites .wt-chart-horizontal-line,
 .wt-family-members .wt-chart-horizontal-line,
 .wt-chart-relationships .wt-chart-horizontal-line,
 .wt-chart-ancestors .wt-chart-horizontal-line,
@@ -24618,6 +24638,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-horizontal-first-child,
 .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
+.wt-block-content-user_favorites .wt-chart-horizontal-first-child,
 .wt-family-members .wt-chart-horizontal-first-child,
 .wt-chart-relationships .wt-chart-horizontal-first-child,
 .wt-chart-ancestors .wt-chart-horizontal-first-child,
@@ -24633,6 +24654,7 @@ table.tv_tree i.dates {
 
 [dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-child,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
+[dir=ltr] .wt-block-content-user_favorites .wt-chart-horizontal-first-child,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-first-child,
 [dir=ltr] .wt-chart-relationships .wt-chart-horizontal-first-child,
 [dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-first-child,
@@ -24646,6 +24668,7 @@ table.tv_tree i.dates {
 
 [dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-child,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-first-child,
+[dir=rtl] .wt-block-content-user_favorites .wt-chart-horizontal-first-child,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-first-child,
 [dir=rtl] .wt-chart-relationships .wt-chart-horizontal-first-child,
 [dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-first-child,
@@ -24659,6 +24682,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-horizontal-middle-child,
 .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
+.wt-block-content-user_favorites .wt-chart-horizontal-middle-child,
 .wt-family-members .wt-chart-horizontal-middle-child,
 .wt-chart-relationships .wt-chart-horizontal-middle-child,
 .wt-chart-ancestors .wt-chart-horizontal-middle-child,
@@ -24671,6 +24695,7 @@ table.tv_tree i.dates {
 
 [dir=ltr] .wt-tab-relatives .wt-chart-horizontal-middle-child,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
+[dir=ltr] .wt-block-content-user_favorites .wt-chart-horizontal-middle-child,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-middle-child,
 [dir=ltr] .wt-chart-relationships .wt-chart-horizontal-middle-child,
 [dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-middle-child,
@@ -24683,6 +24708,7 @@ table.tv_tree i.dates {
 
 [dir=rtl] .wt-tab-relatives .wt-chart-horizontal-middle-child,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-middle-child,
+[dir=rtl] .wt-block-content-user_favorites .wt-chart-horizontal-middle-child,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-middle-child,
 [dir=rtl] .wt-chart-relationships .wt-chart-horizontal-middle-child,
 [dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-middle-child,
@@ -24695,6 +24721,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-horizontal-last-child,
 .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
+.wt-block-content-user_favorites .wt-chart-horizontal-last-child,
 .wt-family-members .wt-chart-horizontal-last-child,
 .wt-chart-relationships .wt-chart-horizontal-last-child,
 .wt-chart-ancestors .wt-chart-horizontal-last-child,
@@ -24708,6 +24735,7 @@ table.tv_tree i.dates {
 
 [dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-child,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
+[dir=ltr] .wt-block-content-user_favorites .wt-chart-horizontal-last-child,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-last-child,
 [dir=ltr] .wt-chart-relationships .wt-chart-horizontal-last-child,
 [dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-last-child,
@@ -24721,6 +24749,7 @@ table.tv_tree i.dates {
 
 [dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-child,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-last-child,
+[dir=rtl] .wt-block-content-user_favorites .wt-chart-horizontal-last-child,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-last-child,
 [dir=rtl] .wt-chart-relationships .wt-chart-horizontal-last-child,
 [dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-last-child,
@@ -24734,6 +24763,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-horizontal-first-parent,
 .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
+.wt-block-content-user_favorites .wt-chart-horizontal-first-parent,
 .wt-family-members .wt-chart-horizontal-first-parent,
 .wt-chart-relationships .wt-chart-horizontal-first-parent,
 .wt-chart-ancestors .wt-chart-horizontal-first-parent,
@@ -24749,6 +24779,7 @@ table.tv_tree i.dates {
 
 [dir=ltr] .wt-tab-relatives .wt-chart-horizontal-first-parent,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
+[dir=ltr] .wt-block-content-user_favorites .wt-chart-horizontal-first-parent,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-first-parent,
 [dir=ltr] .wt-chart-relationships .wt-chart-horizontal-first-parent,
 [dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-first-parent,
@@ -24762,6 +24793,7 @@ table.tv_tree i.dates {
 
 [dir=rtl] .wt-tab-relatives .wt-chart-horizontal-first-parent,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-first-parent,
+[dir=rtl] .wt-block-content-user_favorites .wt-chart-horizontal-first-parent,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-first-parent,
 [dir=rtl] .wt-chart-relationships .wt-chart-horizontal-first-parent,
 [dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-first-parent,
@@ -24775,6 +24807,7 @@ table.tv_tree i.dates {
 
 .wt-tab-relatives .wt-chart-horizontal-last-parent,
 .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
+.wt-block-content-user_favorites .wt-chart-horizontal-last-parent,
 .wt-family-members .wt-chart-horizontal-last-parent,
 .wt-chart-relationships .wt-chart-horizontal-last-parent,
 .wt-chart-ancestors .wt-chart-horizontal-last-parent,
@@ -24788,6 +24821,7 @@ table.tv_tree i.dates {
 
 [dir=ltr] .wt-tab-relatives .wt-chart-horizontal-last-parent,
 [dir=ltr] .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
+[dir=ltr] .wt-block-content-user_favorites .wt-chart-horizontal-last-parent,
 [dir=ltr] .wt-family-members .wt-chart-horizontal-last-parent,
 [dir=ltr] .wt-chart-relationships .wt-chart-horizontal-last-parent,
 [dir=ltr] .wt-chart-ancestors .wt-chart-horizontal-last-parent,
@@ -24801,6 +24835,7 @@ table.tv_tree i.dates {
 
 [dir=rtl] .wt-tab-relatives .wt-chart-horizontal-last-parent,
 [dir=rtl] .wt-block-gedcom_favorites .wt-chart-horizontal-last-parent,
+[dir=rtl] .wt-block-content-user_favorites .wt-chart-horizontal-last-parent,
 [dir=rtl] .wt-family-members .wt-chart-horizontal-last-parent,
 [dir=rtl] .wt-chart-relationships .wt-chart-horizontal-last-parent,
 [dir=rtl] .wt-chart-ancestors .wt-chart-horizontal-last-parent,
