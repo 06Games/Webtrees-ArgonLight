@@ -10,10 +10,7 @@ export default defineConfig(({ command, mode }) => {
 
         resolve: {
             alias: {
-                '@argon': path.resolve(__dirname, 'src/scss/argon'),
-                '@select2': path.resolve(__dirname, 'src/scss/select2'),
-                '@leaflet': path.resolve(__dirname, 'src/scss/leaflet'),
-                '@beautify-marker': path.resolve(__dirname, 'src/scss/beautify-marker')
+                '@argon': path.resolve(__dirname, 'src/scss/argon')
             },
         },
 
