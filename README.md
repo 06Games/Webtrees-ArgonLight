@@ -18,15 +18,15 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
 
 ## Installation
 
-### Latest Release (Recommended)
+### Latest release (Recommended)
 
 1. Download the first zip file from the [latest release](https://github.com/06Games/Webtrees-ArgonLight/releases/latest) (look under the "Assets" section).
 2. Unzip the file.
 3. Move the folder into your `webtrees/modules_v4` directory.
 
-### Nightly Version
+### Nightly version
 
-1. Find the latest build from the [Actions tab](https://github.com/06Games/Webtrees-ArgonLight/actions/workflows/build.yml).
+1. Find the latest build from the [Actions tab](https://github.com/06Games/Webtrees-ArgonLight/actions/workflows/build.yml?query=is%3Asuccess).
 2. Download the artifact linked in the build summary.
 3. Unzip the file.
 4. Move the folder into your `webtrees/modules_v4` directory.
