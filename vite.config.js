@@ -4,7 +4,6 @@ import path from 'path';
 
 export default defineConfig(({ command, mode }) => {
     const isProd = mode === 'production';
-    const minify = false;
 
     return {
         base: './',
@@ -12,8 +11,8 @@ export default defineConfig(({ command, mode }) => {
         build: {
             outDir: 'dist',
             emptyOutDir: true,
-            sourcemap: true,
-            minify: minify,
+            sourcemap: 'inline',
+            minify: isProd,
             esbuild: {
                 legalComments: 'inline',
             },

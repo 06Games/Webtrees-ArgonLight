@@ -1,0 +1,77 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      # Add: ensure PHP is available
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, intl
+          coverage: none
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            vendor
+            ~/.cache/composer
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install PHP dependencies
+        run: composer install --no-progress --no-interaction
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Install dependencies
+        run: sudo apt update && sudo apt install -y gettext
+
+      - name: Build module
+        run: npm run build
+
+
+      - name: Generate zip file
+        run: |
+          outputName=evang-argonlight-$(cat version.txt)
+          echo "outputName=$outputName" >> $GITHUB_ENV
+          mv dist evang-argonlight
+          zip -r "$outputName.zip" evang-argonlight
+          
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.outputName }}
+          path: ${{ env.outputName }}.zip
+          if-no-files-found: error
+
+      - name: Adding step summary
+        run: |
+          url=https://nightly.link/06Games/Webtrees-ArgonLight/actions/runs/${{ github.run_id }}/${{ env.outputName }}.zip
+          echo "This artifact is available at [$url]($url)" >> $GITHUB_STEP_SUMMARY
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ${{ env.outputName }}.zip
+          draft: true
