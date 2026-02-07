@@ -35,11 +35,17 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
 > Or simply clone the repository into the `webtrees/modules_v4` directory.
 
 ## Development
-This module uses [composer](https://getcomposer.org/) and [gulp](https://gulpjs.com/) to manage its dependencies
 
-```shell
-composer install
-npm install
-npm install --global gulp-cli
-gulp
-```
+1. Make sure you have both [composer](https://getcomposer.org/) and [npm](https://www.npmjs.com/) installed on your system.
+
+2. Install the dependencies by running the following commands in the module's root directory:
+    ```shell
+    composer install
+    npm install
+    ```
+
+3. To build the module, run one of the following commands:
+    ```shell
+    npm run dev    # For development
+    npm run build  # For production
+    ```

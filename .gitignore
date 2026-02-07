@@ -1,7 +1,7 @@
 /vendor/
 *.lock
 composer.phar
-
+dist/
 node_modules/
 package-lock.json
 .idea/

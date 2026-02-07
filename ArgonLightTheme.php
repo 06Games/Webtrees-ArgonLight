@@ -25,29 +25,51 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
 {
     use ModuleCustomTrait, ModuleThemeTrait;
 
-    public function title(): string { return 'Argon Light'; }
+    public const string MODULE_TITLE = "Argon Light";
+    public const string MODULE_DESCRIPTION = "A light theme for Webtrees based on Argon Design System";
+    public const string MODULE_AUTHOR = 'EvanG';
+    public const string MODULE_VERSION = '1.1.8';
+    public const string MODULE_REPO = '06Games/Webtrees-ArgonLight';
+    public const string MODULE_SUPPORT_URL = 'https://github.com/' . self::MODULE_REPO . '/issues';
+    public const string MODULE_LATEST_VERSION = 'https://raw.githubusercontent.com/' . self::MODULE_REPO . '/main/version.txt';
 
-    public function description(): string { return 'A light theme for Webtrees based on Argon Design System'; }
 
-    public function customModuleAuthorName(): string { return 'EvanG'; }
+    public function title(): string
+    {
+        return self::MODULE_TITLE;
+    }
+
+    public function description(): string
+    {
+        return self::MODULE_DESCRIPTION;
+    }
+
+    public function customModuleAuthorName(): string
+    {
+        return self::MODULE_AUTHOR;
+    }
 
     public function customModuleVersion(): string
     {
-        return '1.1.8';
+        return self::MODULE_VERSION;
     }
 
-    public function customModuleLatestVersionUrl(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/raw/main/version.txt'; }
+    public function customModuleLatestVersionUrl(): string
+    {
+        return self::MODULE_LATEST_VERSION;
+    }
 
-    public function customModuleSupportUrl(): string { return 'https://github.com/06Games/Webtrees-ArgonLight/issues'; }
+    public function customModuleSupportUrl(): string
+    {
+        return self::MODULE_SUPPORT_URL;
+    }
 
     public function stylesheets(): array
     {
         return [
             $this->assetUrl('css/imports.css'),
             $this->assetUrl('css/fonts.css'),
-            $this->assetUrl('css/theme.css'),
-            $this->assetUrl('css/magicsunday.css'),
-            $this->assetUrl('css/gustine-sosa.css')
+            $this->assetUrl('css/theme.css')
         ];
     }
 
@@ -106,11 +128,14 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
 
 
         /** My views **/
-        
+
         View::registerCustomView('::lists/individuals-table', $this->name() . '::lists/individuals-table');
         View::registerCustomView('::lists/families-table', $this->name() . '::lists/families-table');
         View::registerCustomView('::individual-page-menu', $this->name() . '::individual-page-menu');
     }
 
-    public function resourcesFolder(): string { return __DIR__ . '/resources/'; }
+    public function resourcesFolder(): string
+    {
+        return __DIR__ . '/resources/';
+    }
 }
