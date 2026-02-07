@@ -28,12 +28,11 @@ $x-color: #fceaa1;
 
 $box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 
-@import "argon/argon";
-@import "argon/bootstrap/spinners";
-@import "select2/core"; // Custom selection dropdowns
-@import "leaflet/leaflet"; // Maps
-@import "beautify-marker/beautify-marker"; // Map markers
-
+@import "@argon/argon";
+@import "@argon/bootstrap/spinners";
+@import "@select2/core"; // Custom selection dropdowns
+@import "@leaflet/leaflet"; // Maps
+@import "@beautify-marker/beautify-marker"; // Map markers
 body {
   min-width: map-get($grid-breakpoints, xs);
 }

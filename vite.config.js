@@ -7,7 +7,24 @@ export default defineConfig(({ command, mode }) => {
 
     return {
         base: './',
-        
+
+        resolve: {
+            alias: {
+                '@argon': path.resolve(__dirname, 'src/scss/argon'),
+                '@select2': path.resolve(__dirname, 'src/scss/select2'),
+                '@leaflet': path.resolve(__dirname, 'src/scss/leaflet'),
+                '@beautify-marker': path.resolve(__dirname, 'src/scss/beautify-marker')
+            },
+        },
+
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    quietDeps: true,
+                },
+            }
+        },
+
         build: {
             outDir: 'dist',
             emptyOutDir: true,
@@ -39,6 +56,6 @@ export default defineConfig(({ command, mode }) => {
                     { src: "LICENSE.md", dest: '.' }
                 ]
             })
-        ]
+        ].filter(Boolean)
     };
 });
