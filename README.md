@@ -20,32 +20,28 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
 
 ### Latest Release (Recommended)
 
-1. Download the `Source code (zip)` file from the [latest release](https://github.com/06Games/Webtrees-ArgonLight/releases/latest) (look under the "Assets" section).
+1. Download the first zip file from the [latest release](https://github.com/06Games/Webtrees-ArgonLight/releases/latest) (look under the "Assets" section).
 2. Unzip the file.
-3. Rename the resulting folder to `Webtrees-ArgonLight`.
+3. Move the folder into your `webtrees/modules_v4` directory.
+
+### Nightly Version
+
+1. Find the latest build from the [Actions tab](https://github.com/06Games/Webtrees-ArgonLight/actions/workflows/build.yml).
+2. Download the artifact linked in the build summary.
+3. Unzip the file.
 4. Move the folder into your `webtrees/modules_v4` directory.
-
-### Development Version
-
-1. Download the repository as [a zip file](https://github.com/06Games/Webtrees-ArgonLight/archive/refs/heads/main.zip).
-2. Unzip the file.
-3. Rename the resulting folder to `Webtrees-ArgonLight`.
-4. Move the folder into your `webtrees/modules_v4` directory.
-
-> Or simply clone the repository into the `webtrees/modules_v4` directory.
 
 ## Development
 
 1. Make sure you have both [composer](https://getcomposer.org/) and [npm](https://www.npmjs.com/) installed on your system.
-
 2. Install the dependencies by running the following commands in the module's root directory:
     ```shell
     composer install
     npm install
     ```
-
 3. To build the module, run one of the following commands:
     ```shell
     npm run dev    # For development
     npm run build  # For production
     ```
+4. The built module will be located in the `dist` directory. You can copy this folder to your `webtrees/modules_v4` directory to test it out.
