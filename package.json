@@ -9,6 +9,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
+    "argon-design-system-free": "~1.1.0",
     "autoprefixer": "^10.4.24",
     "cssnano": "^7.1.2",
     "postcss": "^8.5.6",

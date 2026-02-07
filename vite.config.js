@@ -8,12 +8,6 @@ export default defineConfig(({ command, mode }) => {
     return {
         base: './',
 
-        resolve: {
-            alias: {
-                '@argon': path.resolve(__dirname, 'src/scss/argon')
-            },
-        },
-
         css: {
             preprocessorOptions: {
                 scss: {

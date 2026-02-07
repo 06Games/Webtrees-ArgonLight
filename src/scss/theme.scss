@@ -12,7 +12,7 @@
 ***********************************************/
 
 $compact-header: false !default;
-$header-breakpoint: xxl;
+$header-breakpoint: xl;
 
 $card-border-width: 0.188rem;
 $card-spacer-y: 0.5rem;
@@ -31,8 +31,14 @@ $box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 @use "sass:map";
 @use "sass:color";
 
-@import "@argon/argon";
-@import "@argon/bootstrap/spinners";
+$table-cell-padding: 1rem;
+$table-cell-padding-sm: 0.75rem;
+$card-spacer-y: 0.5rem;
+$card-spacer-x: 1rem;
+$card-border-width: 0.188rem;
+
+@import "argon-design-system-free/assets/scss/argon";
+@import "argon-design-system-free/assets/scss/bootstrap/spinners";
 
 body {
   min-width: map.get($grid-breakpoints, xs);
@@ -665,7 +671,7 @@ select {
       }
 
       .wt-header-search {
-        @extend .ml-xxl-3;
+        @extend .ml-xl-3;
         order: 4;
         flex-shrink: 0;
 
