@@ -11,8 +11,6 @@
                    Main theme
 ***********************************************/
 
-$default: #172b4d !default;
-
 $compact-header: false !default;
 $header-breakpoint: xxl;
 
@@ -37,8 +35,9 @@ $box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 @import "@argon/argon-dashboard/custom/variables";
 @import "@argon/argon-dashboard/_variables";
 
+$dark: #172b4d;
+
 $theme-colors: (
-  "default":    $default, // <-- Added
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
@@ -50,7 +49,6 @@ $theme-colors: (
   "white":      $white
 );
 $table-variants: (
-  "default":    $default, // <-- Added
   "primary":    shift-color($primary, $table-bg-scale),
   "secondary":  shift-color($secondary, $table-bg-scale),
   "success":    shift-color($success, $table-bg-scale),
@@ -507,7 +505,7 @@ select {
 }
 
 [dir] body>header {
-  background-color: $default;
+  background-color: $dark;
   box-shadow: 0 10px 20px rgba(50, 50, 93, .2);
   z-index: 1052;
   padding: 5px 0;
@@ -1801,7 +1799,7 @@ table.tv_tree {
 
   .wt-chart-box-zoom-dropdown {
     border: none;
-    color: $default;
+    color: $dark;
     font-size: $font-size-sm;
     //line-height: $line-height-smallest;
     padding: 0.625rem;
@@ -2514,7 +2512,7 @@ table.tv_tree {
 
   [dir] & {
     @extend .btn;
-    @extend .btn-default;
+    @extend .btn-dark;
     @extend .btn-sm;
     position: absolute;
 
