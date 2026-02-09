@@ -11,6 +11,8 @@
                    Main theme
 ***********************************************/
 
+$default: #172b4d !default;
+
 $compact-header: false !default;
 $header-breakpoint: xxl;
 
@@ -31,8 +33,35 @@ $box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 @use "sass:map";
 @use "sass:color";
 
+@import "@argon/argon-dashboard/bootstrap/functions";
+@import "@argon/argon-dashboard/custom/variables";
+@import "@argon/argon-dashboard/_variables";
+
+$theme-colors: (
+  "default":    $default, // <-- Added
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "white":      $white
+);
+$table-variants: (
+  "default":    $default, // <-- Added
+  "primary":    shift-color($primary, $table-bg-scale),
+  "secondary":  shift-color($secondary, $table-bg-scale),
+  "success":    shift-color($success, $table-bg-scale),
+  "info":       shift-color($info, $table-bg-scale),
+  "warning":    shift-color($warning, $table-bg-scale),
+  "danger":     shift-color($danger, $table-bg-scale),
+  "light":      $light,
+  "dark":       $dark,
+);
+
 @import "bootstrap/scss/bootstrap";
-@import "@argon/argon-dashboard";
 
 body {
   min-width: map.get($grid-breakpoints, xs);
@@ -61,8 +90,8 @@ caption {
   overflow-x: auto;
 }
 
-table,
-.table {
+[dir] table,
+[dir] .table {
 
   td,
   th,
@@ -206,7 +235,7 @@ select {
   }
 }
 
-.table-sm {
+[dir] .table-sm {
 
   td,
   th,
@@ -217,7 +246,7 @@ select {
   }
 }
 
-.table-bordered {
+[dir] .table-bordered {
 
   td,
   th,
@@ -316,7 +345,7 @@ select {
 /* Icons */
 
 // Accordion toggles
-.accordion-header {
+[dir] .accordion-header {
 
   .wt-icon-collapse,
   .wt-icon-expand {
@@ -340,7 +369,7 @@ select {
 }
 
 // Spinner
-.wt-ajax-load:empty {
+[dir] .wt-ajax-load:empty {
   height: 2rem;
 
   &::before {
@@ -442,14 +471,14 @@ select {
 }
 
 @each $color, $value in $theme-colors {
-  .btn-#{$color} {
+  [dir] .btn-#{$color} {
     &:hover {
       background-color: color.adjust($value, $lightness: 5%);
     }
   }
 }
 
-.btn-link {
+[dir] .btn-link {
   padding: 0;
 }
 
@@ -477,8 +506,8 @@ select {
   }
 }
 
-body>header {
-  background-color: $primary;
+[dir] body>header {
+  background-color: $default;
   box-shadow: 0 10px 20px rgba(50, 50, 93, .2);
   z-index: 1052;
   padding: 5px 0;
@@ -952,8 +981,8 @@ div[id^=caldiv] {
   background-color: $x-color;
 }
 
-.wt-new,
-.wt-old {
+[dir] .wt-new,
+[dir] .wt-old {
   outline-style: solid;
   outline-width: 2px;
   outline-offset: -2px;
@@ -1193,7 +1222,7 @@ div[id^=caldiv] {
  * Individual Page
  *****/
 
-.img-thumbnail {
+[dir] .img-thumbnail {
   text-align: center;
 }
 
@@ -1291,7 +1320,7 @@ div[id^=caldiv] {
         float: right;
       }
 
-      & {
+      [dir] & {
         float: none;
       }
 
@@ -1625,7 +1654,7 @@ table.tv_tree {
       font-size: 0.9em;
     }
 
-    &>.news_date~ {
+    &>.news_date~[dir] {
       margin: 1em 0 1em 1em;
     }
 
@@ -1772,7 +1801,7 @@ table.tv_tree {
 
   .wt-chart-box-zoom-dropdown {
     border: none;
-    color: $primary;
+    color: $default;
     font-size: $font-size-sm;
     //line-height: $line-height-smallest;
     padding: 0.625rem;
@@ -2416,7 +2445,7 @@ table.tv_tree {
   width: 100%;
 }
 
-#cboxLoadingGraphic {
+[dir] #cboxLoadingGraphic {
   background: url("data:image/gif;base64,R0lGODlhIAAgALMAAP///7Ozs/v7+9bW1uHh4fLy8rq6uoGBgTQ0NAEBARsbG8TExJeXl/39/VRUVAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBQAAACwAAAAAIAAgAAAE5xDISSlLrOrNp0pKNRCdFhxVolJLEJQUoSgOpSYT4RowNSsvyW1icA16k8MMMRkCBjskBTFDAZyuAEkqCfxIQ2hgQRFvAQEEIjNxVDW6XNE4YagRjuBCwe60smQUDnd4Rz1ZAQZnFAGDd0hihh12CEE9kjAEVlycXIg7BAsMB6SlnJ87paqbSKiKoqusnbMdmDC2tXQlkUhziYtyWTxIfy6BE8WJt5YEvpJivxNaGmLHT0VnOgGYf0dZXS7APdpB309RnHOG5gDqXGLDaC457D1zZ/V/nmOM82XiHQjYKhKP1oZmADdEAAAh+QQFBQAAACwAAAAAGAAXAAAEchDISasKNeuJFKoHs4mUYlJIkmjIV54Soypsa0wmLSnqoTEtBw52mG0AjhYpBxioEqRNy8V0qFzNw+GGwlJki4lBqx1IBgjMkRIghwjrzcDti2/Gh7D9qN774wQGAYOEfwCChIV/gYmDho+QkZKTR3p7EQAh+QQFBQAAACwBAAAAHQAOAAAEchDISWdANesNHHJZwE2DUSEo5SjKKB2HOKGYFLD1CB/DnEoIlkti2PlyuKGEATMBaAACSyGbEDYD4zN1YIEmh0SCQQgYehNmTNNaKsQJXmBuuEYPi9ECAU/UFnNzeUp9VBQEBoFOLmFxWHNoQw6RWEocEQAh+QQFBQAAACwHAAAAGQARAAAEaRDICdZZNOvNDsvfBhBDdpwZgohBgE3nQaki0AYEjEqOGmqDlkEnAzBUjhrA0CoBYhLVSkm4SaAAWkahCFAWTU0A4RxzFWJnzXFWJJWb9pTihRu5dvghl+/7NQmBggo/fYKHCX8AiAmEEQAh+QQFBQAAACwOAAAAEgAYAAAEZXCwAaq9ODAMDOUAI17McYDhWA3mCYpb1RooXBktmsbt944BU6zCQCBQiwPB4jAihiCK86irTB20qvWp7Xq/FYV4TNWNz4oqWoEIgL0HX/eQSLi69boCikTkE2VVDAp5d1p0CW4RACH5BAUFAAAALA4AAAASAB4AAASAkBgCqr3YBIMXvkEIMsxXhcFFpiZqBaTXisBClibgAnd+ijYGq2I4HAamwXBgNHJ8BEbzgPNNjz7LwpnFDLvgLGJMdnw/5DRCrHaE3xbKm6FQwOt1xDnpwCvcJgcJMgEIeCYOCQlrF4YmBIoJVV2CCXZvCooHbwGRcAiKcmFUJhEAIfkEBQUAAAAsDwABABEAHwAABHsQyAkGoRivELInnOFlBjeM1BCiFBdcbMUtKQdTN0CUJru5NJQrYMh5VIFTTKJcOj2HqJQRhEqvqGuU+uw6AwgEwxkOO55lxIihoDjKY8pBoThPxmpAYi+hKzoeewkTdHkZghMIdCOIhIuHfBMOjxiNLR4KCW1ODAlxSxEAIfkEBQUAAAAsCAAOABgAEgAABGwQyEkrCDgbYvvMoOF5ILaNaIoGKroch9hacD3MFMHUBzMHiBtgwJMBFolDB4GoGGBCACKRcAAUWAmzOWJQExysQsJgWj0KqvKalTiYPhp1LBFTtp10Is6mT5gdVFx1bRN8FTsVCAqDOB9+KhEAIfkEBQUAAAAsAgASAB0ADgAABHgQyEmrBePS4bQdQZBdR5IcHmWEgUFQgWKaKbWwwSIhc4LonsXhBSCsQoOSScGQDJiWwOHQnAxWBIYJNXEoFCiEWDI9jCzESey7GwMM5doEwW4jJoypQQ743u1WcTV0CgFzbhJ5XClfHYd/EwZnHoYVDgiOfHKQNREAIfkEBQUAAAAsAAAPABkAEQAABGeQqUQruDjrW3vaYCZ5X2ie6EkcKaooTAsi7ytnTq046BBsNcTvItz4AotMwKZBIC6H6CVAJaCcT0CUBTgaTg5nTCu9GKiDEMPJg5YBBOpwlnVzLwtqyKnZagZWahoMB2M3GgsHSRsRACH5BAUFAAAALAEACAARABgAAARcMKR0gL34npkUyyCAcAmyhBijkGi2UW02VHFt33iu7yiDIDaD4/erEYGDlu/nuBAOJ9Dvc2EcDgFAYIuaXS3bbOh6MIC5IAP5Eh5fk2exC4tpgwZyiyFgvhEMBBEAIfkEBQUAAAAsAAACAA4AHQAABHMQyAnYoViSlFDGXBJ808Ep5KRwV8qEg+pRCOeoioKMwJK0Ekcu54h9AoghKgXIMZgAApQZcCCu2Ax2O6NUud2pmJcyHA4L0uDM/ljYDCnGfGakJQE5YH0wUBYBAUYfBIFkHwaBgxkDgX5lgXpHAXcpBIsRADs=") no-repeat 50%;
 }
 
@@ -2425,8 +2454,8 @@ table.tv_tree {
   z-index: 9999;
 }
 
-#cboxContent,
-#cboxOverlay {
+[dir] #cboxContent,
+[dir] #cboxOverlay {
   background: $white;
 }
 
@@ -2443,7 +2472,7 @@ table.tv_tree {
   overflow: hidden;
   position: relative;
 
-  & {
+  [dir] & {
     border-radius: $popover-border-radius;
     box-shadow: $popover-box-shadow;
     padding: 1rem;
@@ -2453,12 +2482,12 @@ table.tv_tree {
 .cboxPhoto {
   display: block;
 
-  & {
+  [dir] & {
     margin: auto;
   }
 }
 
-#cboxError {
+[dir] #cboxError {
   border: $border-radius solid $border-color;
   padding: 3.125rem;
 }
@@ -2483,9 +2512,9 @@ table.tv_tree {
   overflow: visible;
   position: absolute;
 
-  & {
+  [dir] & {
     @extend .btn;
-    @extend .btn-primary;
+    @extend .btn-default;
     @extend .btn-sm;
     position: absolute;
 
