@@ -84,7 +84,7 @@ $body-color:                  $font-color;
 // ---------------------------------------------------------------------------
 
 $link-decoration:             none;
-$link-hover-color:            darken($primary, 15%);
+$link-hover-color:            color.adjust($primary, $lightness: -15%);
 $link-hover-decoration:       none;
 
 
