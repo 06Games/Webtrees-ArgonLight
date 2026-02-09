@@ -31,8 +31,8 @@ $box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 @use "sass:map";
 @use "sass:color";
 
-@import "@argon/argon";
-@import "@argon/bootstrap/spinners";
+@import "bootstrap/scss/bootstrap";
+@import "@argon/argon-dashboard";
 
 body {
   min-width: map.get($grid-breakpoints, xs);
@@ -61,8 +61,8 @@ caption {
   overflow-x: auto;
 }
 
-[dir] table,
-[dir] .table {
+table,
+.table {
 
   td,
   th,
@@ -128,7 +128,7 @@ input[type=text] {
 }
 
 select {
-  @extend .custom-select;
+  //@extend .custom-select;
 }
 
 .select2-container {
@@ -189,7 +189,7 @@ select {
       }
 
       li.select2-results__option--highlighted {
-        background-color: $component-hover-bg;
+        background-color: $table-hover-bg;
       }
 
       li[aria-selected=true] {
@@ -206,7 +206,7 @@ select {
   }
 }
 
-[dir] .table-sm {
+.table-sm {
 
   td,
   th,
@@ -217,7 +217,7 @@ select {
   }
 }
 
-[dir] .table-bordered {
+.table-bordered {
 
   td,
   th,
@@ -316,7 +316,7 @@ select {
 /* Icons */
 
 // Accordion toggles
-[dir] .accordion-header {
+.accordion-header {
 
   .wt-icon-collapse,
   .wt-icon-expand {
@@ -340,7 +340,7 @@ select {
 }
 
 // Spinner
-[dir] .wt-ajax-load:empty {
+.wt-ajax-load:empty {
   height: 2rem;
 
   &::before {
@@ -442,14 +442,14 @@ select {
 }
 
 @each $color, $value in $theme-colors {
-  [dir] .btn-#{$color} {
+  .btn-#{$color} {
     &:hover {
-      background-color: color.adjust(theme-color(#{$color}), $lightness: 5%);
+      background-color: color.adjust($value, $lightness: 5%);
     }
   }
 }
 
-[dir] .btn-link {
+.btn-link {
   padding: 0;
 }
 
@@ -464,7 +464,7 @@ select {
   .card-header {
     background-color: rgba($black, .05);
     border-bottom: none;
-    font-weight: $font-weight-extra-bold;
+    font-weight: $font-weight-bold;
 
     &[id^=name-header-] {
       font-size: $font-size-lg;
@@ -477,8 +477,8 @@ select {
   }
 }
 
-[dir] body>header {
-  background-color: theme-color("default");
+body>header {
+  background-color: $primary;
   box-shadow: 0 10px 20px rgba(50, 50, 93, .2);
   z-index: 1052;
   padding: 5px 0;
@@ -518,7 +518,7 @@ select {
       .wt-site-title {
         @extend .navbar-brand;
         order: 1;
-        color: theme-color("white");
+        color: $white;
         flex-shrink: 0;
         flex-basis: content;
         font-size: 1.75rem;
@@ -555,10 +555,10 @@ select {
         }
 
         a {
-          color: theme-color("white");
+          color: $white;
 
           &:hover {
-            color: color.adjust(theme-color("white"), $lightness: -20%);
+            color: color.adjust($white, $lightness: -20%);
           }
         }
       }
@@ -665,7 +665,7 @@ select {
       }
 
       .wt-header-search {
-        @extend .ml-xxl-3;
+        @extend .ms-xxl-3;
         order: 4;
         flex-shrink: 0;
 
@@ -707,11 +707,11 @@ select {
             letter-spacing: 0;
             transition: all 0.15s linear;
 
-            color: theme-color("white");
+            color: $white;
             padding: 0.75rem 0.4rem;
 
             &:hover {
-              color: color.adjust(theme-color("white"), $lightness: -20%);
+              color: color.adjust($white, $lightness: -20%);
             }
 
             &::before {
@@ -761,7 +761,7 @@ select {
 }
 
 #site-footer {
-  background-color: theme-color("secondary");
+  background-color: $secondary;
   font-size: $font-size-sm;
   padding: 2.5rem 0;
   text-align: center;
@@ -916,10 +916,10 @@ div[id^=caldiv] {
         }
 
         &.descriptionbox {
-          background-color: theme-color("primary") !important;
+          background-color: $primary !important;
 
           a {
-            color: theme-color("white");
+            color: $white;
           }
         }
       }
@@ -952,8 +952,8 @@ div[id^=caldiv] {
   background-color: $x-color;
 }
 
-[dir] .wt-new,
-[dir] .wt-old {
+.wt-new,
+.wt-old {
   outline-style: solid;
   outline-width: 2px;
   outline-offset: -2px;
@@ -1193,7 +1193,7 @@ div[id^=caldiv] {
  * Individual Page
  *****/
 
-[dir] .img-thumbnail {
+.img-thumbnail {
   text-align: center;
 }
 
@@ -1216,7 +1216,7 @@ div[id^=caldiv] {
 .tv_out {
   -webkit-box-align: center;
   align-items: center;
-  background-color: theme-color("white");
+  background-color: $white;
   border-radius: $border-radius;
   box-shadow: $box-shadow-sm;
   display: -webkit-box;
@@ -1291,7 +1291,7 @@ div[id^=caldiv] {
         float: right;
       }
 
-      [dir] & {
+      & {
         float: none;
       }
 
@@ -1443,7 +1443,7 @@ table.tv_tree {
   }
 
   .tv_box {
-    background: theme-color("white");
+    background: $white;
     border-radius: $border-radius;
     box-shadow: $box-shadow-xs;
     cursor: help;
@@ -1579,7 +1579,7 @@ table.tv_tree {
   font-size: $font-size-sm;
 
   ul {
-    line-height: $paragraph-line-height;
+    line-height: $line-height-base;
     padding-left: 0;
 
     ul {
@@ -1607,7 +1607,7 @@ table.tv_tree {
   .news_box {
 
     padding-bottom: 1em;
-    border-bottom: 1px solid color("light");
+    border-bottom: 1px solid $light;
 
     &:not(:last-of-type) {
       margin-bottom: 2em;
@@ -1625,7 +1625,7 @@ table.tv_tree {
       font-size: 0.9em;
     }
 
-    &>.news_date~[dir] {
+    &>.news_date~ {
       margin: 1em 0 1em 1em;
     }
 
@@ -1772,7 +1772,7 @@ table.tv_tree {
 
   .wt-chart-box-zoom-dropdown {
     border: none;
-    color: theme-color("default");
+    color: $primary;
     font-size: $font-size-sm;
     //line-height: $line-height-smallest;
     padding: 0.625rem;
@@ -2236,20 +2236,20 @@ table.tv_tree {
   }
 
   .person0 {
-    background-color: theme-color("primary");
-    color: theme-color("white");
+    background-color: $primary;
+    color: $white;
 
     a {
-      color: theme-color("white");
+      color: $white;
 
       &:hover {
-        color: color.adjust(theme-color("white"), $lightness: -20%);
+        color: color.adjust($white, $lightness: -20%);
       }
     }
   }
 
   .person1 {
-    background-color: theme-color("secondary");
+    background-color: $secondary;
     color: $body-color;
 
     a {
@@ -2263,52 +2263,52 @@ table.tv_tree {
 
   .person2 {
     background-color: theme-color("info");
-    color: theme-color("white");
+    color: $white;
 
     a {
-      color: theme-color("white");
+      color: $white;
 
       &:hover {
-        color: color.adjust(theme-color("white"), $lightness: -20%);
+        color: color.adjust($white, $lightness: -20%);
       }
     }
   }
 
   .person3 {
     background-color: theme-color("success");
-    color: theme-color("white");
+    color: $white;
 
     a {
-      color: theme-color("white");
+      color: $white;
 
       &:hover {
-        color: color.adjust(theme-color("white"), $lightness: -20%);
+        color: color.adjust($white, $lightness: -20%);
       }
     }
   }
 
   .person4 {
     background-color: theme-color("danger");
-    color: theme-color("white");
+    color: $white;
 
     a {
-      color: theme-color("white");
+      color: $white;
 
       &:hover {
-        color: color.adjust(theme-color("white"), $lightness: -20%);
+        color: color.adjust($white, $lightness: -20%);
       }
     }
   }
 
   .person5 {
     background-color: theme-color("warning");
-    color: theme-color("white");
+    color: $white;
 
     a {
-      color: theme-color("white");
+      color: $white;
 
       &:hover {
-        color: color.adjust(theme-color("white"), $lightness: -20%);
+        color: color.adjust($white, $lightness: -20%);
       }
     }
   }
@@ -2416,7 +2416,7 @@ table.tv_tree {
   width: 100%;
 }
 
-[dir] #cboxLoadingGraphic {
+#cboxLoadingGraphic {
   background: url("data:image/gif;base64,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") no-repeat 50%;
 }
 
@@ -2425,9 +2425,9 @@ table.tv_tree {
   z-index: 9999;
 }
 
-[dir] #cboxContent,
-[dir] #cboxOverlay {
-  background: theme-color("white");
+#cboxContent,
+#cboxOverlay {
+  background: $white;
 }
 
 #cboxOverlay {
@@ -2443,7 +2443,7 @@ table.tv_tree {
   overflow: hidden;
   position: relative;
 
-  [dir] & {
+  & {
     border-radius: $popover-border-radius;
     box-shadow: $popover-box-shadow;
     padding: 1rem;
@@ -2453,12 +2453,12 @@ table.tv_tree {
 .cboxPhoto {
   display: block;
 
-  [dir] & {
+  & {
     margin: auto;
   }
 }
 
-[dir] #cboxError {
+#cboxError {
   border: $border-radius solid $border-color;
   padding: 3.125rem;
 }
@@ -2483,9 +2483,9 @@ table.tv_tree {
   overflow: visible;
   position: absolute;
 
-  [dir] & {
+  & {
     @extend .btn;
-    @extend .btn-default;
+    @extend .btn-primary;
     @extend .btn-sm;
     position: absolute;
 
