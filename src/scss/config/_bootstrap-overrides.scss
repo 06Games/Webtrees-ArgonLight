@@ -1,0 +1,337 @@
+// ==========================================================================
+// Bootstrap 5.3 Variable Overrides — Argon Light Theme
+// ==========================================================================
+// Only variables that DIFFER from Bootstrap 5.3 defaults.
+// Requires bootstrap/scss/functions to be loaded first.
+// Requires config/theme-variables to be loaded first.
+//
+// Organization follows Bootstrap's _variables.scss structure.
+// ==========================================================================
+
+
+// ---------------------------------------------------------------------------
+// 1. Color System
+// ---------------------------------------------------------------------------
+
+// Base colors (overrides of Bootstrap defaults)
+$blue:                        #63B3ED;
+$indigo:                      #596CFF;
+$red:                         #F56565;
+$yellow:                      #FBD38D;
+$green:                       #81E6D9;
+
+// Theme colors
+$primary:                     #5e72e4;
+$secondary:                   #8392ab;
+$success:                     #2dce89;
+$info:                        #11cdef;
+$warning:                     #fb6340;
+$danger:                      #f5365c;
+$dark:                        #172b4d;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      #e9ecef,
+  "dark":       $dark,
+  "white":      #fff
+);
+
+
+// ---------------------------------------------------------------------------
+// 2. Options
+// ---------------------------------------------------------------------------
+
+$enable-negative-margins:     true;
+
+
+// ---------------------------------------------------------------------------
+// 3. Spacing
+// ---------------------------------------------------------------------------
+
+// Extended spacers (Bootstrap provides 0–5, Argon adds 6–12)
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 6,
+  8: $spacer * 8,
+  9: $spacer * 10,
+  10: $spacer * 12,
+  11: $spacer * 14,
+  12: $spacer * 16,
+);
+
+
+// ---------------------------------------------------------------------------
+// 4. Body
+// ---------------------------------------------------------------------------
+
+$body-color:                  $font-color;
+
+
+// ---------------------------------------------------------------------------
+// 5. Links
+// ---------------------------------------------------------------------------
+
+$link-decoration:             none;
+$link-hover-color:            darken($primary, 15%);
+$link-hover-decoration:       none;
+
+
+// ---------------------------------------------------------------------------
+// 6. Border & Shadows
+// ---------------------------------------------------------------------------
+
+$box-shadow-sm:               0 .3125rem .625rem 0 rgba(0, 0, 0, 0.12);
+$box-shadow:                  0 .25rem .375rem -.0625rem rgba(20, 20, 20, .12), 0 .125rem .25rem -.0625rem rgba(20, 20, 20, .07);
+$box-shadow-lg:               0 8px 26px -4px rgba(20, 20, 20, 0.15), 0 8px 9px -5px rgba(20, 20, 20, 0.06);
+
+
+// ---------------------------------------------------------------------------
+// 7. Typography
+// ---------------------------------------------------------------------------
+
+$font-family-sans-serif:      "Open Sans", sans-serif;
+
+$font-weight-bold:            600;
+$font-weight-bolder:          700;
+
+$h1-font-size:                3rem;    // BS default: 2.5rem
+$h2-font-size:                2.25rem; // BS default: 2rem
+$h3-font-size:                1.875rem;// BS default: 1.75rem
+
+$headings-font-weight:        400;     // BS default: 500
+$headings-color:              $h-color;
+
+
+// ---------------------------------------------------------------------------
+// 8. Tables
+// ---------------------------------------------------------------------------
+
+$table-cell-padding-y:        .5rem;
+$table-cell-padding-x:        .5rem;
+$table-border-color:          #e9ecef; // $gray-200
+
+$table-variants: (
+  "primary":    shift-color($primary, -80%),
+  "secondary":  shift-color($secondary, -80%),
+  "success":    shift-color($success, -80%),
+  "info":       shift-color($info, -80%),
+  "warning":    shift-color($warning, -80%),
+  "danger":     shift-color($danger, -80%),
+  "light":      #e9ecef,
+  "dark":       $dark,
+);
+
+
+// ---------------------------------------------------------------------------
+// 9. Buttons
+// ---------------------------------------------------------------------------
+
+$btn-padding-y:               .625rem;   // BS default: .375rem
+$btn-padding-x:               1.25rem;   // BS default: .75rem
+$btn-font-size:               .875rem;   // BS default: 1rem
+$btn-font-weight:             700;       // BS default: 400
+
+$btn-padding-y-sm:            .5rem;
+$btn-padding-x-sm:            2rem;      // BS default: .5rem
+$btn-font-size-sm:            .75rem;
+
+$btn-padding-y-lg:            .875rem;
+$btn-padding-x-lg:            4rem;      // BS default: 1rem
+$btn-font-size-lg:            .875rem;
+
+$btn-box-shadow:              0 4px 6px rgba(50, 50, 93, .1), 0 1px 3px rgba(0, 0, 0, .08);
+$btn-focus-box-shadow:        0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+$btn-active-box-shadow:       none;
+
+$btn-border-radius:           $border-radius-md; // .5rem (BS default: .375rem)
+$btn-border-radius-sm:        .25rem;
+$btn-border-radius-lg:        .75rem;
+
+$btn-transition:              all .15s ease-in;
+
+$btn-close-color:             #fff;  // BS default: #000
+
+
+// ---------------------------------------------------------------------------
+// 10. Forms
+// ---------------------------------------------------------------------------
+
+$form-label-font-size:        .75rem;
+$form-label-font-weight:      700;
+$form-label-color:            $dark;
+
+$input-padding-y:             .5rem;
+$input-padding-x:             .75rem;
+$input-font-size:             .875rem;      // BS default: 1rem
+$input-line-height:           1.4rem;
+
+$input-color:                 #495057;      // $gray-700
+$input-border-color:          #d2d6da;
+$input-box-shadow:            0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+$input-border-radius:         $border-radius-md;
+$input-border-radius-sm:      $border-radius-md;
+$input-border-radius-lg:      $border-radius-md;
+
+$input-focus-border-color:    $primary;
+$input-focus-width:           2px;           // BS default: .25rem
+$input-focus-box-shadow:      0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, .10);
+
+$input-placeholder-color:     #adb5bd;      // $gray-500
+
+$form-check-input-border:               none;
+$form-check-input-border-radius:        .35rem;
+$form-check-input-focus-box-shadow:     none;
+$form-check-input-checked-bg-color:     transparent;
+$form-check-input-checked-bg-image:     linear-gradient(310deg, $primary-gradient 0%, $primary-gradient-state 100%);
+$form-check-radio-checked-bg-image:     linear-gradient(310deg, $primary-gradient 0%, $primary-gradient-state 100%);
+
+$form-switch-color:           rgba(0, 0, 0, 1);
+$form-switch-bg-image:        none;
+$form-switch-focus-bg-image:  none;
+$form-switch-checked-bg-image: none;
+
+$form-feedback-valid-color:   #66d432;
+$form-feedback-invalid-color: #fd5c70;
+
+$input-group-addon-color:     $dark;
+$input-group-addon-bg:        #fff;
+
+$form-select-border-radius:   $border-radius-md;
+
+
+// ---------------------------------------------------------------------------
+// 11. Dropdowns
+// ---------------------------------------------------------------------------
+
+$dropdown-min-width:          11rem;
+$dropdown-spacer:             1.625rem;      // BS default: .125rem
+$dropdown-font-size:          .875rem;
+$dropdown-border-color:       transparent;
+$dropdown-border-width:       0;
+$dropdown-border-radius:      $border-radius-md;
+$dropdown-box-shadow:         $box-shadow-lg;
+
+$dropdown-link-color:         $font-color;
+$dropdown-link-hover-color:   $h-color;
+$dropdown-link-hover-bg:      #e9ecef;       // $gray-200
+$dropdown-link-active-color:  $font-color;
+$dropdown-link-active-bg:     transparent;
+
+$dropdown-item-padding-y:     .3rem;
+
+
+// ---------------------------------------------------------------------------
+// 12. Navs & Navbar
+// ---------------------------------------------------------------------------
+
+$nav-tabs-border-radius:      $border-radius-md;
+
+$nav-pills-border-radius:     0.75rem;
+$nav-pills-link-active-color: $dark;
+$nav-pills-link-active-bg:    #fff;
+
+$navbar-dark-color:           rgba(#fff, .85);  // BS default: .55
+$navbar-dark-hover-color:     rgba(#fff, .75);  // BS default: .75
+
+$navbar-light-color:          $dark;
+$navbar-light-hover-color:    rgba($dark, .7);
+$navbar-light-active-color:   rgba($dark, .9);
+$navbar-light-disabled-color: rgba($dark, .3);
+
+
+// ---------------------------------------------------------------------------
+// 13. Cards
+// ---------------------------------------------------------------------------
+
+$card-border-width:           0.188rem;
+$card-spacer-y:               0.5rem;
+$card-spacer-x:               1rem;
+$card-border-radius:          1rem;            // BS default: .375rem
+$card-cap-bg:                 #fff;
+
+
+// ---------------------------------------------------------------------------
+// 14. Accordion
+// ---------------------------------------------------------------------------
+
+$accordion-bg:                transparent;
+$accordion-border-width:      0;
+$accordion-border-radius:     .25rem;
+$accordion-button-active-color: $dark;
+$accordion-button-focus-box-shadow: none;
+$accordion-button-icon:       none;
+$accordion-button-active-icon: none;
+
+
+// ---------------------------------------------------------------------------
+// 15. Tooltips, Popovers, Toasts
+// ---------------------------------------------------------------------------
+
+$tooltip-border-radius:       $border-radius-md;
+
+$popover-font-size:           $font-size-xs;   // .75rem (BS default: .875rem)
+$popover-border-width:        0;
+$popover-border-radius:       .75rem;
+
+$toast-border-width:          0;
+$toast-border-color:          transparent;
+$toast-border-radius:         $border-radius-md;
+$toast-header-color:          $h-color;
+
+
+// ---------------------------------------------------------------------------
+// 16. Badges
+// ---------------------------------------------------------------------------
+
+$badge-padding-y:             .55em;           // BS default: .35em
+$badge-padding-x:             .9em;            // BS default: .65em
+$badge-border-radius:         .45rem;
+
+
+// ---------------------------------------------------------------------------
+// 17. Modals
+// ---------------------------------------------------------------------------
+
+$modal-content-border-radius: .75rem;
+
+
+// ---------------------------------------------------------------------------
+// 18. Alerts
+// ---------------------------------------------------------------------------
+
+$alert-border-radius:         $border-radius-md;
+
+
+// ---------------------------------------------------------------------------
+// 19. Progress
+// ---------------------------------------------------------------------------
+
+$progress-height:             8px;             // BS default: 1rem
+$progress-border-radius:      $border-radius-md;
+
+
+// ---------------------------------------------------------------------------
+// 20. List Group
+// ---------------------------------------------------------------------------
+
+$list-group-border-radius:    $border-radius-md;
+
+
+// ---------------------------------------------------------------------------
+// 21. Breadcrumbs
+// ---------------------------------------------------------------------------
+
+$breadcrumb-border-radius:    $border-radius-md;

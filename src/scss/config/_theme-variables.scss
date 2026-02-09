@@ -1,0 +1,95 @@
+// ==========================================================================
+// Theme-Specific Custom Variables — Argon Light
+// ==========================================================================
+// Variables that are NOT part of Bootstrap's API. These define the
+// Argon Light theme's own design tokens, used in theme.scss styles.
+// Imported BEFORE _bootstrap-overrides.scss so they can be referenced there.
+// ==========================================================================
+
+// ---------------------------------------------------------------------------
+// Custom Color Foundation
+// ---------------------------------------------------------------------------
+// Used as the basis for $body-color, $headings-color, dropdown link colors,
+// and other Bootstrap overrides.
+
+$font-color:                  #67748e !default; // Muted body text
+$h-color:                     #344767 !default; // Heading text
+
+// ---------------------------------------------------------------------------
+// Genealogy Sex Colors
+// ---------------------------------------------------------------------------
+
+$f-color:                     #fff4f9 !default; // Female
+$m-color:                     #f4fdff !default; // Male
+$u-color:                     #fff !default;    // Unknown
+$x-color:                     #fceaa1 !default; // Other
+
+// ---------------------------------------------------------------------------
+// Layout Options
+// ---------------------------------------------------------------------------
+
+$compact-header:              false !default;
+$header-breakpoint:           xxl;
+
+// ---------------------------------------------------------------------------
+// Argon Gradient Colors
+// ---------------------------------------------------------------------------
+// Used for gradient backgrounds, text gradients, and form-check styling.
+
+$primary-gradient:            #5e72e4 !default;
+$primary-gradient-state:      #825ee4 !default;
+
+$secondary-gradient:          #627594 !default;
+$secondary-gradient-state:    #a8b8d8 !default;
+
+$info-gradient:               #1171ef !default;
+$info-gradient-state:         #11cdef !default;
+
+$success-gradient:            #2dce89 !default;
+$success-gradient-state:      #2dcecc !default;
+
+$danger-gradient:             #f5365c !default;
+$danger-gradient-state:       #f56036 !default;
+
+$warning-gradient:            #fb6340 !default;
+$warning-gradient-state:      #fbb140 !default;
+
+$dark-gradient:               #212229 !default;
+$dark-gradient-state:         #212529 !default;
+
+$light-gradient:              #CED4DA !default;
+$light-gradient-state:        #EBEFF4 !default;
+
+// Gradient map
+$theme-gradient-colors: (
+  "primary":    ($primary-gradient, $primary-gradient-state),
+  "secondary":  ($secondary-gradient, $secondary-gradient-state),
+  "success":    ($success-gradient, $success-gradient-state),
+  "info":       ($info-gradient, $info-gradient-state),
+  "warning":    ($warning-gradient, $warning-gradient-state),
+  "danger":     ($danger-gradient, $danger-gradient-state),
+  "light":      ($light-gradient, $light-gradient-state),
+  "dark":       ($dark-gradient, $dark-gradient-state)
+) !default;
+
+// ---------------------------------------------------------------------------
+// Extended Font Sizes (not in Bootstrap)
+// ---------------------------------------------------------------------------
+
+$font-size-xxs:               .65rem !default;
+$font-size-xs:                .75rem !default;
+
+// ---------------------------------------------------------------------------
+// Extended Box Shadows (not in Bootstrap)
+// ---------------------------------------------------------------------------
+
+$box-shadow-xs:               0 2px 9px -5px rgba(#000, 0.15) !default;
+$box-shadow-xl:               0 23px 45px -11px rgba(20, 20, 20, .25) !default;
+
+// ---------------------------------------------------------------------------
+// Extended Border Radii (not in Bootstrap)
+// ---------------------------------------------------------------------------
+
+$border-radius-xs:            .125rem !default;
+$border-radius-md:            .5rem !default;
+$border-radius-section:       10rem !default;

@@ -1,4 +1,4 @@
-/************************************************
+/*! ********************************************
                 Argon Light Theme
              Originally made by jchue
   Under the Internet Systems Consortium License
@@ -7,58 +7,14 @@
        Forked and maintained by Evan Galli
              Under the same licence
  https://github.com/06Games/Webtrees-ArgonLight
-************************************************
-                   Main theme
-***********************************************/
-
-$compact-header: false !default;
-$header-breakpoint: xxl;
-
-$card-border-width: 0.188rem;
-$card-spacer-y: 0.5rem;
-$card-spacer-x: 1rem;
-
-$table-cell-padding: 1rem;
-$table-cell-padding-sm: 0.75rem;
-
-$f-color: #fff4f9;
-$m-color: #f4fdff;
-$u-color: #fff;
-$x-color: #fceaa1;
-
-$box-shadow-xs: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+************************************************/
 
 @use "sass:map";
 @use "sass:color";
 
-@import "@argon/argon-dashboard/bootstrap/functions";
-@import "@argon/argon-dashboard/custom/variables";
-@import "@argon/argon-dashboard/_variables";
-
-$dark: #172b4d;
-
-$theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark,
-  "white":      $white
-);
-$table-variants: (
-  "primary":    shift-color($primary, $table-bg-scale),
-  "secondary":  shift-color($secondary, $table-bg-scale),
-  "success":    shift-color($success, $table-bg-scale),
-  "info":       shift-color($info, $table-bg-scale),
-  "warning":    shift-color($warning, $table-bg-scale),
-  "danger":     shift-color($danger, $table-bg-scale),
-  "light":      $light,
-  "dark":       $dark,
-);
-
+@import "bootstrap/scss/functions";
+@import "config/theme-variables";
+@import "config/bootstrap-overrides";
 @import "bootstrap/scss/bootstrap";
 
 body {
