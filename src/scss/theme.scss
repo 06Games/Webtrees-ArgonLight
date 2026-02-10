@@ -439,6 +439,10 @@ select {
 [dir] .btn-link {
   padding: 0;
   font-weight: $font-weight-bold;
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 }
 
 // Detail toggle button
