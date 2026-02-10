@@ -84,6 +84,13 @@ caption {
       border-right: none;
     }
   }
+
+  &.table-sm {
+    td,
+    th {
+      padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
+    }
+  }
 }
 
 input[type=text] {
