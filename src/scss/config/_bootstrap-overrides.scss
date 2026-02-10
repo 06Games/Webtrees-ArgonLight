@@ -8,6 +8,7 @@
 // Organization follows Bootstrap's _variables.scss structure.
 // ==========================================================================
 
+$prefix: "bs-";
 
 // ---------------------------------------------------------------------------
 // Color System
@@ -65,6 +66,7 @@ $theme-colors: (
 // ---------------------------------------------------------------------------
 
 $enable-negative-margins: true;
+$enable-shadows: true;
 
 
 // ---------------------------------------------------------------------------
@@ -348,3 +350,14 @@ $breadcrumb-border-radius: $border-radius-md;
 // ---------------------------------------------------------------------------
 
 $pagination-border-radius: 50%;
+$pagination-padding-x: 3px;
+$pagination-padding-y: 3px;
+$pagination-font-size: $btn-font-size;
+
+// ---------------------------------------------------------------------------
+// Card
+// ---------------------------------------------------------------------------
+
+$card-box-shadow: var(--#{$prefix}box-shadow-lg);
+$card-inner-border-radius: var(--#{$prefix}card-border-radius);
+$card-border-color: var(--#{$prefix}gray-200);

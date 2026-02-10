@@ -454,17 +454,11 @@ select {
   border-color: rgba($black, .05);
 
   .card-header {
-    background-color: rgba($black, .05);
-    border-bottom: none;
+    background-color: var(--#{$prefix}gray-200);
     font-weight: $font-weight-bold;
 
     &[id^=name-header-] {
       font-size: $font-size-lg;
-    }
-
-    &#name-header-add {
-      font-size: $font-size-base;
-      font-weight: $font-weight-normal;
     }
   }
 }
@@ -831,6 +825,7 @@ select {
         color: $gray-600;
         font-weight: bold;
         text-align: center;
+        line-height: 1.6rem;
       }
     }
 
