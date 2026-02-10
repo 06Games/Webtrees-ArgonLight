@@ -21,6 +21,15 @@ body {
   min-width: map.get($grid-breakpoints, xs);
 }
 
+p {
+  font-weight: $font-weight-light;
+}
+
+.navbar-brand,
+.btn {
+  text-transform: uppercase;
+}
+
 .wt-footers {
   text-align: center;
 }
@@ -111,7 +120,7 @@ input[type=text] {
 }
 
 select {
-  //@extend .custom-select;
+  @extend .form-select;
 }
 
 .select2-container {
@@ -787,57 +796,63 @@ select {
   align-items: center;
 }
 
-ul.pagination {
+.pagination {
   margin-bottom: 0;
-}
+  gap: 5px;
 
-/* Hack for Pagination Arrows */
+  .page-link {
 
-.pagination .page-link {
+    border-radius: var(--#{$prefix}pagination-border-radius);
+    width: 36px;
+    height: 36px;
 
-  &.first,
-  &[data-dt-idx="first"],
-  &.previous,
-  &[data-dt-idx="previous"],
-  &.next,
-  &[data-dt-idx="next"],
-  &.last,
-  &[data-dt-idx="last"] {
-    visibility: hidden;
+    // Hack for Pagination Arrows
+    &.first,
+    &[data-dt-idx="first"],
+    &.previous,
+    &[data-dt-idx="previous"],
+    &.next,
+    &[data-dt-idx="next"],
+    &.last,
+    &[data-dt-idx="last"] {
+      visibility: hidden;
 
-    &::after {
-      @extend .page-link;
-      border-radius: 50%;
-      display: block;
-      height: 36px;
-      padding-right: 0;
-      padding-left: 0;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      visibility: visible;
-      width: 36px;
+      &::after {
+        @extend .page-link;
+        visibility: visible;
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 36px;
+        height: 36px;
+        padding-right: 0;
+        padding-left: 0;
+        border-radius: 50%;
+        color: $gray-600;
+        font-weight: bold;
+        text-align: center;
+      }
     }
-  }
 
-  &.first::after,
-  &[data-dt-idx="first"]::after {
-    content: "\00AB";
-  }
+    &.first::after,
+    &[data-dt-idx="first"]::after {
+      content: "\00AB";
+    }
 
-  &.previous::after,
-  &[data-dt-idx="previous"]::after {
-    content: "\2039";
-  }
+    &.previous::after,
+    &[data-dt-idx="previous"]::after {
+      content: "\2039";
+    }
 
-  &.next::after,
-  &[data-dt-idx="next"]::after {
-    content: "\203A";
-  }
+    &.next::after,
+    &[data-dt-idx="next"]::after {
+      content: "\203A";
+    }
 
-  &.last::after,
-  &[data-dt-idx="last"]::after {
-    content: "\00BB";
+    &.last::after,
+    &[data-dt-idx="last"]::after {
+      content: "\00BB";
+    }
   }
 }
 
