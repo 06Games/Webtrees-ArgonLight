@@ -40,12 +40,13 @@ $cyan: #2bffc6;
 
 // Theme Color Assignments
 $primary: $blue;
-$secondary: #f4f5f7;
+$secondary: $gray-200;
+$tertiary: $gray-300;
 $success: $green;
 $info: $teal; // Argon uses Teal for Info, not Cyan
 $warning: $yellow; // Argon uses Yellow for Warning, not Orange
 $danger: $red;
-$light: $gray-500;
+$light: $gray-100;
 $dark: #172b4d; // Argon specific "Dark Blue" used for text/nav
 
 // Theme Colors Map
@@ -139,20 +140,11 @@ $headings-color: $h-color;
 // Tables
 // ---------------------------------------------------------------------------
 
-$table-cell-padding-y: .5rem;
-$table-cell-padding-x: .5rem;
-$table-border-color: #e9ecef; // $gray-200
-
-$table-variants: (
-  "primary": shift-color($primary, -80%),
-  "secondary": shift-color($secondary, -80%),
-  "success": shift-color($success, -80%),
-  "info": shift-color($info, -80%),
-  "warning": shift-color($warning, -80%),
-  "danger": shift-color($danger, -80%),
-  "light": #e9ecef,
-  "dark": $dark,
-);
+$table-cell-padding-y: 1rem;
+$table-cell-padding-x: 1rem;
+$table-cell-padding-y-sm: .5rem;
+$table-cell-padding-x-sm: .5rem;
+$table-border-color: $gray-200;
 
 
 // ---------------------------------------------------------------------------
@@ -234,43 +226,22 @@ $form-select-border-radius: $border-radius-md;
 
 
 // ---------------------------------------------------------------------------
-// Dropdowns
-// ---------------------------------------------------------------------------
-
-$dropdown-min-width: 11rem;
-$dropdown-spacer: 1.625rem; // BS default: .125rem
-$dropdown-font-size: .875rem;
-$dropdown-border-color: transparent;
-$dropdown-border-width: 0;
-$dropdown-border-radius: $border-radius-md;
-$dropdown-box-shadow: $box-shadow-lg;
-
-$dropdown-link-color: $font-color;
-$dropdown-link-hover-color: $h-color;
-$dropdown-link-hover-bg: #e9ecef; // $gray-200
-$dropdown-link-active-color: $font-color;
-$dropdown-link-active-bg: transparent;
-
-$dropdown-item-padding-y: .3rem;
-
-
-// ---------------------------------------------------------------------------
 // Navs & Navbar
 // ---------------------------------------------------------------------------
 
 $nav-tabs-border-radius: $border-radius-md;
 
 $nav-pills-border-radius: 0.75rem;
-$nav-pills-link-active-color: $dark;
-$nav-pills-link-active-bg: #fff;
+$nav-pills-link-active-color: $white;
+$nav-pills-link-active-bg: $dark;
 
 $navbar-dark-color: rgba(#fff, .85); // BS default: .55
 $navbar-dark-hover-color: rgba(#fff, .75); // BS default: .75
 
-$navbar-light-color: $dark;
-$navbar-light-hover-color: rgba($dark, .7);
-$navbar-light-active-color: rgba($dark, .9);
-$navbar-light-disabled-color: rgba($dark, .3);
+$navbar-light-color: $white;
+$navbar-light-hover-color: rgba($white, .7);
+$navbar-light-active-color: rgba($white, .9);
+$navbar-light-disabled-color: rgba($white, .3);
 
 // ---------------------------------------------------------------------------
 // Accordion

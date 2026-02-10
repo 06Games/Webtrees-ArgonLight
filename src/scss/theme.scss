@@ -49,27 +49,20 @@ caption {
   padding-top: 0;
 }
 
-.dataTables_wrapper>div:not(.d-flex) {
+.dt-layout-table > div {
   overflow-x: auto;
 }
 
+.dt-column-order {
+  margin: 0 $icon-link-gap;
+}
+
 [dir] table,
-[dir] .table {
-
-  td,
-  th,
-  thead th,
-  tbody th,
-  tbody td {
-    border: none;
-    font-size: $font-size-sm;
-
-    border-right: $table-border-width solid $table-border-color;
-
-    &:first-child {
-      border-left: $table-border-width solid $table-border-color;
-    }
-  }
+[dir] .table,
+[dir] table.table.dataTable {
+  @extend .table;
+  @extend .table-bordered;
+  font-size: $font-size-sm;
 
   thead,
   tfoot,
@@ -78,20 +71,17 @@ caption {
   }
 
   thead th {
-    border-top: $table-border-width solid $table-border-color;
+    @extend .text-uppercase;
   }
 
   td,
-  tbody th,
-  tbody td {
-    border-bottom: $table-border-width solid $table-border-color;
-  }
+  th {
+    &:not(:first-of-type) {
+      border-left: none;
+    }
 
-  tr:first-child {
-
-    th,
-    td {
-      border-top: $table-border-width solid $table-border-color;
+    &:not(:last-of-type) {
+      border-right: none;
     }
   }
 }
@@ -435,14 +425,13 @@ select {
 
 @each $color, $value in $theme-colors {
   [dir] .btn-#{$color} {
-    &:hover {
-      background-color: color.adjust($value, $lightness: 5%);
-    }
+    --bs-btn-hover-bg: #{color.adjust($value, $lightness: 5%)};
   }
 }
 
 [dir] .btn-link {
   padding: 0;
+  font-weight: $font-weight-bold;
 }
 
 // Detail toggle button
@@ -763,6 +752,14 @@ select {
 
 .dropdown-header {
   color: #6c757d;
+}
+
+[dir] .dropdown-item {
+  &.active:hover{
+    // Reverts Webtrees custom colors
+    background-color: var(--#{$prefix}dropdown-link-active-bg);
+    color: var(--#{$prefix}dropdown-link-active-color);
+  }
 }
 
 .modal {
