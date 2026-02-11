@@ -1634,7 +1634,7 @@ table.tv_tree {
  */
 
 .wt-block-content-todo .wt-table-tasks {
-// Override Webtree
+  // Override Webtree
   table-layout: auto !important;
 
   thead th {
@@ -1906,7 +1906,8 @@ table.tv_tree {
 
 /* Relationship Tree */
 
-.wt-relationship-chart {
+.wt-relationship-chart,
+.wt-chart-relationships {
   table {
     width: auto;
   }
@@ -2454,7 +2455,7 @@ table.tv_tree {
   }
 }
 
-/* ColorBox */
+/* Default Image Viewer */
 
 #cboxLoadingGraphic,
 #cboxLoadingOverlay {
@@ -2510,17 +2511,8 @@ table.tv_tree {
   padding: 3.125rem;
 }
 
-#cboxTitle {
-  font-size: $font-size-sm;
-  padding: 0.25rem 0;
-
-  [dir=ltr] & {
-    margin: 0 2rem 0 5.5rem;
-  }
-
-  [dir=rtl] & {
-    margin: 0 5.5rem 0 2rem;
-  }
+#cboxLoadedContent {
+  margin-bottom: 2.5rem;
 }
 
 #cboxClose,
@@ -2534,7 +2526,6 @@ table.tv_tree {
     @extend .btn;
     @extend .btn-dark;
     @extend .btn-sm;
-    position: absolute;
 
     &:not(:last-child) {
       margin-right: 0;
@@ -2544,7 +2535,8 @@ table.tv_tree {
 
 #cboxNext,
 #cboxPrevious,
-#cboxSlideshow {
+#cboxSlideshow,
+#cboxTitle {
   bottom: 1rem;
 }
 
@@ -2570,11 +2562,24 @@ table.tv_tree {
 
 #cboxNext {
   [dir=ltr] & {
-    left: 3.25rem;
+    left: 7rem;
   }
 
   [dir=rtl] & {
-    right: 3.25rem;
+    right: 7rem;
+  }
+}
+
+#cboxTitle {
+  margin: 0;
+  padding: .33rem 0;
+
+  [dir=ltr] & {
+    left: 13rem;
+  }
+
+  [dir=rtl] & {
+    right: 13rem;
   }
 }
 
