@@ -1,21 +1,22 @@
-// ==========================================================================
-// Theme-Specific Custom Variables — Argon Light
-// ==========================================================================
-// Variables that are NOT part of Bootstrap's API. These define the
-// Argon Light theme's own design tokens, used in theme.scss styles.
-// Imported BEFORE _bootstrap-overrides.scss so they can be referenced there.
-// ==========================================================================
+/*! ********************************************
+                Argon Light Theme
+             Originally made by jchue
+  Under the Internet Systems Consortium License
+  https://github.com/jchue/argon-webtrees-theme
+
+       Forked and maintained by Evan Galli
+             Under the same licence
+ https://github.com/06Games/Webtrees-ArgonLight
+************************************************/
 
 @use "sass:color";
 
 // ---------------------------------------------------------------------------
 // Custom Color Foundation
 // ---------------------------------------------------------------------------
-// Used as the basis for $body-color, $headings-color, dropdown link colors,
-// and other Bootstrap overrides.
 
-$font-color: #67748e !default; // Muted body text
-$h-color: #344767 !default; // Heading text
+$font-color: #67748e !default;
+$h-color: #344767 !default;
 
 $white: #fff;
 $gray-100: #f6f9fc;
@@ -23,9 +24,9 @@ $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
-$gray-600: #8898aa; // Line footer color
-$gray-700: #525f7f; // Line p color
-$gray-800: #32325d; // Line heading color
+$gray-600: #8898aa;
+$gray-700: #525f7f;
+$gray-800: #32325d;
 $gray-900: #212529;
 $black: #000;
 
@@ -65,7 +66,6 @@ $header-breakpoint: xxl;
 // ---------------------------------------------------------------------------
 // Argon Gradient Colors
 // ---------------------------------------------------------------------------
-// Used for gradient backgrounds, text gradients, and form-check styling.
 
 $primary-gradient: #5e72e4 !default;
 $primary-gradient-state: #825ee4 !default;
@@ -91,7 +91,6 @@ $dark-gradient-state: #212529 !default;
 $light-gradient: #CED4DA !default;
 $light-gradient-state: #EBEFF4 !default;
 
-// Gradient map
 $theme-gradient-colors: (
   "primary": ($primary-gradient, $primary-gradient-state),
   "secondary": ($secondary-gradient, $secondary-gradient-state),
@@ -103,21 +102,21 @@ $theme-gradient-colors: (
   "dark": ($dark-gradient, $dark-gradient-state)) !default;
 
 // ---------------------------------------------------------------------------
-// Extended Font Sizes (not in Bootstrap)
+// Extended Font Sizes
 // ---------------------------------------------------------------------------
 
 $font-size-xxs: .65rem !default;
 $font-size-xs: .75rem !default;
 
 // ---------------------------------------------------------------------------
-// Extended Box Shadows (not in Bootstrap)
+// Extended Box Shadows
 // ---------------------------------------------------------------------------
 
 $box-shadow-xs: 0 1px 3px #32325d26,0 1px #00000005 !default;
 $box-shadow-xl: 0 23px 45px -11px rgba(20, 20, 20, .25) !default;
 
 // ---------------------------------------------------------------------------
-// Extended Border Radii (not in Bootstrap)
+// Extended Border Radii
 // ---------------------------------------------------------------------------
 
 $border-radius-xs: .125rem !default;

@@ -1,12 +1,13 @@
-// ==========================================================================
-// Bootstrap 5.3 Variable Overrides — Argon Light Theme
-// ==========================================================================
-// Only variables that DIFFER from Bootstrap 5.3 defaults.
-// Requires bootstrap/scss/functions to be loaded first.
-// Requires config/theme-variables to be loaded first.
-//
-// Organization follows Bootstrap's _variables.scss structure.
-// ==========================================================================
+/*! ********************************************
+                Argon Light Theme
+             Originally made by jchue
+  Under the Internet Systems Consortium License
+  https://github.com/jchue/argon-webtrees-theme
+
+       Forked and maintained by Evan Galli
+             Under the same licence
+ https://github.com/06Games/Webtrees-ArgonLight
+************************************************/
 
 $prefix: "bs-";
 
@@ -19,11 +20,11 @@ $primary: $blue;
 $secondary: $gray-200;
 $tertiary: $gray-300;
 $success: $green;
-$info: $teal; // Argon uses Teal for Info, not Cyan
-$warning: $yellow; // Argon uses Yellow for Warning, not Orange
+$info: $teal;
+$warning: $yellow;
 $danger: $red;
 $light: $gray-100;
-$dark: #172b4d; // Argon specific "Dark Blue" used for text/nav
+$dark: #172b4d;
 
 // Theme Colors Map
 $theme-colors: (
@@ -52,7 +53,6 @@ $enable-shadows: true;
 // Spacing
 // ---------------------------------------------------------------------------
 
-// Extended spacers (Bootstrap provides 0–5, Argon adds 6–12)
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
@@ -103,12 +103,12 @@ $font-family-sans-serif: "Open Sans", sans-serif;
 $font-weight-bold: 600;
 $font-weight-bolder: 700;
 
-$small-font-size: .8em; // BS default: .875em
-$h1-font-size: 3rem; // BS default: 2.5rem
-$h2-font-size: 2.25rem; // BS default: 2rem
-$h3-font-size: 1.875rem; // BS default: 1.75rem
+$small-font-size: .8em;
+$h1-font-size: 3rem; 
+$h2-font-size: 2.25rem; 
+$h3-font-size: 1.875rem; 
 
-$headings-font-weight: 400; // BS default: 500
+$headings-font-weight: 400; 
 $headings-color: $h-color;
 
 
@@ -127,30 +127,30 @@ $table-border-color: $gray-200;
 // Buttons
 // ---------------------------------------------------------------------------
 
-$btn-padding-y: .625rem; // BS default: .375rem
-$btn-padding-x: 1.25rem; // BS default: .75rem
-$btn-font-size: .875rem; // BS default: 1rem
-$btn-font-weight: 700; // BS default: 400
+$btn-padding-y: .625rem; 
+$btn-padding-x: 1.25rem; 
+$btn-font-size: .875rem; 
+$btn-font-weight: 700; 
 
 $btn-padding-y-sm: .5rem;
-$btn-padding-x-sm: 2rem; // BS default: .5rem
+$btn-padding-x-sm: 2rem;
 $btn-font-size-sm: .75rem;
 
 $btn-padding-y-lg: .875rem;
-$btn-padding-x-lg: 4rem; // BS default: 1rem
+$btn-padding-x-lg: 4rem;
 $btn-font-size-lg: .875rem;
 
 $btn-box-shadow: 0 4px 6px rgba(50, 50, 93, .1), 0 1px 3px rgba(0, 0, 0, .08);
 $btn-focus-box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
 $btn-active-box-shadow: none;
 
-$btn-border-radius: $border-radius-md; // .5rem (BS default: .375rem)
+$btn-border-radius: $border-radius-md;
 $btn-border-radius-sm: .25rem;
 $btn-border-radius-lg: .75rem;
 
 $btn-transition: all .15s ease-in;
 
-$btn-close-color: #fff; // BS default: #000
+$btn-close-color: #fff;
 
 
 // ---------------------------------------------------------------------------
@@ -163,10 +163,10 @@ $form-label-color: $dark;
 
 $input-padding-y: .5rem;
 $input-padding-x: .75rem;
-$input-font-size: .875rem; // BS default: 1rem
+$input-font-size: .875rem;
 $input-line-height: 1.4rem;
 
-$input-color: #495057; // $gray-700
+$input-color: $gray-700;
 $input-border-color: #d2d6da;
 $input-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
@@ -175,10 +175,10 @@ $input-border-radius-sm: $border-radius-md;
 $input-border-radius-lg: $border-radius-md;
 
 $input-focus-border-color: $primary;
-$input-focus-width: 2px; // BS default: .25rem
+$input-focus-width: 2px;
 $input-focus-box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, .10);
 
-$input-placeholder-color: #adb5bd; // $gray-500
+$input-placeholder-color: $gray-500;
 
 $form-switch-color: rgba(0, 0, 0, 1);
 $form-switch-bg-image: none;
@@ -204,8 +204,8 @@ $nav-pills-border-radius: 0.75rem;
 $nav-pills-link-active-color: $white;
 $nav-pills-link-active-bg: $dark;
 
-$navbar-dark-color: rgba(#fff, .85); // BS default: .55
-$navbar-dark-hover-color: rgba(#fff, .75); // BS default: .75
+$navbar-dark-color: rgba(#fff, .85);
+$navbar-dark-hover-color: rgba(#fff, .75);
 
 $navbar-light-color: $white;
 $navbar-light-hover-color: rgba($white, .7);
@@ -218,7 +218,7 @@ $navbar-light-disabled-color: rgba($white, .3);
 
 $tooltip-border-radius: $border-radius-md;
 
-$popover-font-size: $font-size-xs; // .75rem (BS default: .875rem)
+$popover-font-size: $font-size-xs;
 $popover-border-width: 0;
 $popover-border-radius: .75rem;
 
@@ -246,7 +246,7 @@ $alert-border-radius: $border-radius-md;
 // Progress
 // ---------------------------------------------------------------------------
 
-$progress-height: 8px; // BS default: 1rem
+$progress-height: 8px;
 $progress-border-radius: $border-radius-md;
 
 
