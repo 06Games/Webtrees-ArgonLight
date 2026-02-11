@@ -99,7 +99,7 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
         // Register a namespace for our views.
         View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
 
-        /** Argon views **/
+        /** Views inherited from the original Argon theme **/
 
         // Site Footer
         View::registerCustomView('::modules/powered-by-webtrees/footer', $this->name() . '::modules/powered-by-webtrees/footer'); // Remove text-center class
@@ -109,7 +109,6 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
 
         // Tree Page Blocks
         View::registerCustomView('::modules/block-template', $this->name() . '::modules/block-template'); // Remove card classes from block
-        View::registerCustomView('::modules/todo/research-tasks', $this->name() . '::modules/todo/research-tasks'); // Make table normal
         View::registerCustomView('::modules/recent_changes/changes-list', $this->name() . '::modules/recent_changes/changes-list'); // Restructure changes list
 
         // Individual Page
@@ -127,7 +126,7 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
         View::registerCustomView('::modules/place-hierarchy/list', $this->name() . '::modules/place-hierarchy/list'); // Make list header a heading
 
 
-        /** My views **/
+        /** Views added by this theme **/
 
         View::registerCustomView('::lists/individuals-table', $this->name() . '::lists/individuals-table');
         View::registerCustomView('::lists/families-table', $this->name() . '::lists/families-table');

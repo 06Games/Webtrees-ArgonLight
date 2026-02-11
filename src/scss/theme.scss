@@ -1633,6 +1633,14 @@ table.tv_tree {
  * User Page
  */
 
+.wt-block-content-todo .wt-table-tasks {
+// Override Webtree
+  table-layout: auto !important;
+
+  thead th {
+    width: auto !important;
+  }
+}
 
 .wt-block-content-gedcom_news {
   .news_box {
