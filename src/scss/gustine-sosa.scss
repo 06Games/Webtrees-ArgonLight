@@ -9,11 +9,19 @@
  https://github.com/06Games/Webtrees-ArgonLight
 ************************************************/
 
-#sidebar-content-_sosa20_{
-    &.collapse:not(.show) {
-        display: none;
+$collapse_mode: true !default;
+
+@if $collapse_mode {
+    #sidebar-header-_sosa20_{
+        display: unset !important;
     }
 
+    #sidebar-content-_sosa20_.collapse:not(.show) {
+        display: none;
+    }
+}
+
+#sidebar-content-_sosa20_{
     #wt-sidebar-sosa1{
         border: none !important;
     }
