@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Http\RequestHandlers\AddNewFact;
@@ -20,11 +22,12 @@ use Fisharebest\Webtrees\Http\RequestHandlers\AddChildToIndividualPage;
 // End added
 
 /**
- * @var bool               $can_upload_media
- * @var Collection<Fact>   $clipboard_facts
- * @var Individual         $record
- * @var Collection<string> $shares
+ * @var bool                   $can_upload_media
+ * @var Collection<int,Fact>   $clipboard_facts
+ * @var Individual             $record
+ * @var Collection<int,string> $shares
  */
+
 ?>
 
 <div class="dropdown wt-page-menu">
@@ -34,7 +37,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\AddChildToIndividualPage;
     </button>
 
     <div class="dropdown-menu dropdown-menu-end wt-page-menu-items" aria-labelledby="page-menu">
-        <?php if ($shares->isNotEmpty()): ?>
+        <?php if ($shares->isNotEmpty()) : ?>
             <button class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#wt-shares-modal">
                 <?= view('icons/share') ?>
                 <?= I18N::translate('Share') ?>
@@ -65,7 +68,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\AddChildToIndividualPage;
         <?php if ($record->facts(['SEX'], false, null, true)->isEmpty()) : ?>
             <a class="dropdown-item" href="<?= e(route(AddNewFact::class, ['fact' => 'SEX', 'tree' => $record->tree()->name(), 'xref' => $record->xref()])) ?>">
                 <?= view('icons/edit') ?>
-                <?= I18N::translate('Edit the gender') ?>
+                <?= I18N::translate('Edit the sex') ?>
             </a>
         <?php endif ?>
 
@@ -73,7 +76,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\AddChildToIndividualPage;
             <?php if ($fact->canEdit()) : ?>
                 <a class="dropdown-item" href="<?= e(route(EditFactPage::class, ['xref' => $record->xref(), 'fact_id' => $fact->id(), 'tree' => $record->tree()->name()])) ?>">
                     <?= view('icons/edit') ?>
-                    <?= I18N::translate('Edit the gender') ?>
+                    <?= I18N::translate('Edit the sex') ?>
                 </a>
             <?php endif ?>
         <?php endforeach ?>
@@ -142,7 +145,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\AddChildToIndividualPage;
             <?= I18N::translate('Delete') ?>
         </a>
 
-        <?php if (Auth::isAdmin() || $record->tree()->getPreference('SHOW_GEDCOM_RECORD')) : ?>
+        <?php if (Auth::isAdmin() || $record->tree()->getPreference('SHOW_GEDCOM_RECORD') === '1') : ?>
             <a class="dropdown-item" href="<?= e(route(EditRawRecordPage::class, ['tree' => $record->tree()->name(), 'xref' => $record->xref()])) ?>">
                 <?= view('icons/edit') ?>
                 <?= I18N::translate('Edit the raw GEDCOM') ?>

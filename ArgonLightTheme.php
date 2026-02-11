@@ -101,12 +101,6 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
 
         /** Views inherited from the original Argon theme **/
 
-        // Site Footer
-        View::registerCustomView('::modules/powered-by-webtrees/footer', $this->name() . '::modules/powered-by-webtrees/footer'); // Remove text-center class
-        View::registerCustomView('::modules/contact-links/footer', $this->name() . '::modules/contact-links/footer'); // Remove text-center and padding classes
-        View::registerCustomView('::modules/hit-counter/footer', $this->name() . '::modules/hit-counter/footer'); // Remove text-center and padding classes
-        View::registerCustomView('::modules/privacy-policy/footer', $this->name() . '::modules/privacy-policy/footer'); // Remove text-center and padding classes
-
         // Tree Page Blocks
         View::registerCustomView('::modules/block-template', $this->name() . '::modules/block-template'); // Remove card classes from block
         View::registerCustomView('::modules/recent_changes/changes-list', $this->name() . '::modules/recent_changes/changes-list'); // Restructure changes list
