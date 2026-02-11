@@ -38,6 +38,8 @@ $theme-colors: (
   "white": $white
 );
 
+$min-contrast-ratio: 3;
+
 // ---------------------------------------------------------------------------
 // Options
 // ---------------------------------------------------------------------------
@@ -81,9 +83,7 @@ $body-color: $font-color;
 // ---------------------------------------------------------------------------
 
 $link-decoration: none;
-$link-hover-color: color.adjust($primary, $lightness: -15%);
 $link-hover-decoration: none;
-
 
 // ---------------------------------------------------------------------------
 // Border & Shadows
@@ -180,13 +180,6 @@ $input-focus-box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114,
 
 $input-placeholder-color: #adb5bd; // $gray-500
 
-$form-check-input-border: none;
-$form-check-input-border-radius: .35rem;
-$form-check-input-focus-box-shadow: none;
-$form-check-input-checked-bg-color: transparent;
-$form-check-input-checked-bg-image: linear-gradient(310deg, $primary-gradient 0%, $primary-gradient-state 100%);
-$form-check-radio-checked-bg-image: linear-gradient(310deg, $primary-gradient 0%, $primary-gradient-state 100%);
-
 $form-switch-color: rgba(0, 0, 0, 1);
 $form-switch-bg-image: none;
 $form-switch-focus-bg-image: none;
@@ -233,15 +226,6 @@ $toast-border-width: 0;
 $toast-border-color: transparent;
 $toast-border-radius: $border-radius-md;
 $toast-header-color: $h-color;
-
-
-// ---------------------------------------------------------------------------
-// Badges
-// ---------------------------------------------------------------------------
-
-$badge-padding-y: .55em; // BS default: .35em
-$badge-padding-x: .9em; // BS default: .65em
-$badge-border-radius: .45rem;
 
 
 // ---------------------------------------------------------------------------

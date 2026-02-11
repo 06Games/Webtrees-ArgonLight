@@ -49,7 +49,7 @@ caption {
   padding-top: 0;
 }
 
-.dt-layout-table > div {
+.dt-layout-table>div {
   overflow-x: auto;
 }
 
@@ -86,6 +86,7 @@ caption {
   }
 
   &.table-sm {
+
     td,
     th {
       padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
@@ -439,10 +440,17 @@ select {
 [dir] .btn-link {
   padding: 0;
   font-weight: $font-weight-bold;
+}
 
-  &:not(:last-child) {
-    margin-right: 0.5rem;
-  }
+.btn:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+// Fix Webtrees overriding link colors
+a:hover,
+.btn-link:hover,
+.nav-link:hover {
+  color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
 }
 
 // Detail toggle button
@@ -460,6 +468,12 @@ select {
     &[id^=name-header-] {
       font-size: $font-size-lg;
     }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge.bg-#{$color} {
+    @extend .text-bg-#{$color};
   }
 }
 
@@ -766,7 +780,7 @@ select {
 }
 
 [dir] .dropdown-item {
-  &.active:hover{
+  &.active:hover {
     // Reverts Webtrees custom colors
     background-color: var(--#{$prefix}dropdown-link-active-bg);
     color: var(--#{$prefix}dropdown-link-active-color);
@@ -1879,6 +1893,14 @@ table.tv_tree {
       border-right: $border-width solid $border-color;
       border-radius: 0 0 $border-radius 0;
     }
+  }
+}
+
+/* Relationship Tree */
+
+.wt-relationship-chart {
+  table {
+    width: auto;
   }
 }
 
