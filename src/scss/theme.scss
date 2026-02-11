@@ -938,19 +938,35 @@ div[id^=caldiv] {
 }
 
 .wt-sex-m {
-  background-color: $m-color;
+  background-color: $m-background;
 }
 
 .wt-sex-f {
-  background-color: $f-color;
+  background-color: $f-background;
 }
 
 .wt-sex-u {
-  background-color: $u-color;
+  background-color: $u-background;
 }
 
 .wt-sex-x {
-  background-color: $x-color;
+  background-color: $x-background;
+}
+
+.wt-icon-sex-m {
+  color: $m-color;
+}
+
+.wt-icon-sex-f {
+  color: $f-color;
+}
+
+.wt-icon-sex-u {
+  color: $u-color;
+}
+
+.wt-icon-sex-x {
+  color: $x-color;
 }
 
 [dir] .wt-new,
@@ -1518,11 +1534,11 @@ table.tv_tree {
     }
 
     .tvM {
-      background-color: $m-color;
+      background-color: $m-background;
     }
 
     .tvF {
-      background-color: $f-color;
+      background-color: $f-background;
     }
 
     .icon-silhouette {
@@ -1756,19 +1772,19 @@ table.tv_tree {
 
 
   .wt-chart-box-f {
-    background-color: $f-color;
+    background-color: $f-background;
   }
 
   .wt-chart-box-m {
-    background-color: $m-color;
+    background-color: $m-background;
   }
 
   .wt-chart-box-u {
-    background-color: $u-color;
+    background-color: $u-background;
   }
 
   .wt-chart-box-x {
-    background-color: $x-color;
+    background-color: $x-background;
   }
 
   .wt-chart-box-zoom-dropdown {

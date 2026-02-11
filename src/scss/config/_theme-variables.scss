@@ -6,6 +6,8 @@
 // Imported BEFORE _bootstrap-overrides.scss so they can be referenced there.
 // ==========================================================================
 
+@use "sass:color";
+
 // ---------------------------------------------------------------------------
 // Custom Color Foundation
 // ---------------------------------------------------------------------------
@@ -15,14 +17,43 @@
 $font-color: #67748e !default; // Muted body text
 $h-color: #344767 !default; // Heading text
 
+$white: #fff;
+$gray-100: #f6f9fc;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #8898aa; // Line footer color
+$gray-700: #525f7f; // Line p color
+$gray-800: #32325d; // Line heading color
+$gray-900: #212529;
+$black: #000;
+
+$blue: #5e72e4;
+$indigo: #5603ad;
+$purple: #8965e0;
+$pink: #f3a4b5;
+$red: #f5365c;
+$orange: #fb6340;
+$yellow: #ffd600;
+$green: #2dce89;
+$teal: #11cdef;
+$cyan: #2bffc6;
+
 // ---------------------------------------------------------------------------
 // Genealogy Sex Colors
 // ---------------------------------------------------------------------------
 
-$f-color: #fff4f9 !default; // Female
-$m-color: #f4fdff !default; // Male
-$u-color: #fff !default; // Unknown
-$x-color: #fceaa1 !default; // Other
+
+$f-color: $red !default;
+$m-color: $teal !default;
+$u-color: $gray-700 !default;
+$x-color: $yellow !default;
+
+$f-background: color.scale($f-color, $lightness: 95%) !default;
+$m-background: color.scale($m-color, $lightness: 95%) !default;
+$u-background: $white !default;
+$x-background: color.scale($x-color, $lightness: 95%) !default;
 
 // ---------------------------------------------------------------------------
 // Layout Options
