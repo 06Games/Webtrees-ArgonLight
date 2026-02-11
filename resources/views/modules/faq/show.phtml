@@ -1,29 +1,43 @@
 <?php
 
+declare(strict_types=1);
+
 use Fisharebest\Webtrees\I18N;
+
+/**
+ * @var array<int,object{
+ *      block_id: int,
+ *      block_order: int,
+ *      gedcom_id: int,
+ *      header: string,
+ *      faqbody: string,
+ *      languages: string
+ *  }>         $faqs
+ * @var string $title
+ */
 
 ?>
 
 <h2 class="wt-page-title"><?= $title ?></h2>
 
-<ul class="faq_list">
+<ul class="faq">
     <?php foreach ($faqs as $id => $faq) : ?>
     <li>
-            <a href="#faq<?= e($id) ?>"><?= e($faq->header) ?></a>
+        <a href="#faq<?= e($id) ?>"><?= e($faq->header) ?></a>
     </li>
     <?php endforeach ?>
 </ul>
 
 <?php foreach ($faqs as $id => $faq) : ?>
-    <article class="faq">
-        <header class="faq_title" id="faq<?= $id ?>">
-            <h3><?= e($faq->header) ?></h3>
-            <span class="faq_top">
-                <a href="#content"><?= I18N::translate('back to top') ?></a>
-            </span>
-        </header>
-        <main class="faq_body">
-            <?= substr($faq->faqbody, 0, 1) === '<' ? $faq->faqbody : nl2br(e($faq->faqbody), false) ?>
-        </main>
+    <article class="faq_article">
+    <header class="faq_title" id="faq<?= $id ?>">
+        <h3><?= e($faq->header) ?></h3>
+        <span class="faq_top faq_italic">
+            <a href="#content"><?= I18N::translate('back to top') ?></a>
+        </span>
+    </header>
+    <main class="faq_body">
+        <?= str_starts_with($faq->faqbody, '<') ? $faq->faqbody : nl2br(e($faq->faqbody), false) ?>
+    </main>
     </article>
 <?php endforeach ?>
