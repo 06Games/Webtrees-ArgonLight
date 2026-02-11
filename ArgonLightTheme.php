@@ -17,13 +17,15 @@ namespace EvanG\Themes\Argon;
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
+use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
+use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeTrait;
 use Fisharebest\Webtrees\View;
 
-class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, ModuleThemeInterface
+class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, ModuleGlobalInterface, ModuleThemeInterface
 {
-    use ModuleCustomTrait, ModuleThemeTrait;
+    use ModuleCustomTrait, ModuleGlobalTrait, ModuleThemeTrait;
 
     public const string MODULE_TITLE = "Argon Light";
     public const string MODULE_DESCRIPTION = "A light theme for Webtrees based on Argon Design System";
@@ -71,6 +73,11 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
             $this->assetUrl('css/fonts.css'),
             $this->assetUrl('css/theme.css')
         ];
+    }
+
+    public function headContent(): string
+    {
+        return '<link rel="icon" href="' . $this->assetUrl('img/favicon.svg') . '" type="image/svg+xml">';
     }
 
     public function parameter($parameter_name)
