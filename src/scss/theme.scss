@@ -342,7 +342,7 @@ select {
   }
 }
 
-.wt-footer-powered-by-webtrees{
+.wt-footer-powered-by-webtrees {
   content: url("../img/webtrees.svg");
 }
 
@@ -448,6 +448,13 @@ select {
 
 .btn:not(:last-child) {
   margin-right: 0.5rem;
+}
+
+.btn-outline-secondary {
+  --#{$prefix}btn-color: var(--#{$prefix}gray-700);
+  --#{$prefix}btn-hover-color: var(--#{$prefix}gray-700);
+  --#{$prefix}btn-active-color: var(--#{$prefix}gray-700);
+  --#{$prefix}btn-disabled-color: var(--#{$prefix}gray-700);
 }
 
 // Fix Webtrees overriding link colors
