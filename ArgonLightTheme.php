@@ -33,7 +33,8 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
     public const string MODULE_VERSION = '1.1.8';
     public const string MODULE_REPO = '06Games/Webtrees-ArgonLight';
     public const string MODULE_SUPPORT_URL = 'https://github.com/' . self::MODULE_REPO . '/issues';
-    public const string MODULE_LATEST_VERSION = 'https://raw.githubusercontent.com/' . self::MODULE_REPO . '/main/version.txt';
+    public const string MODULE_LATEST_VERSION = 'https://raw.githubusercontent.com/' . self::MODULE_REPO . '/main/version.txt'; 
+    public const string MODULE_RESOURCE_PATH = __DIR__ . '/resources/';
 
 
     public function title(): string
@@ -66,6 +67,11 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
         return self::MODULE_SUPPORT_URL;
     }
 
+    public function resourcesFolder(): string
+    {
+        return self::MODULE_RESOURCE_PATH;
+    }
+
     public function stylesheets(): array
     {
         return [
@@ -80,31 +86,11 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
         return '<link rel="icon" href="' . $this->assetUrl('img/favicon.svg') . '" type="image/svg+xml">';
     }
 
-    public function parameter($parameter_name)
-    {
-        $parameters = [
-            'chart-background-f' => 'fff4f9',
-            'chart-background-m' => 'f4fdff',
-            'chart-background-u' => 'f4f5f7',
-            'chart-box-x' => 260,
-            'chart-box-y' => 85,
-            'chart-font-color' => '000000',
-            'chart-spacing-x' => 5,
-            'chart-spacing-y' => 10,
-            'compact-chart-box-x' => 240,
-            'compact-chart-box-y' => 50,
-            'distribution-chart-high-values' => '84beff',
-            'distribution-chart-low-values' => 'c3dfff',
-            'distribution-chart-no-values' => 'ffffff',
-        ];
-
-        return $parameters[$parameter_name];
-    }
-
     public function boot(): void
     {
         // Register a namespace for our views.
         View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
+
 
         /** Views inherited from the original Argon theme **/
 
@@ -131,10 +117,5 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
         View::registerCustomView('::lists/individuals-table', $this->name() . '::lists/individuals-table');
         View::registerCustomView('::lists/families-table', $this->name() . '::lists/families-table');
         View::registerCustomView('::individual-page-menu', $this->name() . '::individual-page-menu');
-    }
-
-    public function resourcesFolder(): string
-    {
-        return __DIR__ . '/resources/';
     }
 }
