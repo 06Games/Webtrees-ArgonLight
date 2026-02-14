@@ -4,17 +4,25 @@ It adds a modern light theme to [Webtrees](https://github.com/fisharebest/webtre
 This module is brought to you by [Evan Galli](https://github.com/06Games) under the [ISC License](https://choosealicense.com/licenses/isc/)
 
 ## Screenshots
-|               Home               |                  Statistics                  |
-|:--------------------------------:|:--------------------------------------------:|
-| ![Home](.github/assets/home.png) | ![Statistics](.github/assets/statistics.png) |
 
-|                  Individual                  |               Event                |
-|:--------------------------------------------:|:----------------------------------:|
-| ![Individual](.github/assets/individual.png) | ![Event](.github/assets/event.png) |
-
-|                     Interactive tree                     | [Magicsunday's Pedigree chart](https://github.com/magicsunday/webtrees-pedigree-chart) |
-|:--------------------------------------------------------:|:--------------------------------------------------------------------------------------:|
-| ![Interactive tree](.github/assets/interactive-tree.png) |       ![Magicsunday's Pedigree chart ](.github/assets/magicsunday-pedigree.png)        |
+<table>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/d4c89342-7ae0-4617-94c7-1601146bee76" alt="Home"></td>
+        <td><img src="https://github.com/user-attachments/assets/24142bda-0393-4d8f-9e3d-ff98e91850cd" alt="Statistics"></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/0731f23f-e9fe-4741-a7c0-d674df917f0c" alt="Individual"></td>
+        <td><img src="https://github.com/user-attachments/assets/68b007bb-6a54-4d09-bdca-163710510550" alt="Event"></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/e1f434e6-7538-43b7-85fe-958a95d50fed" alt="Individual Pending"></td>
+        <td><img src="https://github.com/user-attachments/assets/a57d197e-d667-4caa-823f-ef9adf034b2d" alt="Family"></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/4128d85b-62a5-47c7-8bfd-7701b2151509" alt="Pedigree Tree"></td>
+        <td><img src="https://github.com/user-attachments/assets/399d8698-a1ef-4201-b013-e304f10d410a" alt="Pedigree Map"></td>
+    </tr>
+</table>
 
 ## Installation
 
@@ -40,9 +48,8 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
     composer install
     npm install
     ```
-3. To build the module, run one of the following commands:
+3. To build the module, run the following command:
     ```shell
-    npm run dev    # For development
-    npm run build  # For production
+    npm run build
     ```
 4. You can now copy the repo folder to your `webtrees/modules_v4` directory to test it out.
