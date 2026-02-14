@@ -53,8 +53,7 @@ jobs:
         run: |
           outputName=evang-argonlight-$(cat version.txt)
           echo "outputName=$outputName" >> $GITHUB_ENV
-          git add .
-          git archive -o "$outputName.zip" $(git stash create 2>/dev/null || git rev-parse HEAD)
+          git archive -o "$outputName.zip" HEAD
           
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
