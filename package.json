@@ -4,7 +4,7 @@
   "author": "Evan Galli",
   "homepage": "https://github.com/06Games/Webtrees-ArgonLight",
   "repository": "github:06Games/Webtrees-ArgonLight",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.0",

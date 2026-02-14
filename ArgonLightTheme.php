@@ -30,7 +30,7 @@ class ArgonLightTheme extends AbstractModule implements ModuleCustomInterface, M
     public const string MODULE_TITLE = "Argon Light";
     public const string MODULE_DESCRIPTION = "A light theme for Webtrees based on Argon Design System";
     public const string MODULE_AUTHOR = 'EvanG';
-    public const string MODULE_VERSION = '1.1.8';
+    public const string MODULE_VERSION = '2.0.0';
     public const string MODULE_REPO = '06Games/Webtrees-ArgonLight';
     public const string MODULE_SUPPORT_URL = 'https://github.com/' . self::MODULE_REPO . '/issues';
     public const string MODULE_LATEST_VERSION = 'https://raw.githubusercontent.com/' . self::MODULE_REPO . '/main/version.txt'; 
