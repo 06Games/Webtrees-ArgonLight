@@ -22,7 +22,8 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
 
 1. Download the first zip file from the [latest release](https://github.com/06Games/Webtrees-ArgonLight/releases/latest) (look under the "Assets" section).
 2. Unzip the file.
-3. Move the folder into your `webtrees/modules_v4` directory.
+3. Rename the resulting folder to `evang-argonlight`.
+4. Move the folder into your `webtrees/modules_v4` directory.
 
 ### Development version
 
