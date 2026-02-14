@@ -24,11 +24,11 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
 2. Unzip the file.
 3. Move the folder into your `webtrees/modules_v4` directory.
 
-### Nightly version
+### Development version
 
-1. Find the latest build from the [Actions tab](https://github.com/06Games/Webtrees-ArgonLight/actions/workflows/build.yml?query=is%3Asuccess).
-2. Download the artifact linked in the build summary.
-3. Unzip the file.
+1. Download the repository as [a zip file](https://github.com/06Games/Webtrees-ArgonLight/archive/refs/heads/main.zip).
+2. Unzip the file.
+3. Rename the resulting folder to `evang-argonlight`.
 4. Move the folder into your `webtrees/modules_v4` directory.
 
 ## Development
@@ -44,4 +44,4 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
     npm run dev    # For development
     npm run build  # For production
     ```
-4. The built module will be located in the `dist` directory. You can copy this folder to your `webtrees/modules_v4` directory to test it out.
+4. You can now copy the repo folder to your `webtrees/modules_v4` directory to test it out.

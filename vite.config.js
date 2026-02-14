@@ -23,8 +23,8 @@ export default defineConfig(({ command, mode }) => {
         },
 
         build: {
-            outDir: 'dist',
-            emptyOutDir: true,
+            outDir: 'resources',
+            emptyOutDir: false,
             sourcemap: 'inline',
             minify: isProd,
             esbuild: {
@@ -37,23 +37,11 @@ export default defineConfig(({ command, mode }) => {
                     'imports': path.resolve(__dirname, 'src/css/imports.css'),
                 },
                 output: {
-                    entryFileNames: `resources/js/[name].js`,
-                    chunkFileNames: `resources/js/[name].js`,
-                    assetFileNames: 'resources/[ext]/[name].[ext]'
+                    entryFileNames: `js/[name].js`,
+                    chunkFileNames: `js/[name].js`,
+                    assetFileNames: '[ext]/[name].[ext]'
                 }
             }
-        },
-
-        plugins: [
-            viteStaticCopy({
-                targets: [
-                    { src: '*.php', dest: '.' },
-                    { src: 'resources', dest: '.', overwrite: false },
-                    { src: "README.md", dest: '.' },
-                    { src: "LICENSE.md", dest: '.' },
-                    { src: "composer.json", dest: '.' }
-                ]
-            })
-        ].filter(Boolean)
+        }
     };
 });

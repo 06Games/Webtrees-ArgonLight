@@ -49,13 +49,12 @@ jobs:
       - name: Build module
         run: npm run build
 
-
       - name: Generate zip file
         run: |
           outputName=evang-argonlight-$(cat version.txt)
           echo "outputName=$outputName" >> $GITHUB_ENV
-          mv dist evang-argonlight
-          zip -r "$outputName.zip" evang-argonlight
+          git add .
+          git archive -o "$outputName.zip" $(git stash create 2>/dev/null || git rev-parse HEAD)
           
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
