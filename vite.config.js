@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 import path from 'path';
 
 export default defineConfig(({ command, mode }) => {
@@ -7,12 +6,6 @@ export default defineConfig(({ command, mode }) => {
 
     return {
         base: './',
-
-        resolve: {
-            alias: {
-                '@argon': path.resolve(__dirname, 'src/scss/argon')
-            },
-        },
 
         css: {
             preprocessorOptions: {
