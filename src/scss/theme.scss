@@ -457,6 +457,10 @@ select {
   --#{$prefix}btn-disabled-color: var(--#{$prefix}gray-700);
 }
 
+.btn-text {
+  --bs-btn-box-shadow: none;
+}
+
 // Fix Webtrees overriding link colors
 a:hover,
 .btn-link:hover,
