@@ -85,6 +85,16 @@ caption {
     }
   }
 
+  table,
+  .table {
+    margin: 0;
+
+    td,
+    th {
+      border: none;
+    }
+  }
+
   &.table-sm {
 
     td,
@@ -1739,6 +1749,7 @@ table.tv_tree {
 .wt-chart-ancestors,
 .wt-chart-descendants,
 .wt-chart-pedigree,
+.wt-chart-compact,
 .wt-chart-family-book,
 .wt-chart-hourglass {
   .wt-chart-box {
@@ -1755,6 +1766,7 @@ table.tv_tree {
 .wt-chart-ancestors,
 .wt-chart-descendants,
 .wt-chart-pedigree,
+.wt-chart-compact,
 .wt-chart-family-book,
 .wt-chart-hourglass {
   td {
@@ -1766,7 +1778,7 @@ table.tv_tree {
   }
 
   .wt-chart-box {
-    background: var(--white);
+    background: var(--#{$prefix}gray-100);
     font-size: $font-size-xs;
     margin-bottom: 0.125rem;
     margin-top: 0.125rem;
@@ -1933,17 +1945,35 @@ table.tv_tree {
 .wt-chart-compact {
   table {
     border-collapse: separate;
+
+
+    td {
+      border: none;
+      vertical-align: middle;
+      padding: 0;
+      min-width: 1.25em;
+    }
   }
 
   .wt-chart-box {
-    height: 5rem;
-    width: 9.375rem;
-  }
+    margin: auto;
+    width: 12rem;
+    height: 5rem !important;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: .1em;
 
-  .wt-chart-box-extra,
-  .wt-chart-box-facts,
-  .wt-chart-box-thumbnail {
-    display: none
+    .wt-chart-box-name,
+    .wt-chart-box-lifespan {
+      margin-left: 0;
+    }
+
+    .wt-chart-box-extra,
+    .wt-chart-box-facts,
+    .wt-chart-box-thumbnail {
+      display: none;
+    }
   }
 }
 
