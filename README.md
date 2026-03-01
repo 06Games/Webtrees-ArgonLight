@@ -11,7 +11,7 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
         <td><img src="https://github.com/user-attachments/assets/24142bda-0393-4d8f-9e3d-ff98e91850cd" alt="Statistics"></td>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/0731f23f-e9fe-4741-a7c0-d674df917f0c" alt="Individual"></td>
+        <td><img src="https://github.com/user-attachments/assets/ac04e2f3-fe5b-4a6d-9af0-ec7bd9527756" alt="Individual"></td>
         <td><img src="https://github.com/user-attachments/assets/68b007bb-6a54-4d09-bdca-163710510550" alt="Event"></td>
     </tr>
     <tr>
@@ -19,7 +19,11 @@ This module is brought to you by [Evan Galli](https://github.com/06Games) under 
         <td><img src="https://github.com/user-attachments/assets/a57d197e-d667-4caa-823f-ef9adf034b2d" alt="Family"></td>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/4128d85b-62a5-47c7-8bfd-7701b2151509" alt="Pedigree Tree"></td>
+        <td><img src="https://github.com/user-attachments/assets/d90edf9d-ab7c-4b0d-8f5f-150ee5957c0a" alt="Pedigree Tree"></td>
+        <td><img src="https://github.com/user-attachments/assets/6414719d-45f3-4a8e-b989-35679a8934ee" alt="Magicsunday's Pedigree Chart"></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/fd930f9c-8f4c-4635-8b1a-0697d2b4fb25" alt="Compact Tree"/></td>
         <td><img src="https://github.com/user-attachments/assets/399d8698-a1ef-4201-b013-e304f10d410a" alt="Pedigree Map"></td>
     </tr>
 </table>
