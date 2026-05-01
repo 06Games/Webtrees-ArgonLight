@@ -9,10 +9,23 @@
  https://github.com/06Games/Webtrees-ArgonLight
 ************************************************/
 
+@use "sass:color";
+@import "config/theme-variables";
+
 .wt-route-webtrees {
+
   &-pedigree-chart,
   &-descendants-chart,
   &-fan-chart {
+    --sex-m-fg: #{$m-color};
+    --sex-m-bg: #{$m-background};
+    --sex-f-fg: #{$f-color};
+    --sex-f-bg: #{$f-background};
+    --sex-u-fg: #{$u-color};
+    --sex-u-bg: #{$u-background};
+    --sex-x-fg: #{$x-color};
+    --sex-x-bg: #{$x-background};
+
     .icon {
       width: auto;
       height: auto;
@@ -23,8 +36,43 @@
     }
   }
 
+  &-pedigree-chart .webtrees-pedigree-chart-container,
+  &-descendants-chart .webtrees-descendants-chart-container {
+
+    svg g.person>rect,
+    svg g.person:hover>rect {
+
+      &.male,
+      &.female,
+      &.unknown,
+      &.other {
+        filter: drop-shadow(0 1px 3px rgba(50, 50, 93, 0.15)) drop-shadow(0 1px 0 rgba(0, 0, 0, 0.02));
+        fill-opacity: 1;
+      }
+    }
+
+    svg g.person:hover {
+
+      rect.male {
+        stroke: #{color.scale($m-color, $lightness: 70%)};
+      }
+
+      rect.female {
+        stroke: #{color.scale($f-color, $lightness: 70%)};
+      }
+
+      rect.unknown {
+        stroke: #{color.scale($u-color, $lightness: 70%)};
+      }
+
+      rect.other {
+        stroke: #{color.scale($x-color, $lightness: 70%)};
+      }
+    }
+  }
+
   &-fan-chart {
-    & > div.tooltip table {
+    &>div.tooltip table {
       border-collapse: initial;
 
       th {
