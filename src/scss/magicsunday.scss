@@ -74,9 +74,25 @@
   &-fan-chart {
     &>div.tooltip table {
       border-collapse: initial;
+      margin-bottom: 0;
 
-      th {
+      th,
+      td {
         background: none;
+        border: none;
+      }
+    }
+
+    .webtrees-fan-chart-container svg {
+
+      g.person.available g.arc path,
+      g.marriage.available g.arc path {
+        fill: var(--bs-light-bg-subtle);
+        stroke: var(--bs-light-border-subtle);
+      }
+
+      g.person g.color path {
+        filter: saturate(5);
       }
     }
   }
