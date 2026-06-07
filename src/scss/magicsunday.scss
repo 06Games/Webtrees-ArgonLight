@@ -12,6 +12,19 @@
 @use "sass:color";
 @import "config/theme-variables";
 
+
+.webtrees-pedigree-chart-container svg,
+.webtrees-descendants-chart-container svg,
+.webtrees-fan-chart-container svg {
+  max-height: 80dvh;
+}
+
+[fullscreen] .webtrees-pedigree-chart-container svg,
+[fullscreen] .webtrees-descendants-chart-container svg,
+[fullscreen] .webtrees-fan-chart-container svg {
+  max-height: 100dvh;
+}
+
 .wt-route-webtrees {
 
   &-pedigree-chart,
