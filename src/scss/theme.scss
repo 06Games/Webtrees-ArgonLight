@@ -503,7 +503,7 @@ a:hover,
 }
 
 [dir] body>header {
-  background-color: $dark;
+  background-color: var(--#{$prefix}dark);
   box-shadow: 0 10px 20px rgba(50, 50, 93, .2);
   z-index: 1052;
   padding: 5px 0;
@@ -1838,7 +1838,7 @@ table.tv_tree {
 
   .wt-chart-box-zoom-dropdown {
     border: none;
-    color: $dark;
+    color: var(--#{$prefix}dark);
     font-size: $font-size-sm;
     //line-height: $line-height-smallest;
     padding: 0.625rem;

@@ -81,3 +81,11 @@
     }
   }
 }
+
+.wt-statistics-chart {
+  --sans: var(--bs-font-sans-serif);
+  --serif: Georgia, serif;
+  --hero-bg-from: var(--bs-dark);
+  --hero-bg-to: #{$dark-gradient};
+  --wine: var(--bs-primary);
+}
